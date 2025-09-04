@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        Hello World
+        <p className="text-2xl font-bold dark:text-yellow-300">hello world</p>
         <ModeToggle />
       </>
     </>
