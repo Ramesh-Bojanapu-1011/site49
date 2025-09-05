@@ -89,7 +89,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className=" caret-transparent bg-white dark:bg-gray-900    sticky top-0  ">
+    <header className=" caret-transparent bg-white dark:bg-gray-900    sticky top-0 z-100  ">
       <div className="  mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <div className="flex items-center gap-2">
