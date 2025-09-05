@@ -1,8 +1,10 @@
 import React, { useState } from "react";
- 
+import { useTranslation } from "react-i18next";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { ModeToggle } from "./theme/ModeToggle";
+import i18n from "@/i18n";
 
 const services = [
   "Web Design",
@@ -15,33 +17,100 @@ const services = [
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [profileOpen, setProfileOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [homeOpen, setHomeOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  // Supported languages
+  const supportedLanguages = [
+    { code: "en", label: "English" },
+    { code: "ar", label: "Arabic" },
+    { code: "he", label: "Hebrew" },
+  ];
+  //   const [selectedLanguage, setSelectedLanguage] = useState("English");
+  const [langReady, setLangReady] = useState(false);
+  const router = useRouter();
+  const { t } = useTranslation();
 
   function handleLogout(): void {
     throw new Error("Function not implemented.");
   }
+
+  // Dropdown handler: only one open at a time
+  const handleDropdown = (menu: string) => {
+    setOpenDropdown((prev) => (prev === menu ? null : menu));
+  };
+
+  // Restore language from localStorage on mount and on route change
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      const setLangFromStorage = () => {
+        const savedLang = localStorage.getItem("selectedLanguage");
+        if (savedLang) {
+          //   setSelectedLanguage(savedLang);
+          if (savedLang === "English" && i18n.language !== "en")
+            i18n.changeLanguage("en");
+          else if (savedLang === "Arabic" && i18n.language !== "ar")
+            i18n.changeLanguage("ar");
+          else if (savedLang === "Hebrew" && i18n.language !== "he")
+            i18n.changeLanguage("he");
+          // Set document direction
+          if (savedLang === "Arabic" || savedLang === "Hebrew") {
+            document.documentElement.dir = "rtl";
+          } else {
+            document.documentElement.dir = "ltr";
+          }
+        }
+      };
+      setLangFromStorage();
+      setLangReady(true);
+      // Listen for route changes to re-apply language
+      const handleRouteChange = () => {
+        setLangFromStorage();
+      };
+      router.events.on("routeChangeComplete", handleRouteChange);
+      return () => {
+        router.events.off("routeChangeComplete", handleRouteChange);
+      };
+    }
+  }, [router.events, i18n.language]);
+  const handleLanguageChange = (langLabel: string) => {
+    // setSelectedLanguage(langLabel);
+    const langObj = supportedLanguages.find((l) => l.label === langLabel);
+    if (langObj) {
+      i18n.changeLanguage(langObj.code);
+      if (typeof window !== "undefined") {
+        localStorage.setItem("selectedLanguage", langLabel);
+        if (langObj.code === "ar" || langObj.code === "he") {
+          document.documentElement.dir = "rtl";
+        } else {
+          document.documentElement.dir = "ltr";
+        }
+      }
+    }
+  };
 
   return (
     <header className="bg-white dark:bg-gray-900 shadow-md fixed w-full z-50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <Image src={'/logo-stackly.png'} alt="Logo" width={100} height={100} />
+          <Image
+            src={"/logo-stackly.png"}
+            alt="Logo"
+            width={100}
+            height={100}
+          />
         </div>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-6 text-gray-700 dark:text-gray-200 font-medium">
           <div className="relative group">
             <button
-              onClick={() => setHomeOpen((v) => !v)}
+              onClick={() => handleDropdown("home")}
               className="hover:text-blue-500 dark:hover:text-blue-400 flex items-center gap-1 transition-colors"
             >
               Home <span className="ml-1">▼</span>
             </button>
-            {homeOpen && (
+            {openDropdown === "home" && (
               <div className="absolute left-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]">
                 <a
                   href="/home1"
@@ -66,12 +135,12 @@ const Header: React.FC = () => {
           </a>
           <div className="relative group">
             <button
-              onClick={() => setServicesOpen((v) => !v)}
+              onClick={() => handleDropdown("services")}
               className="hover:text-blue-500 dark:hover:text-blue-400 flex items-center gap-1 transition-colors"
             >
               Services <span className="ml-1">▼</span>
             </button>
-            {servicesOpen && (
+            {openDropdown === "services" && (
               <div className="absolute left-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[160px]">
                 <a
                   href="/services"
@@ -109,7 +178,7 @@ const Header: React.FC = () => {
           {/* Profile Dropdown */}
           <div className="relative group">
             <button
-              onClick={() => setProfileOpen((v) => !v)}
+              onClick={() => handleDropdown("profile")}
               className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
             >
               <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 dark:to-blue-300 text-white px-3 py-1 font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
@@ -117,7 +186,7 @@ const Header: React.FC = () => {
               </span>
               <span className="ml-1">Profile</span> <span>▼</span>
             </button>
-            {profileOpen && (
+            {openDropdown === "profile" && (
               <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]">
                 <button
                   onClick={handleLogout}
@@ -131,31 +200,22 @@ const Header: React.FC = () => {
           {/* Language Dropdown */}
           <div className="relative group">
             <button
-              onClick={() => setLangOpen((v) => !v)}
+              onClick={() => handleDropdown("language")}
               className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
             >
               <span className="text-xl">🌐</span> <span>▼</span>
             </button>
-            {langOpen && (
+            {openDropdown === "language" && (
               <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]">
-                <a
-                  href="#en"
-                  className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
-                >
-                  English
-                </a>
-                <a
-                  href="#ar"
-                  className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
-                >
-                  Arabic
-                </a>
-                <a
-                  href="#he"
-                  className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
-                >
-                  Hebrew
-                </a>
+                {supportedLanguages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => handleLanguageChange(lang.label)}
+                    className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                  >
+                    {lang.label}
+                  </button>
+                ))}
               </div>
             )}
           </div>
@@ -177,12 +237,12 @@ const Header: React.FC = () => {
         <nav className="md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-700 shadow-lg px-4 py-3 transition-colors">
           <div className="mb-2">
             <button
-              onClick={() => setHomeOpen((v) => !v)}
+              onClick={() => handleDropdown("home")}
               className="w-full text-left py-2 flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
             >
               Home <span>▼</span>
             </button>
-            {homeOpen && (
+            {openDropdown === "home" && (
               <div className="pl-4">
                 <a
                   href="#home1"
@@ -207,12 +267,12 @@ const Header: React.FC = () => {
           </a>
           <div className="mb-2">
             <button
-              onClick={() => setServicesOpen((v) => !v)}
+              onClick={() => handleDropdown("services")}
               className="w-full text-left py-2 flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
             >
               Services <span>▼</span>
             </button>
-            {servicesOpen && (
+            {openDropdown === "services" && (
               <div className="pl-4">
                 {services.map((service) => (
                   <a
@@ -243,7 +303,7 @@ const Header: React.FC = () => {
 
             <div className="mb-2 flex items-center gap-2">
               <button
-                onClick={() => setProfileOpen((v) => !v)}
+                onClick={() => handleDropdown("profile")}
                 className="w-full text-left py-2 flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               >
                 <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 dark:to-blue-300 text-white px-3 py-1 font-bold text-lg shadow-md border-2 border-white dark:border-gray-900 mr-2">
@@ -251,7 +311,7 @@ const Header: React.FC = () => {
                 </span>
                 Profile <span>▼</span>
               </button>
-              {profileOpen && (
+              {openDropdown === "profile" && (
                 <div className="  px-3   absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700">
                   <a
                     href="#logout"
@@ -262,33 +322,24 @@ const Header: React.FC = () => {
                 </div>
               )}
             </div>
-            <div className=" ">
+            <div className="">
               <button
-                onClick={() => setLangOpen((v) => !v)}
+                onClick={() => handleDropdown("language")}
                 className="w-full text-left py-2 flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               >
                 <span className="text-xl">🌐</span> Language <span>▼</span>
               </button>
-              {langOpen && (
-                <div className=" flex flex-col p-3   absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700">
-                  <a
-                    href="#en"
-                    className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
-                  >
-                    English
-                  </a>
-                  <a
-                    href="#ar"
-                    className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
-                  >
-                    Arabic
-                  </a>
-                  <a
-                    href="#he"
-                    className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
-                  >
-                    Hebrew
-                  </a>
+              {openDropdown === "language" && (
+                <div className="flex flex-col p-3 absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700">
+                  {supportedLanguages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => handleLanguageChange(lang.label)}
+                      className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                    >
+                      {lang.label}
+                    </button>
+                  ))}
                 </div>
               )}
             </div>
