@@ -1,4 +1,6 @@
-import { ModeToggle } from "@/components/ModeToggle";
+import Footer from "@/components/Footer";
+import Header from "@/components/Hedder";
+import { ModeToggle } from "@/components/theme/ModeToggle";
 import Head from "next/head";
 
 export default function Home() {
@@ -10,8 +12,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <>
-        <p className="text-2xl font-bold dark:text-yellow-300">hello world</p>
-        <ModeToggle />
+        <Header />
+        <Footer />
       </>
     </>
   );
