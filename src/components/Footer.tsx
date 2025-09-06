@@ -4,10 +4,11 @@ import { LinkedinIcon, Twitter, TwitterIcon } from "lucide-react";
 import Link from "next/link";
 
 const quickLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Portfolio", href: "/portfolio" },
+  { name: "Home1", href: "/home1" },
+  { name: "Home2", href: "/home2" },
+  { name: "About", href: "/about-us" },
   { name: "Services", href: "/services" },
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -23,9 +24,9 @@ const services = [
 const Footer = () => {
   return (
     <footer className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 pt-10 pb-6 px-4 md:px-8 lg:px-16 justify-center caret-transparent">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-8">
+      <div className="flex flex-col w-full sm:flex-row sm:justify-evenly sm:items-start gap-8">
         {/* Column 1: Logo & Content */}
-        <div className="flex flex-col w-1/4 items-start">
+        <div className="flex flex-col sm:w-1/4 items-start">
           <Image
             src="/logo-stackly.png"
             alt="Logo"
@@ -41,7 +42,7 @@ const Footer = () => {
         </div>
 
         {/* Column 2: Quick Links */}
-        <div className="w-1/4 items-center">
+        <div className="sm:w-1/4 items-center">
           <h3 className="font-semibold text-md mb-3">Quick Links</h3>
           <ul className="space-y-2">
             {quickLinks.map((link) => (
@@ -58,7 +59,7 @@ const Footer = () => {
         </div>
 
         {/* Column 3: Services */}
-        <div className="w-1/4 items-center">
+        <div className="sm:w-1/4 items-center">
           <h3 className="font-semibold text-md mb-3">Services</h3>
           <ul className="space-y-2">
             {services.map((service) => (
@@ -72,7 +73,7 @@ const Footer = () => {
         </div>
 
         {/* Column 4: Contact */}
-        <div className="w-1/4 items-center">
+        <div className="sm:w-1/4 items-center">
           <h3 className="font-semibold text-md mb-3">Contact</h3>
           <ul className="space-y-2 text-sm">
             <li>

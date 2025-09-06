@@ -1,9 +1,16 @@
 import React from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Hedder";
-import { ModeToggle } from "@/components/theme/ModeToggle";
 import Head from "next/head";
 import Image from "next/image";
+import {
+  AwardIcon,
+  Clock10,
+  FolderKanban,
+  Star,
+  StarHalfIcon,
+  User2,
+} from "lucide-react";
 
 const Home1 = () => {
   return (
@@ -11,7 +18,7 @@ const Home1 = () => {
       <Head>
         <title>Home1 Page</title>
       </Head>
-      <div className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col">
+      <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col caret-transparent">
         <Header />
         {/* Hero Section */}
         <section className="relative flex min-h-screen flex-col md:flex-row items-center justify-between px-6 py-16   mx-auto w-full  ">
@@ -93,84 +100,107 @@ const Home1 = () => {
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className="py-16 px-6 max-w-7xl mx-auto w-full">
+        {/* Why Choose Me Section */}
+        <section className="py-16 px-6 mx-auto w-full">
           <h2 className="text-3xl font-bold mb-6 text-center text-primary-500">
-            Services
+            Why Choose Me?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
+            {/* Stats Cards */}
             {[
               {
-                title: "Web Development",
-                img: "/window.svg",
-                desc: "Custom websites and web apps built for your needs.",
+                label: "Projects Completed",
+                value: "120+",
+                icon: (
+                  <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-primary-500 to-cyan-400 shadow-lg mb-4">
+                    <FolderKanban />
+                  </span>
+                ),
               },
               {
-                title: "UI/UX Design",
-                img: "/next.svg",
-                desc: "Beautiful, user-friendly interfaces for all devices.",
+                label: "Happy Clients",
+                value: "80+",
+                icon: (
+                  <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-green-400 to-primary-500 shadow-lg mb-4">
+                    <User2 />
+                  </span>
+                ),
               },
               {
-                title: "Branding",
-                img: "/logo-stackly.png",
-                desc: "Logo, colors, and identity to make you stand out.",
+                label: "Years Experience",
+                value: "5+",
+                icon: (
+                  <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-yellow-400 to-primary-500 shadow-lg mb-4">
+                    <Clock10 />
+                  </span>
+                ),
               },
               {
-                title: "SEO Optimization",
-                img: "/vercel.svg",
-                desc: "Improve your search rankings and visibility.",
+                label: "Awards Won",
+                value: "10",
+                icon: (
+                  <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-pink-400 to-primary-500 shadow-lg mb-4">
+                    <AwardIcon />
+                  </span>
+                ),
               },
-              {
-                title: "Content Creation",
-                img: "/logo-fav-icon.png",
-                desc: "Engaging content for blogs, social, and more.",
-              },
-              {
-                title: "Consulting",
-                img: "/globe.svg",
-                desc: "Expert advice to grow your business online.",
-              },
-            ].map((service) => (
+            ].map((stat) => (
               <div
-                key={service.title}
-                className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 flex flex-col items-center text-center"
+                key={stat.label}
+                className="min-w-[220px] max-w-xs bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center mx-2 transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
               >
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  className="w-16 h-16 mb-4 object-contain"
-                />
-                <h3 className="font-semibold text-lg mb-2 text-primary-500">
-                  {service.title}
-                </h3>
-                <p className="text-gray-700 dark:text-gray-300">
-                  {service.desc}
-                </p>
+                {stat.icon}
+                <div className="text-4xl font-extrabold text-primary-500 mb-2 animate-pulse">
+                  {stat.value}
+                </div>
+                <div className="font-semibold text-lg text-gray-700 dark:text-gray-300">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Portfolio Section */}
+        {/* Featured Success Stories Section */}
         <section className="py-16 px-6 max-w-7xl mx-auto w-full">
           <h2 className="text-3xl font-bold mb-6 text-center text-primary-500">
-            Portfolio
+            Featured Success Stories
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
+            {[
+              {
+                title: "E-Commerce Launch",
+                img: "/success-ecommerce.jpg",
+                desc: "Helped a local business launch their online store, increasing sales by 300% in the first quarter.",
+              },
+              {
+                title: "Personal Brand Transformation",
+                img: "/success-brand.jpg",
+                desc: "Revamped a freelancer's portfolio and personal brand, leading to new international clients.",
+              },
+              {
+                title: "Nonprofit Awareness",
+                img: "/success-nonprofit.jpg",
+                desc: "Created a campaign site for a nonprofit, boosting donations and community engagement.",
+              },
+            ].map((story) => (
               <div
-                key={i}
-                className="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden"
+                key={story.title}
+                className="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden flex flex-col"
               >
-                <img
-                  src={`/portfolio${i}.jpg`}
-                  alt={`Project ${i}`}
+                <Image
+                  src={story.img}
+                  alt={story.title}
+                  width={400}
+                  height={200}
                   className="w-full h-48 object-cover"
                 />
-                <div className="p-4">
-                  <h4 className="font-bold text-lg mb-2">Project {i}</h4>
+                <div className="p-4 flex-1 flex flex-col justify-between">
+                  <h4 className="font-bold text-lg mb-2 text-primary-500">
+                    {story.title}
+                  </h4>
                   <p className="text-gray-700 dark:text-gray-300">
-                    A brief description of the project and its impact.
+                    {story.desc}
                   </p>
                 </div>
               </div>
@@ -178,74 +208,88 @@ const Home1 = () => {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-16 px-6 max-w-5xl mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-6 text-center text-primary-500">
-            Testimonials
+        {/* Client Reviews Section */}
+        <section className="py-16 px-6   mx-auto w-full">
+          <h2 className="text-3xl  font-bold mb-6 text-center text-primary-500">
+            Client Reviews
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-between   gap-8 pb-4  ">
             {[
-              { name: "John Doe", text: "Amazing work! Highly recommended." },
               {
-                name: "Jane Smith",
-                text: "Professional and creative. Will hire again!",
+                name: "Priya Sharma",
+                avatar: "/review1.jpg",
+                rating: 5,
+                text: "Working with this freelancer was a game-changer for my business. The website looks stunning and works flawlessly!",
               },
-            ].map((t) => (
+              {
+                name: "David Lee",
+                avatar: "/review2.jpg",
+                rating: 4.5,
+                text: "Great communication and creative ideas. My portfolio now truly reflects my brand. Highly recommended!",
+              },
+              {
+                name: "Sara Cohen",
+                avatar: "/review3.jpg",
+                rating: 5,
+                text: "Professional, timely, and very talented. The branding work helped me attract new clients quickly.",
+              },
+            ].map((review) => (
               <div
-                key={t.name}
-                className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6"
+                key={review.name}
+                className="min-w-[320px] max-w-sm bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center mx-2 transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
               >
+                <Image
+                  src={review.avatar}
+                  alt={review.name}
+                  width={64}
+                  height={64}
+                  className="rounded-full mb-4 w-20 h-20 object-cover object-top border-4 border-primary-500"
+                />
+                <div className="flex items-center justify-center mb-2">
+                  {[...Array(Math.floor(review.rating))].map((_, i) => (
+                    <Star key={i} className="text-yellow-400 w-6 h-6" />
+                  ))}
+                  {review.rating % 1 !== 0 && (
+                    <StarHalfIcon className="text-yellow-400 w-6 h-6" />
+                  )}
+                </div>
                 <p className="text-gray-700 dark:text-gray-300 italic mb-4">
-                  "{t.text}"
+                  "{review.text}"
                 </p>
-                <div className="font-semibold text-primary-500">- {t.name}</div>
+                <div className="font-semibold text-primary-500">
+                  - {review.name}
+                </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section className="py-16 px-6 max-w-5xl mx-auto w-full">
-          <div className="bg-gradient-to-tr from-primary-500 to-cyan-400 rounded-3xl shadow-2xl p-1">
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col items-center justify-center">
-              <div className="mb-6 flex justify-center">
-                <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-primary-500 to-cyan-400 shadow-lg">
-                  <svg
-                    width="36"
-                    height="36"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="text-white"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M21 10.5a8.38 8.38 0 01-.9 3.8c-.6 1.2-1.5 2.3-2.6 3.1-1.1.8-2.3 1.3-3.6 1.3s-2.5-.5-3.6-1.3c-1.1-.8-2-1.9-2.6-3.1a8.38 8.38 0 01-.9-3.8V7.5a8.38 8.38 0 01.9-3.8c.6-1.2 1.5-2.3 2.6-3.1C8.5.5 9.7 0 11 0s2.5.5 3.6 1.3c1.1.8 2 1.9 2.6 3.1a8.38 8.38 0 01.9 3.8v3z"
-                    />
-                  </svg>
-                </span>
+        {/* Let's Collaborate Section */}
+        <section className="py-16 px-6   mx-auto w-full">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="bg-gradient-to-tr from-primary-500 to-cyan-400 rounded-3xl shadow-2xl p-1">
+              <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col items-center justify-center">
+                <h2 className="text-3xl font-bold mb-4 text-primary-500 text-center">
+                  Let's Collaborate
+                </h2>
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
+                  Ready to bring your ideas to life? Whether you have a project
+                  in mind or just want to connect, I'm here to help you achieve
+                  your goals. Let's work together to create something amazing!
+                </p>
+                <a
+                  href="/contact-us"
+                  className="px-10 py-4 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-xl tracking-wide"
+                >
+                  Start Your Project
+                </a>
               </div>
-              <h2 className="text-3xl font-bold mb-4 text-center text-primary-500">
-                Contact
-              </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
-                Want to discuss your project or have any questions? Reach out
-                and let's connect!
-              </p>
-              <a
-                href="/contact-us"
-                className="px-10 py-4 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-xl tracking-wide"
-              >
-                Go to Contact Us Page
-              </a>
             </div>
           </div>
         </section>
 
         <Footer />
-      </div>
+      </main>
     </>
   );
 };
