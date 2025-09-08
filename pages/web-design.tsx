@@ -244,47 +244,93 @@ const WebDesign = () => (
 
       {/* Section 4: Web Design Features (Horizontal Cards) */}
       <section className="py-20 px-6 mx-auto w-full">
-        <h2 className="text-3xl font-bold mb-10 text-primary-500 text-center">Standout Features</h2>
+        <h2 className="text-3xl font-bold mb-10 text-primary-500 text-center">
+          Standout Features
+        </h2>
         <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
           {[
-            { icon: "/award.svg", title: "Award-Winning Quality", desc: "Our designs have received industry recognition for creativity and impact." },
-            { icon: "/next.svg", title: "Lightning Fast", desc: "Optimized for speed and performance on every device." },
-            { icon: "/file.svg", title: "Custom Graphics", desc: "Unique illustrations and icons tailored to your brand." },
-            { icon: "/window.svg", title: "Dark & Light Modes", desc: "Seamless experience in any environment, day or night." },
-            { icon: "/globe.svg", title: "Global Reach", desc: "Websites built for international audiences and accessibility." },
-            { icon: "/vercel.svg", title: "Easy Deployment", desc: "Launch your site quickly with modern hosting solutions." },
+            {
+              icon: "/award.svg",
+              title: "Award-Winning Quality",
+              desc: "Our designs have received industry recognition for creativity and impact.",
+            },
+            {
+              icon: "/next.svg",
+              title: "Lightning Fast",
+              desc: "Optimized for speed and performance on every device.",
+            },
+            {
+              icon: "/file.svg",
+              title: "Custom Graphics",
+              desc: "Unique illustrations and icons tailored to your brand.",
+            },
+            {
+              icon: "/window.svg",
+              title: "Dark & Light Modes",
+              desc: "Seamless experience in any environment, day or night.",
+            },
+            {
+              icon: "/globe.svg",
+              title: "Global Reach",
+              desc: "Websites built for international audiences and accessibility.",
+            },
+            {
+              icon: "/vercel.svg",
+              title: "Easy Deployment",
+              desc: "Launch your site quickly with modern hosting solutions.",
+            },
           ].map((feature, idx) => (
-            <div key={idx} className="flex flex-col items-center justify-center min-w-[220px] max-w-xs rounded-2xl shadow-xl p-8 bg-gradient-to-br from-[#7a8387] via-[#00BFFF] to-[#8e4747] hover:scale-105 transition-all duration-300 group">
+            <div
+              key={idx}
+              className="flex flex-col items-center justify-center min-w-[220px] max-w-xs rounded-2xl shadow-xl p-8 bg-gradient-to-br from-[#7a8387] via-[#00BFFF] to-[#8e4747] hover:scale-105 transition-all duration-300 group"
+            >
               <div className="w-14 h-14 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 rounded-full shadow-lg border-4 border-white dark:border-gray-900 mb-4 animate-float">
-                <Image src={feature.icon} alt={feature.title} width={40} height={40} />
+                <Image
+                  src={feature.icon}
+                  alt={feature.title}
+                  width={40}
+                  height={40}
+                />
               </div>
-              <div className="font-extrabold text-xl text-white mb-2 text-center drop-shadow-lg">{feature.title}</div>
-              <div className="text-white/80 dark:text-gray-200 text-center mb-2">{feature.desc}</div>
+              <div className="font-extrabold text-xl text-white mb-2 text-center drop-shadow-lg">
+                {feature.title}
+              </div>
+              <div className="text-white/80 dark:text-gray-200 text-center mb-2">
+                {feature.desc}
+              </div>
               <div className="w-8 h-1 bg-gradient-to-r from-primary-500 to-cyan-400 rounded-full mt-2" />
             </div>
           ))}
         </div>
         <style jsx>{`
-          @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-          .animate-float { animation: float 2.5s ease-in-out infinite; }
+          @keyframes float {
+            0%,
+            100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-10px);
+            }
+          }
+          .animate-float {
+            animation: float 2.5s ease-in-out infinite;
+          }
         `}</style>
       </section>
 
       {/* Section 5: Web Design Stats */}
-      <section className="py-20 px-6 max-w-5xl mx-auto w-full">
+      <section className="py-20 px-6   mx-auto w-full">
         <h2 className="text-3xl font-bold mb-10 text-primary-500 text-center">
           Our Web Design Impact
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-16 gap-x-10">
+        <div className="flex flex-wrap gap-16 justify-center items-center pb-4">
           {webDesignStats.map((fact, idx) => (
             <div
               key={idx}
-              className={`relative flex flex-col items-center justify-center rounded-3xl shadow-2xl p-10 bg-white/60 dark:bg-gray-900/60 backdrop-blur-lg border border-cyan-200 dark:border-cyan-900 hover:scale-105 hover:shadow-2xl transition-all duration-300 group ${
-                idx % 2 === 0 ? "mt-0" : "mt-10"
-              } animate-popin`}
-              style={{ boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)" }}
+              className={`relative flex flex-col items-center justify-center w-70 h-70 rounded-4xl shadow-2xl bg-gradient-to-tr from-0% via-cyan-400 to-amber-400 hover:scale-105 transition-all duration-300 group animate-popin`}
+              style={{ animationDelay: `${idx * 0.18}s` }}
             >
-              <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 flex items-center justify-center bg-gradient-to-tr from-primary-500 to-cyan-400 rounded-full shadow-lg border-4 border-white dark:border-gray-900 animate-float z-10">
+              <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-16 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 rounded-full shadow-lg border-4 border-white dark:border-gray-900 animate-float z-10">
                 <Image
                   src={fact.icon}
                   alt={fact.label}
@@ -292,18 +338,18 @@ const WebDesign = () => (
                   height={40}
                 />
               </div>
-              <div className="pt-10 pb-2 flex flex-col items-center">
-                <div className="font-extrabold text-4xl text-primary-500 mb-2 text-center drop-shadow-lg">
+              <div className="flex flex-col items-center justify-center h-full pt-16">
+                <div className="font-extrabold text-5xl text-white mb-2 text-center drop-shadow-lg animate-count">
                   {fact.value}
                 </div>
-                <div className="font-semibold text-lg text-primary-500 mb-2 text-center">
+                <div className="font-semibold text-lg text-white mb-2 text-center">
                   {fact.label}
                 </div>
-                <div className="text-gray-700 dark:text-gray-300 text-center mb-2">
+                <div className="text-white/80 dark:text-gray-200 text-center mb-2  px-2">
                   {fact.desc}
                 </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-400 to-primary-500 opacity-0 group-hover:opacity-80 blur-sm transition-all duration-300" />
+              <div className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-400 to-primary-500 opacity-0 group-hover:opacity-80 blur-sm transition-all duration-300" />
               <style jsx>{`
                 @keyframes float {
                   0%,
@@ -329,6 +375,23 @@ const WebDesign = () => (
                 }
                 .animate-popin {
                   animation: popin 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+                }
+                @keyframes count {
+                  0% {
+                    opacity: 0;
+                    transform: scale(0.7);
+                  }
+                  80% {
+                    opacity: 1;
+                    transform: scale(1.1);
+                  }
+                  100% {
+                    opacity: 1;
+                    transform: scale(1);
+                  }
+                }
+                .animate-count {
+                  animation: count 1.2s cubic-bezier(0.23, 1, 0.32, 1);
                 }
               `}</style>
             </div>
