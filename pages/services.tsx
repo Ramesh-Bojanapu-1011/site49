@@ -337,7 +337,7 @@ const Services = () => {
                     </linearGradient>
                   </defs>
                 </svg>
-                <div className="absolute top-10 left-1/2 -translate-x-1/2">
+                <div className="absolute top-8 left-1/2 -translate-x-1/2">
                   <Image
                     src={fact.icon}
                     alt={fact.label}
