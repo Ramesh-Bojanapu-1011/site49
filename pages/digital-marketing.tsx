@@ -5,40 +5,40 @@ import Link from "next/link";
 import Header from "@/components/Hedder";
 import Footer from "@/components/Footer";
 
-const webDesignStats = [
+const marketingStats = [
   {
     icon: "/award.svg",
     label: "Awards",
-    value: 8,
-    desc: "Recognized for creative excellence.",
+    value: 7,
+    desc: "Recognized for marketing excellence.",
   },
   {
     icon: "/project.svg",
     label: "Projects",
-    value: 60,
-    desc: "Diverse web design projects delivered.",
+    value: 55,
+    desc: "Diverse marketing campaigns delivered.",
   },
   {
     icon: "/happy.svg",
     label: "Happy Clients",
-    value: 45,
-    desc: "Clients delighted with our work.",
+    value: 48,
+    desc: "Clients delighted with our results.",
   },
   {
     icon: "/globe.svg",
     label: "Countries",
-    value: 10,
+    value: 14,
     desc: "International reach and impact.",
   },
 ];
 
-const WebDesign = () => (
+const DigitalMarketing = () => (
   <>
     <Head>
-      <title>Web Design Services</title>
+      <title>Digital Marketing Services</title>
       <meta
         name="description"
-        content="Modern, creative web design services for your brand."
+        content="Modern, creative digital marketing services for your brand."
       />
     </Head>
     <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col caret-transparent">
@@ -48,11 +48,11 @@ const WebDesign = () => (
         <div className="absolute inset-0 w-full h-full object-cover opacity-30 z-0 bg-gradient-to-tr from-primary-500/30 to-cyan-400/30" />
         <div className="relative z-10 max-w-2xl mx-auto">
           <h1 className="text-5xl font-extrabold mb-6 text-primary-600 dark:text-primary-400 drop-shadow-lg">
-            Web Design That Inspires
+            Digital Marketing That Grows
           </h1>
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
-            Elevate your brand with stunning, responsive websites crafted for
-            impact.
+            Elevate your brand with powerful, creative marketing strategies
+            crafted for impact.
           </p>
           <Link
             href="/contact-us"
@@ -63,25 +63,23 @@ const WebDesign = () => (
         </div>
       </section>
 
-      {/* Section 2: Web Design Awards & Recognition */}
-      <section className="  mx-auto w-full">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 bg-gradient-to-br from-white via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900    p-10 backdrop-blur-xl">
+      {/* Section 2: Awards & Recognition */}
+      <section className="mx-auto w-full">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12 bg-gradient-to-br from-white via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-10 backdrop-blur-xl">
           <div className="w-full md:w-2/3 flex flex-col justify-center">
             <h2 className="text-4xl font-extrabold mb-6 text-primary-500 dark:text-primary-400 drop-shadow-lg">
               Achievements & Industry Recognition
             </h2>
             <p className="text-lg mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
-              Our commitment to excellence is reflected in the awards and
-              certifications we have earned. We strive to deliver innovative
-              solutions and outstanding service, recognized by leading
-              organizations in the industry.
+              Our marketing excellence is recognized by leading organizations.
+              We deliver innovative marketing solutions and outstanding service.
             </p>
             <ul className="list-disc pl-6 text-base space-y-2 text-primary-500 dark:text-cyan-300">
               <li>
                 <span className="font-semibold text-primary-600 dark:text-amber-300">
-                  Best Creative Agency 2025
+                  Best Marketing Studio 2025
                 </span>{" "}
-                – National Web Awards
+                – National Marketing Awards
               </li>
               <li>
                 <span className="font-semibold text-primary-600 dark:text-amber-300">
@@ -91,15 +89,15 @@ const WebDesign = () => (
               </li>
               <li>
                 <span className="font-semibold text-primary-600 dark:text-amber-300">
-                  Top 50 Innovative Companies
+                  Top 50 Creative Companies
                 </span>{" "}
-                – Tech Innovators
+                – Marketing Innovators
               </li>
               <li>
                 <span className="font-semibold text-primary-600 dark:text-amber-300">
-                  ISO 27001:2022 Certified
+                  ISO 9001:2015 Certified
                 </span>{" "}
-                for Information Security Management
+                for Quality Management
               </li>
             </ul>
           </div>
@@ -117,19 +115,12 @@ const WebDesign = () => (
             </div>
           </div>
         </div>
-        <style jsx>{`
-          .shadow-amber-400\/40 {
-            box-shadow:
-              0 8px 32px 0 rgba(251, 191, 36, 0.25),
-              0 1.5px 8px 0 rgba(6, 182, 212, 0.15);
-          }
-        `}</style>
       </section>
 
-      {/* Section 3: Web Design Process Steps (Vertical Stepper) */}
-      <section className="py-20 px-6   mx-auto w-full">
+      {/* Section 3: Marketing Process Steps (Vertical Stepper) */}
+      <section className="py-20 px-6 mx-auto w-full">
         <h2 className="text-3xl font-bold mb-10 text-primary-500 text-center">
-          How We Build Your Website
+          How We Grow Your Brand
         </h2>
         <div className="relative">
           <div className="absolute left-1/2 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-500 via-cyan-400 to-amber-400 opacity-30 z-0" />
@@ -138,27 +129,27 @@ const WebDesign = () => (
               {
                 icon: "/search.svg",
                 title: "Discovery",
-                desc: "We start by understanding your goals, audience, and vision.",
+                desc: "We start by understanding your brand, goals, and audience.",
               },
               {
                 icon: "/strategy.svg",
                 title: "Strategy",
-                desc: "We craft a custom plan and sitemap for your brand.",
+                desc: "We craft a custom marketing plan for your brand.",
               },
               {
                 icon: "/design.svg",
-                title: "Design",
-                desc: "We create beautiful, user-friendly layouts and graphics.",
+                title: "Campaign Design",
+                desc: "We create engaging, impactful campaigns and visuals.",
               },
               {
                 icon: "/dev.svg",
-                title: "Development",
-                desc: "We build your site with modern tech for speed and reliability.",
+                title: "Execution",
+                desc: "We launch and manage your campaigns across platforms.",
               },
               {
                 icon: "/launch.svg",
-                title: "Launch",
-                desc: "We deploy your new website and ensure everything works perfectly.",
+                title: "Analysis",
+                desc: "We track results and optimize for best performance.",
               },
               {
                 icon: "/support.svg",
@@ -168,18 +159,14 @@ const WebDesign = () => (
             ].map((step, idx) => (
               <div
                 key={idx}
-                className={`flex items-center w-full ${
-                  idx % 2 === 0 ? "justify-start" : "justify-end"
-                }`}
+                className={`flex items-center w-full ${idx % 2 === 0 ? "justify-start" : "justify-end"}`}
               >
                 <div
                   className={`relative w-1/2 bg-gradient-to-br from-[#7a8387] via-[#00BFFF] to-[#8e4747] rounded-2xl shadow-xl p-8 flex flex-col items-center border border-cyan-100 dark:border-cyan-900 animate-popin`}
                   style={{ animationDelay: `${idx * 0.15}s` }}
                 >
                   <div
-                    className={`absolute ${
-                      idx % 2 !== 0 ? "-left-8" : "-right-8"
-                    } top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white/80 dark:bg-gray-900/80 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900 animate-float`}
+                    className={`absolute ${idx % 2 !== 0 ? "-left-8" : "-right-8"} top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white/80 dark:bg-gray-900/80 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900 animate-float`}
                   >
                     <Image
                       src={step.icon}
@@ -200,36 +187,9 @@ const WebDesign = () => (
             ))}
           </div>
         </div>
-        <style jsx>{`
-          @keyframes float {
-            0%,
-            100% {
-              transform: translateY(0);
-            }
-            50% {
-              transform: translateY(-10px);
-            }
-          }
-          .animate-float {
-            animation: float 2.5s ease-in-out infinite;
-          }
-          @keyframes popin {
-            0% {
-              opacity: 0;
-              transform: scale(0.8);
-            }
-            100% {
-              opacity: 1;
-              transform: scale(1);
-            }
-          }
-          .animate-popin {
-            animation: popin 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
-          }
-        `}</style>
       </section>
 
-      {/* Section 4: Web Design Features (Horizontal Cards) */}
+      {/* Section 4: Digital Marketing Features (Horizontal Cards) */}
       <section className="py-20 px-6 mx-auto w-full">
         <h2 className="text-3xl font-bold mb-10 text-primary-500 text-center">
           Standout Features
@@ -238,33 +198,33 @@ const WebDesign = () => (
           {[
             {
               icon: "/award.svg",
-              title: "Award-Winning Quality",
-              desc: "Our designs have received industry recognition for creativity.",
+              title: "Award-Winning Creativity",
+              desc: "Our marketing has received industry recognition for creativity.",
             },
             {
               icon: "/next.svg",
-              title: "Lightning Fast",
-              desc: "Optimized for speed and performance on every device.",
+              title: "Fast Turnaround",
+              desc: "Quick campaign delivery without compromising quality.",
             },
             {
               icon: "/file.svg",
-              title: "Custom Graphics",
-              desc: "Unique illustrations and icons tailored to your brand.",
+              title: "Custom Campaigns",
+              desc: "Unique strategies and visuals tailored to your brand.",
             },
             {
               icon: "/window.svg",
-              title: "Dark & Light Modes",
-              desc: "Seamless experience in any environment, day or night.",
+              title: "Brand Consistency",
+              desc: "Marketing that matches your brand identity perfectly.",
             },
             {
               icon: "/globe.svg",
               title: "Global Reach",
-              desc: "Websites built for international audiences and accessibility.",
+              desc: "Campaigns for international audiences and accessibility.",
             },
             {
               icon: "/vercel.svg",
-              title: "Easy Deployment",
-              desc: "Launch your site quickly with modern hosting solutions.",
+              title: "Easy Reporting",
+              desc: "Clear analytics and progress tracking for your campaigns.",
             },
           ].map((feature, idx) => (
             <div
@@ -289,20 +249,6 @@ const WebDesign = () => (
             </div>
           ))}
         </div>
-        <style jsx>{`
-          @keyframes float {
-            0%,
-            100% {
-              transform: translateY(0);
-            }
-            50% {
-              transform: translateY(-10px);
-            }
-          }
-          .animate-float {
-            animation: float 2.5s ease-in-out infinite;
-          }
-        `}</style>
       </section>
 
       {/* Section 5: Pricing Plans */}
@@ -330,12 +276,12 @@ const WebDesign = () => (
                 $299
               </div>
               <div className="font-semibold text-lg text-primary-600 dark:text-cyan-200 mb-2 text-center tracking-wide">
-                Starter Website
+                Starter Marketing
               </div>
               <ul className="text-gray-800/80 dark:text-gray-200 text-center mb-2 px-4 space-y-1">
-                <li>1-3 Pages</li>
-                <li>Responsive Design</li>
-                <li>Basic SEO</li>
+                <li>Social Media Campaign</li>
+                <li>2 Platforms</li>
+                <li>Basic Analytics</li>
                 <li>Email Support</li>
               </ul>
               <Link
@@ -365,12 +311,12 @@ const WebDesign = () => (
                 $599
               </div>
               <div className="font-semibold text-lg text-cyan-600 dark:text-amber-200 mb-2 text-center tracking-wide">
-                Business Website
+                Business Marketing
               </div>
               <ul className="text-gray-800/80 dark:text-gray-200 text-center mb-2 px-4 space-y-1">
-                <li>Up to 8 Pages</li>
-                <li>Custom Graphics</li>
-                <li>Advanced SEO</li>
+                <li>Multi-Channel Campaign</li>
+                <li>Up to 5 Platforms</li>
+                <li>Advanced Analytics</li>
                 <li>Chat & Contact Forms</li>
               </ul>
               <Link
@@ -400,10 +346,10 @@ const WebDesign = () => (
                 $999
               </div>
               <div className="font-semibold text-lg text-amber-600 dark:text-primary-200 mb-2 text-center tracking-wide">
-                Premium Website
+                Premium Marketing
               </div>
               <ul className="text-gray-800/80 dark:text-gray-200 text-center mb-2 px-4 space-y-1">
-                <li>Unlimited Pages</li>
+                <li>All Marketing Needs</li>
                 <li>Full Customization</li>
                 <li>Priority Support</li>
                 <li>Integrations & Analytics</li>
@@ -417,7 +363,6 @@ const WebDesign = () => (
             </div>
           </div>
         </div>
-        <style jsx>{``}</style>
       </section>
 
       {/* Section 6: Contact CTA */}
@@ -466,8 +411,8 @@ const WebDesign = () => (
                 Let's Connect!
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
-                Ready to start your next web design project? Reach out for a
-                free consultation or to discuss your goals!
+                Ready to start your next digital marketing project? Reach out
+                for a free consultation or to discuss your goals!
               </p>
               <a
                 href="/contact-us"
@@ -478,37 +423,10 @@ const WebDesign = () => (
             </div>
           </div>
         </div>
-        <style jsx>{`
-          @keyframes gradient-x {
-            0%,
-            100% {
-              background-position: 0% 50%;
-            }
-            50% {
-              background-position: 100% 50%;
-            }
-          }
-          .animate-gradient-x {
-            background-size: 200% 200%;
-            animation: gradient-x 4s ease-in-out infinite;
-          }
-          @keyframes float {
-            0%,
-            100% {
-              transform: translateY(0);
-            }
-            50% {
-              transform: translateY(-12px);
-            }
-          }
-          .animate-float {
-            animation: float 2.5s ease-in-out infinite;
-          }
-        `}</style>
       </section>
       <Footer />
     </main>
   </>
 );
 
-export default WebDesign;
+export default DigitalMarketing;

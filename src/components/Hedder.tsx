@@ -152,7 +152,7 @@ const Header: React.FC = () => {
                   <a
                     key={service}
                     href={`/${service.replace(/\s+/g, "-").toLowerCase()}`}
-                    className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                    className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 text-nowrap transition-colors"
                   >
                     {service}
                   </a>
