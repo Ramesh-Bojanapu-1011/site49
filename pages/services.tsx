@@ -67,9 +67,9 @@ const Services = () => {
           >
             <source src="/services-bg.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/30 to-cyan-400/30 z-0" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#00bcd4]/30 to-cyan-400/30 z-0" />
           <div className="relative z-10 max-w-2xl mx-auto">
-            <h1 className="text-5xl font-extrabold mb-6 text-primary-600 dark:text-primary-400 drop-shadow-lg">
+            <h1 className="text-5xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da] drop-shadow-lg">
               Our Services
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
@@ -81,7 +81,7 @@ const Services = () => {
 
         {/* Section 2: Services Grid */}
         <section className="py-20 px-6 max-w-6xl mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-12 text-primary-500 text-center">
+          <h2 className="text-3xl font-bold mb-12 text-[#00bcd4] text-center">
             What We Offer
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
@@ -92,7 +92,7 @@ const Services = () => {
                 style={{ boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)" }}
               >
                 {/* Floating Icon */}
-                <div className="absolute  -top-8 left-1/2 -translate-x-1/2 w-20 h-20 flex items-center justify-center bg-gradient-to-tr from-primary-500 to-cyan-400 rounded-full shadow-lg border-4 border-white dark:border-gray-900 animate-bounce duration-1000 transform    ">
+                <div className="absolute  -top-8 left-1/2 -translate-x-1/2 w-20 h-20 flex items-center justify-center bg-gradient-to-tr from-[#00bcd4] to-cyan-400 rounded-full shadow-lg border-4 border-white dark:border-gray-900 animate-bounce duration-1000 transform    ">
                   <Image
                     src={service.icon}
                     alt={service.name}
@@ -101,7 +101,7 @@ const Services = () => {
                   />
                 </div>
                 <div className="pt-12 pb-2 flex flex-col items-center">
-                  <h4 className="font-bold text-xl text-primary-500 mb-2 text-center group-hover:text-cyan-400 transition drop-shadow-lg">
+                  <h4 className="font-bold text-xl text-[#00bcd4] mb-2 text-center group-hover:text-cyan-400 transition drop-shadow-lg">
                     {service.name}
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 text-center mb-4">
@@ -115,7 +115,7 @@ const Services = () => {
                   </Link>
                 </div>
                 {/* Animated highlight */}
-                <div className="absolute -bottom-4 -right-4 w-12 h-12 rounded-full bg-gradient-to-tr from-cyan-400 to-primary-500 opacity-0 group-hover:opacity-80 blur-sm transition-all duration-300" />
+                <div className="absolute -bottom-4 -right-4 w-12 h-12 rounded-full bg-gradient-to-tr from-cyan-400 to-[#00bcd4] opacity-0 group-hover:opacity-80 blur-sm transition-all duration-300" />
                 <style jsx>{`
                   @keyframes float {
                     0%,
@@ -137,11 +137,11 @@ const Services = () => {
 
         {/* Section 3: Zig-Zag Timeline (Modern Look) */}
         <section className="py-20 px-6 mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-10 text-primary-500 text-center">
+          <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
             How We Work
           </h2>
           <div className="relative   mx-auto">
-            <div className="absolute left-1/2 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-500 via-cyan-400 to-amber-400 opacity-40 z-0" />
+            <div className="absolute left-1/2 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#00bcd4] via-cyan-400 to-amber-400 opacity-40 z-0" />
             <div className="flex flex-col gap-16 relative z-10">
               {[
                 {
@@ -185,7 +185,7 @@ const Services = () => {
                     <div
                       className={`absolute ${
                         idx % 2 != 0 ? "-left-8" : "-right-8"
-                      } top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gradient-to-tr from-primary-500 to-cyan-400 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900`}
+                      } top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900`}
                     >
                       <Image
                         src={step.icon}
@@ -194,13 +194,13 @@ const Services = () => {
                         height={32}
                       />
                     </div>
-                    <div className="font-bold text-xl text-primary-500 mb-2 text-center">
+                    <div className="font-bold text-xl text-[#00bcd4] mb-2 text-center">
                       {step.label}
                     </div>
                     <div className="text-gray-700 dark:text-gray-300 text-center mb-2">
                       {step.desc}
                     </div>
-                    <div className="w-8 h-1 bg-gradient-to-r from-primary-500 to-cyan-400 rounded-full mt-2" />
+                    <div className="w-8 h-1 bg-gradient-to-r from-[#00bcd4] to-cyan-400 rounded-full mt-2" />
                   </div>
                 </div>
               ))}
@@ -210,7 +210,7 @@ const Services = () => {
 
         {/* Section 4: Service Highlights (Horizontal Scroll Cards) */}
         <section className="py-20 px-6   mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-10 text-primary-500 text-center">
+          <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
             Why Choose Us
           </h2>
           <div className="flex gap-8 justify-center items-center   pb-4  ">
@@ -222,7 +222,7 @@ const Services = () => {
             ].map((highlight, idx) => (
               <div
                 key={idx}
-                className="relative min-w-[260px] rounded-2xl shadow-xl p-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary-500 via-cyan-400 to-amber-400 hover:scale-105 transition-all duration-300 group overflow-visible perspective-[1000px]"
+                className="relative min-w-[260px] rounded-2xl shadow-xl p-0 flex flex-col items-center justify-center bg-gradient-to-br from-[#00bcd4] via-cyan-400 to-amber-400 hover:scale-105 transition-all duration-300 group overflow-visible perspective-[1000px]"
                 style={{ boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)" }}
               >
                 {/* Stacked Card with Flip Effect */}
@@ -235,19 +235,19 @@ const Services = () => {
                     style={{ backfaceVisibility: "hidden", padding: "2rem" }}
                   >
                     <div className="flex flex-col items-center justify-center h-full">
-                      <div className="w-14 h-14 flex items-center justify-center bg-gradient-to-tr from-primary-500 to-cyan-400 rounded-full shadow-lg mb-4">
+                      <div className="w-14 h-14 flex items-center justify-center bg-gradient-to-tr from-[#00bcd4] to-cyan-400 rounded-full shadow-lg mb-4">
                         <span className="font-extrabold text-2xl text-white">
                           {highlight[0]}
                         </span>
                       </div>
-                      <div className="font-extrabold text-xl text-primary-500 mb-2 text-center">
+                      <div className="font-extrabold text-xl text-[#00bcd4] mb-2 text-center">
                         {highlight}
                       </div>
                       <div className="text-gray-700 dark:text-gray-300 text-center mb-2">{`We deliver ${highlight.toLowerCase()} for every client.`}</div>
                     </div>
                   </div>
                   <div
-                    className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400 to-primary-500 flex items-center justify-center rotate-y-180 transition-transform duration-700 group-hover:rotate-y-0"
+                    className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400 to-[#00bcd4] flex items-center justify-center rotate-y-180 transition-transform duration-700 group-hover:rotate-y-0"
                     style={{ backfaceVisibility: "hidden", padding: "2rem" }}
                   >
                     <div className="font-bold text-lg text-white text-center">
@@ -274,7 +274,7 @@ const Services = () => {
 
         {/* Section 5: Service Stats (Animated Circular Grid) */}
         <section className="py-20 px-6 max-w-5xl mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-10 text-primary-500 text-center">
+          <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
             Our Impact
           </h2>
           <div className="flex gap-10 justify-center items-center flex-wrap">
@@ -345,7 +345,7 @@ const Services = () => {
                     height={40}
                   />
                 </div>
-                <div className="font-extrabold text-3xl text-primary-500 mb-2 mt-2">
+                <div className="font-extrabold text-3xl text-[#00bcd4] mb-2 mt-2">
                   {fact.value}
                 </div>
                 <div className="font-semibold text-lg text-gray-700 dark:text-gray-300 text-center">
@@ -369,7 +369,7 @@ const Services = () => {
           </div>
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative group w-full max-w-lg">
-              <div className="absolute inset-0 rounded-3xl p-[3px] bg-gradient-to-tr from-primary-500 via-cyan-400 to-amber-400 animate-gradient-x blur-sm opacity-80 group-hover:opacity-100 transition-all duration-500" />
+              <div className="absolute inset-0 rounded-3xl p-[3px] bg-gradient-to-tr from-[#00bcd4] via-cyan-400 to-amber-400 animate-gradient-x blur-sm opacity-80 group-hover:opacity-100 transition-all duration-500" />
               <div className="relative bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-12 flex flex-col items-center justify-center min-w-[340px]">
                 <div className="flex gap-6 mb-6 animate-float">
                   <a
@@ -403,7 +403,7 @@ const Services = () => {
                     />
                   </a>
                 </div>
-                <h2 className="text-3xl font-bold mb-4 text-primary-500 text-center drop-shadow-lg">
+                <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center drop-shadow-lg">
                   Let's Connect!
                 </h2>
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
@@ -412,7 +412,7 @@ const Services = () => {
                 </p>
                 <a
                   href="/contact-us"
-                  className="px-10 py-4 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide animate-bounce"
+                  className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide animate-bounce"
                 >
                   Get in Touch
                 </a>

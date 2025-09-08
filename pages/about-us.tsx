@@ -28,9 +28,9 @@ const AboutUs = () => {
           >
             <source src="/about-bg-video.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/30 to-cyan-400/30 z-0" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#00bcd4]/30 to-cyan-400/30 z-0" />
           <div className="relative z-10 max-w-2xl mx-auto">
-            <h1 className="text-5xl font-extrabold mb-6 text-primary-600 dark:text-primary-400 drop-shadow-lg">
+            <h1 className="text-5xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da] drop-shadow-lg">
               About Us
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
@@ -52,7 +52,7 @@ const AboutUs = () => {
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-center">
-            <h2 className="text-4xl font-bold mb-6 text-primary-500">
+            <h2 className="text-4xl font-bold mb-6 text-[#00bcd4]">
               Our Story
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300  ">
@@ -92,7 +92,7 @@ const AboutUs = () => {
 
         {/* Section 3: Meet the Team (Horizontal Scroll Carousel) */}
         <section className="py-20 px-6 justify-center flex flex-col items-center   mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-12 text-primary-500 text-center">
+          <h2 className="text-3xl font-bold mb-12 text-[#00bcd4] text-center">
             Meet the Team
           </h2>
           <div className="flex flex-wrap gap-10 pb-4">
@@ -137,9 +137,9 @@ const AboutUs = () => {
                   alt={member.name}
                   width={100}
                   height={100}
-                  className="rounded-full mb-6 border-4 border-primary-500 shadow-lg"
+                  className="rounded-full mb-6 border-4 border-[#00bcd4] shadow-lg"
                 />
-                <div className="font-bold text-2xl text-primary-500 mb-1 text-center">
+                <div className="font-bold text-2xl text-[#00bcd4] mb-1 text-center">
                   {member.name}
                 </div>
                 <div className="text-base text-gray-500 dark:text-gray-400 mb-2 text-center">
@@ -173,7 +173,7 @@ const AboutUs = () => {
 
         {/* Section 4: Our Values (Horizontal Stepper) */}
         <section className="py-20 px-6   mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-14 text-primary-500 text-center">
+          <h2 className="text-3xl font-bold mb-14 text-[#00bcd4] text-center">
             Our Values
           </h2>
           <div className="flex flex-wrap gap-2  items-center justify-center md:gap-0 relative">
@@ -200,8 +200,8 @@ const AboutUs = () => {
               >
                 <div
                   className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 shadow-lg border-4 ${
-                    idx === 1 ? "border-cyan-400" : "border-primary-500"
-                  } bg-gradient-to-tr from-primary-500 to-cyan-400 animate-pulse`}
+                    idx === 1 ? "border-cyan-400" : "border-[#00bcd4]"
+                  } bg-gradient-to-tr from-[#00bcd4] to-cyan-400 animate-pulse`}
                 >
                   <Image
                     src={value.icon}
@@ -210,7 +210,7 @@ const AboutUs = () => {
                     height={48}
                   />
                 </div>
-                <h4 className="font-bold text-xl text-primary-500 mb-2 text-center">
+                <h4 className="font-bold text-xl text-[#00bcd4] mb-2 text-center">
                   {value.title}
                 </h4>
                 <p className="text-gray-700 dark:text-gray-300 text-center">
@@ -223,7 +223,7 @@ const AboutUs = () => {
 
         {/* Section 5: Achievements (Circular Stats Carousel) */}
         <section className="py-20 px-6 max-w-5xl mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-14 text-primary-500 text-center">
+          <h2 className="text-3xl font-bold mb-14 text-[#00bcd4] text-center">
             Achievements
           </h2>
           <div className="flex gap-10 justify-center items-center flex-wrap">
@@ -300,7 +300,7 @@ const AboutUs = () => {
                     height={40}
                   />
                 </div>
-                <div className="font-extrabold text-3xl text-primary-500 mb-2 mt-2">
+                <div className="font-extrabold text-3xl text-[#00bcd4] mb-2 mt-2">
                   {fact.value}
                 </div>
                 <div className="font-semibold text-lg text-gray-700 dark:text-gray-300 text-center">
@@ -327,7 +327,7 @@ const AboutUs = () => {
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative group w-full max-w-lg">
               {/* Animated Gradient Border */}
-              <div className="absolute inset-0 rounded-3xl p-[3px] bg-gradient-to-tr from-primary-500 via-cyan-400 to-amber-400 animate-gradient-x blur-sm opacity-80 group-hover:opacity-100 transition-all duration-500" />
+              <div className="absolute inset-0 rounded-3xl p-[3px] bg-gradient-to-tr from-[#00bcd4] via-cyan-400 to-amber-400 animate-gradient-x blur-sm opacity-80 group-hover:opacity-100 transition-all duration-500" />
               <div className="relative bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-12 flex flex-col items-center justify-center min-w-[340px]">
                 {/* Floating Contact Icons */}
                 <div className="flex gap-6 mb-6 animate-float">
@@ -362,7 +362,7 @@ const AboutUs = () => {
                     />
                   </a>
                 </div>
-                <h2 className="text-3xl font-bold mb-4 text-primary-500 text-center drop-shadow-lg">
+                <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center drop-shadow-lg">
                   Let's Connect!
                 </h2>
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
@@ -372,7 +372,7 @@ const AboutUs = () => {
                 </p>
                 <a
                   href="/contact-us"
-                  className="px-10 py-4 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide animate-bounce"
+                  className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide animate-bounce"
                 >
                   Get in Touch
                 </a>

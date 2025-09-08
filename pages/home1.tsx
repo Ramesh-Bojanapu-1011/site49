@@ -44,7 +44,7 @@ const Home1 = () => {
             </p>
             <a
               href="/contact-us"
-              className="inline-block px-8 py-3 rounded-lg bg-amber-50 dark:bg-black dark:text-white font-semibold shadow-lg hover:bg-primary-600 transition-colors duration-200 text-lg"
+              className="inline-block px-8 py-3 rounded-lg bg-amber-50 dark:bg-black dark:text-white font-semibold shadow-lg hover:bg-[#0097a7] transition-colors duration-200 text-lg"
             >
               Get in Touch
             </a>
@@ -71,9 +71,9 @@ const Home1 = () => {
               />
             </div>
             <div className="md:w-1/2">
-              <div className="bg-gradient-to-tr from-primary-500 to-cyan-400 rounded-3xl shadow-2xl p-1">
+              <div className="bg-gradient-to-tr from-[#00bcd4] to-cyan-400 rounded-3xl shadow-2xl p-1">
                 <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col   justify-center">
-                  <h2 className="text-3xl font-bold mb-4 text-primary-500 text-center">
+                  <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center">
                     About Us
                   </h2>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 text-justify  ">
@@ -90,7 +90,7 @@ const Home1 = () => {
                   </p>
                   <a
                     href="/about-us"
-                    className="inline-block px-8 py-3 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-lg tracking-wide text-center"
+                    className="inline-block px-8 py-3 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-lg tracking-wide text-center"
                   >
                     Learn More
                   </a>
@@ -102,7 +102,7 @@ const Home1 = () => {
 
         {/* Why Choose Me Section */}
         <section className="py-16 px-6 mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-6 text-center text-primary-500">
+          <h2 className="text-3xl font-bold mb-6 text-center text-[#00bcd4]">
             Why Choose Me?
           </h2>
           <div className="flex flex-wrap justify-center gap-8">
@@ -112,7 +112,7 @@ const Home1 = () => {
                 label: "Projects Completed",
                 value: "120+",
                 icon: (
-                  <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-primary-500 to-cyan-400 shadow-lg mb-4">
+                  <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 shadow-lg mb-4">
                     <FolderKanban />
                   </span>
                 ),
@@ -121,7 +121,7 @@ const Home1 = () => {
                 label: "Happy Clients",
                 value: "80+",
                 icon: (
-                  <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-green-400 to-primary-500 shadow-lg mb-4">
+                  <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-green-400 to-[#00bcd4] shadow-lg mb-4">
                     <User2 />
                   </span>
                 ),
@@ -130,7 +130,7 @@ const Home1 = () => {
                 label: "Years Experience",
                 value: "5+",
                 icon: (
-                  <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-yellow-400 to-primary-500 shadow-lg mb-4">
+                  <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-yellow-400 to-[#00bcd4] shadow-lg mb-4">
                     <Clock10 />
                   </span>
                 ),
@@ -139,7 +139,7 @@ const Home1 = () => {
                 label: "Awards Won",
                 value: "10",
                 icon: (
-                  <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-pink-400 to-primary-500 shadow-lg mb-4">
+                  <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-pink-400 to-[#00bcd4] shadow-lg mb-4">
                     <AwardIcon />
                   </span>
                 ),
@@ -150,7 +150,7 @@ const Home1 = () => {
                 className="min-w-[220px] max-w-xs bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center mx-2 transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
               >
                 {stat.icon}
-                <div className="text-4xl font-extrabold text-primary-500 mb-2 animate-pulse">
+                <div className="text-4xl font-extrabold text-[#00bcd4] mb-2 animate-pulse">
                   {stat.value}
                 </div>
                 <div className="font-semibold text-lg text-gray-700 dark:text-gray-300">
@@ -163,7 +163,7 @@ const Home1 = () => {
 
         {/* Featured Success Stories Section */}
         <section className="py-16 px-6 max-w-7xl mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-6 text-center text-primary-500">
+          <h2 className="text-3xl font-bold mb-6 text-center text-[#00bcd4]">
             Featured Success Stories
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -196,7 +196,7 @@ const Home1 = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4 flex-1 flex flex-col justify-between">
-                  <h4 className="font-bold text-lg mb-2 text-primary-500">
+                  <h4 className="font-bold text-lg mb-2 text-[#00bcd4]">
                     {story.title}
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300">
@@ -210,7 +210,7 @@ const Home1 = () => {
 
         {/* Client Reviews Section */}
         <section className="py-16 px-6   mx-auto w-full">
-          <h2 className="text-3xl  font-bold mb-6 text-center text-primary-500">
+          <h2 className="text-3xl  font-bold mb-6 text-center text-[#00bcd4]">
             Client Reviews
           </h2>
           <div className="flex flex-col md:flex-row items-center justify-between   gap-8 pb-4  ">
@@ -243,7 +243,7 @@ const Home1 = () => {
                   alt={review.name}
                   width={64}
                   height={64}
-                  className="rounded-full mb-4 w-20 h-20 object-cover object-top border-4 border-primary-500"
+                  className="rounded-full mb-4 w-20 h-20 object-cover object-top border-4 border-[#00bcd4]"
                 />
                 <div className="flex items-center justify-center mb-2">
                   {[...Array(Math.floor(review.rating))].map((_, i) => (
@@ -256,7 +256,7 @@ const Home1 = () => {
                 <p className="text-gray-700 dark:text-gray-300 italic mb-4">
                   "{review.text}"
                 </p>
-                <div className="font-semibold text-primary-500">
+                <div className="font-semibold text-[#00bcd4]">
                   - {review.name}
                 </div>
               </div>
@@ -267,9 +267,9 @@ const Home1 = () => {
         {/* Let's Collaborate Section */}
         <section className="py-16 px-6   mx-auto w-full">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="bg-gradient-to-tr from-primary-500 to-cyan-400 rounded-3xl shadow-2xl p-1">
+            <div className="bg-gradient-to-tr from-[#00bcd4] to-cyan-400 rounded-3xl shadow-2xl p-1">
               <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col items-center justify-center">
-                <h2 className="text-3xl font-bold mb-4 text-primary-500 text-center">
+                <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center">
                   Let's Collaborate
                 </h2>
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
@@ -279,7 +279,7 @@ const Home1 = () => {
                 </p>
                 <a
                   href="/contact-us"
-                  className="px-10 py-4 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-xl tracking-wide"
+                  className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-xl tracking-wide"
                 >
                   Start Your Project
                 </a>

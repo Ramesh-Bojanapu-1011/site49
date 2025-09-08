@@ -18,9 +18,9 @@ const Blog = () => (
       <Header />
       {/* Section 1: Hero */}
       <section className="relative flex flex-col items-center justify-center min-h-[60vh] text-center">
-        <div className="absolute inset-0 w-full h-full object-cover opacity-30 z-0 bg-gradient-to-tr from-primary-500/30 to-cyan-400/30" />
+        <div className="absolute inset-0 w-full h-full object-cover opacity-30 z-0 bg-gradient-to-tr from-[#00bcd4]/30 to-cyan-400/30" />
         <div className="relative z-10 max-w-2xl mx-auto">
-          <h1 className="text-5xl font-extrabold mb-6 text-primary-600 dark:text-primary-400 drop-shadow-lg">
+          <h1 className="text-5xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da] drop-shadow-lg">
             Our Blog
           </h1>
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
@@ -28,7 +28,7 @@ const Blog = () => (
           </p>
           <Link
             href="#latest"
-            className="px-8 py-4 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-lg tracking-wide animate-bounce"
+            className="px-8 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-lg tracking-wide animate-bounce"
           >
             Explore Latest Posts
           </Link>
@@ -37,7 +37,7 @@ const Blog = () => (
 
       {/* Featured Case Studies Section */}
       <section className="py-16 px-6 max-w-7xl mx-auto w-full">
-        <h2 className="text-3xl font-bold mb-6 text-center text-primary-500">
+        <h2 className="text-3xl font-bold mb-6 text-center text-[#00bcd4]">
           Reader's Picks
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -73,7 +73,7 @@ const Blog = () => (
                 className="w-full h-48 object-cover"
               />
               <div className="p-6 flex flex-col flex-1">
-                <h4 className="font-bold text-xl mb-2 text-primary-500">
+                <h4 className="font-bold text-xl mb-2 text-[#00bcd4]">
                   {study.title}
                 </h4>
                 <p className="text-gray-700 dark:text-gray-300 mb-4 flex-1">
@@ -81,7 +81,7 @@ const Blog = () => (
                 </p>
                 <a
                   href={study.link}
-                  className="inline-block mt-auto px-6 py-2 rounded-lg bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 text-base"
+                  className="inline-block mt-auto px-6 py-2 rounded-lg bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 text-base"
                 >
                   Read More
                 </a>
@@ -94,7 +94,7 @@ const Blog = () => (
       {/* Section 3: Explore Blog Categories */}
       <section className="py-20 px-6 mx-auto w-full flex flex-col md:flex-row md:items-start gap-12">
         <div className="md:w-1/2 flex  flex-col justify-center mb-10 md:mb-0">
-          <h2 className="text-4xl font-extrabold mb-6 text-primary-600 dark:text-primary-400">
+          <h2 className="text-4xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da]">
             Explore by Blog Categories
           </h2>
           <p className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-6">
@@ -146,7 +146,7 @@ const Blog = () => (
 
       {/* Section 4: Author Spotlight (Vertical Cards) */}
       <section className="py-20 px-6 mx-auto w-full">
-        <h2 className="text-3xl font-bold mb-10 text-primary-500 text-center">
+        <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
           Author Spotlight
         </h2>
         <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
@@ -180,9 +180,9 @@ const Blog = () => (
                 alt={author.name}
                 width={80}
                 height={80}
-                className="rounded-full mb-6 border-4 border-primary-500 shadow-lg"
+                className="rounded-full mb-6 border-4 border-[#00bcd4] shadow-lg"
               />
-              <div className="font-bold text-xl text-primary-500 mb-1 text-center">
+              <div className="font-bold text-xl text-[#00bcd4] mb-1 text-center">
                 {author.name}
               </div>
               <div className="text-base text-gray-500 dark:text-gray-400 mb-2 text-center">
@@ -198,7 +198,7 @@ const Blog = () => (
 
       {/* Section 5: Quick Tips (Masonry Grid) */}
       <section className="py-20 px-6 mx-auto w-full">
-        <h2 className="text-4xl font-extrabold mb-10 text-primary-600 dark:text-primary-400 text-left md:text-center">
+        <h2 className="text-4xl font-extrabold mb-10 text-[#0097a7] dark:text-[#26c6da] text-left md:text-center">
           Quick Tips for Creators
         </h2>
         <div className="flex gap-8 flex-wrap justify-center pb-4">
@@ -262,7 +262,7 @@ const Blog = () => (
       <section className="py-20   mx-auto w-full flex flex-col items-center justify-center">
         <div className="relative group w-full  ">
           <div className="relative bg-white dark:bg-gray-900     p-12 flex flex-col items-center justify-center min-w-[340px]">
-            <h2 className="text-3xl font-bold mb-4 text-primary-500 text-center drop-shadow-lg">
+            <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center drop-shadow-lg">
               Stay Inspired!
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
@@ -273,12 +273,12 @@ const Blog = () => (
               <input
                 type="email"
                 placeholder="Your email address"
-                className="w-full px-6 py-3 rounded-xl border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-primary-500 text-lg"
+                className="w-full px-6 py-3 rounded-xl border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] text-lg"
                 required
               />
               <button
                 type="submit"
-                className="px-10 py-4 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105   text-xl tracking-wide  "
+                className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105   text-xl tracking-wide  "
               >
                 Subscribe
               </button>

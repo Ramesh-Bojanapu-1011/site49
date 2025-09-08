@@ -13,7 +13,7 @@ export default function Home() {
         <section className="flex flex-1 flex-col justify-center items-center text-center px-4 py-16 relative z-10">
           <div className="max-w-2xl w-full mx-auto bg-white/80 dark:bg-gray-900/80 rounded-3xl shadow-2xl border-4 border-transparent bg-clip-padding p-8 md:p-12 animate-gradient-border">
             <div className="flex justify-center mb-6">
-              <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-primary-500 to-cyan-400 shadow-lg">
+              <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 shadow-lg">
                 <svg
                   width="36"
                   height="36"
@@ -36,15 +36,15 @@ export default function Home() {
             </h1>
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8">
               Showcase your{" "}
-              <span className="font-semibold text-primary-500 dark:text-cyan-400">
+              <span className="font-semibold text-[#00bcd4] dark:text-cyan-400">
                 skills
               </span>
               ,{" "}
-              <span className="font-semibold text-primary-500 dark:text-cyan-400">
+              <span className="font-semibold text-[#00bcd4] dark:text-cyan-400">
                 projects
               </span>
               , and{" "}
-              <span className="font-semibold text-primary-500 dark:text-cyan-400">
+              <span className="font-semibold text-[#00bcd4] dark:text-cyan-400">
                 services
               </span>
               .<br />
@@ -52,7 +52,7 @@ export default function Home() {
             </p>
             <Link
               href="/auth"
-              className="inline-block px-10 py-4 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-xl tracking-wide"
+              className="inline-block px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-xl tracking-wide"
             >
               Go to Login
             </Link>

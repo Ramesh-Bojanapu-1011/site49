@@ -35,7 +35,7 @@ const HomePage2 = () => {
             </p>
             <a
               href="/contact-us"
-              className="inline-block px-10 py-4 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl"
+              className="inline-block px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl"
             >
               Get Started
             </a>
@@ -44,7 +44,7 @@ const HomePage2 = () => {
 
         {/* Section 2: Featured Skills */}
         <section className="py-24 px-6 max-w-6xl mx-auto w-full">
-          <h2 className="text-4xl font-bold mb-16 text-center text-primary-500">
+          <h2 className="text-4xl font-bold mb-16 text-center text-[#00bcd4]">
             Featured Skills
           </h2>
 
@@ -61,10 +61,10 @@ const HomePage2 = () => {
             ].map((skill, index) => (
               <div
                 key={index}
-                className="relative rounded-3xl p-8 flex flex-col items-center justify-center bg-gradient-to-br from-white/60 to-primary-100/40 dark:from-gray-800/60 dark:to-primary-900/40 backdrop-blur-xl border-2 border-primary-400 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-105"
+                className="relative rounded-3xl p-8 flex flex-col items-center justify-center bg-gradient-to-br from-white/60 to-[#b3eaf2]/40 dark:from-gray-800/60 dark:to-[#002d32]/40 backdrop-blur-xl border-2 border-[#26c6da] shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-105"
               >
                 {/* Floating Icon Circle */}
-                <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-gradient-to-tr from-primary-500 to-cyan-400 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900 z-20">
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900 z-20">
                   <Image
                     src={skill.icon}
                     alt={skill.name}
@@ -75,7 +75,7 @@ const HomePage2 = () => {
                 </div>
                 {/* Card Content */}
                 <div className="pt-10 pb-2 flex flex-col items-center">
-                  <span className="font-bold text-xl text-primary-600 dark:text-primary-300 mb-2 text-center">
+                  <span className="font-bold text-xl text-[#0097a7] dark:text-[#4dd0e1] mb-2 text-center">
                     {skill.name}
                   </span>
                 </div>
@@ -86,7 +86,7 @@ const HomePage2 = () => {
 
         {/* Section 3: Process Timeline (Zigzag Layout) */}
         <section className="py-20 px-6   mx-auto w-full">
-          <h2 className="text-4xl font-bold mb-16 text-center text-primary-500">
+          <h2 className="text-4xl font-bold mb-16 text-center text-[#00bcd4]">
             My Process
           </h2>
           <div className="relative">
@@ -119,7 +119,7 @@ const HomePage2 = () => {
                 }`}
               >
                 {/* Step Icon */}
-                <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-primary-500 to-cyan-400 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900 mx-6 z-10">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900 mx-6 z-10">
                   <Image
                     src={item.icon}
                     alt={item.step}
@@ -129,7 +129,7 @@ const HomePage2 = () => {
                 </div>
                 {/* Step Content */}
                 <div className="flex-1 bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8">
-                  <h3 className="font-bold text-2xl text-primary-500 mb-2">
+                  <h3 className="font-bold text-2xl text-[#00bcd4] mb-2">
                     {item.step}
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
@@ -143,7 +143,7 @@ const HomePage2 = () => {
 
         {/* Section 4: Client Success Stories (Animated Carousel) */}
         <section className="py-16 px-6  mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-8 text-center text-primary-500">
+          <h2 className="text-3xl font-bold mb-8 text-center text-[#00bcd4]">
             Client Success Stories
           </h2>
           <div className="relative">
@@ -192,7 +192,7 @@ const HomePage2 = () => {
                   <p className="italic text-lg text-gray-700 dark:text-gray-300 text-center mb-4">
                     "{client.quote}"
                   </p>
-                  <div className="font-bold text-primary-500 text-xl mb-1">
+                  <div className="font-bold text-[#00bcd4] text-xl mb-1">
                     {client.name}
                   </div>
                   <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
@@ -202,14 +202,14 @@ const HomePage2 = () => {
               ))}
             </div>
             <div
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-primary-500 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg cursor-pointer opacity-70 hover:opacity-100 transition duration-200"
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#00bcd4] text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg cursor-pointer opacity-70 hover:opacity-100 transition duration-200"
               style={{ display: "none" }}
             >
               {/* Left arrow for future carousel controls */}
               &#8592;
             </div>
             <div
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-primary-500 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg cursor-pointer opacity-70 hover:opacity-100 transition duration-200"
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#00bcd4] text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg cursor-pointer opacity-70 hover:opacity-100 transition duration-200"
               style={{ display: "none" }}
             >
               {/* Right arrow for future carousel controls */}
@@ -229,7 +229,7 @@ const HomePage2 = () => {
 
         {/* Section 5: Interactive Timeline (Career Milestones) */}
         <section className="py-20 px-6   mx-auto w-full">
-          <h2 className="text-4xl font-bold mb-16 text-center text-primary-500">
+          <h2 className="text-4xl font-bold mb-16 text-center text-[#00bcd4]">
             Our Journey Timeline
           </h2>
           <span className="flex h-20 w-20 rounded-full bg-amber-50 mx-auto mb-4" />
@@ -268,9 +268,9 @@ const HomePage2 = () => {
             ].map((milestone, idx) => (
               <div
                 key={idx}
-                className="min-w-[260px] max-w-xs bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center relative border-t-4 border-primary-400 hover:border-cyan-400 transition-all duration-300 hover:-translate-y-2 hover:scale-105"
+                className="min-w-[260px] max-w-xs bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center relative border-t-4 border-[#26c6da] hover:border-cyan-400 transition-all duration-300 hover:-translate-y-2 hover:scale-105"
               >
-                <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-primary-500 to-cyan-400 flex items-center justify-center shadow-lg mb-4">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 flex items-center justify-center shadow-lg mb-4">
                   <Image
                     src={milestone.icon}
                     alt={milestone.title}
@@ -278,7 +278,7 @@ const HomePage2 = () => {
                     height={32}
                   />
                 </div>
-                <div className="font-bold text-lg text-primary-500 mb-1">
+                <div className="font-bold text-lg text-[#00bcd4] mb-1">
                   {milestone.year}
                 </div>
                 <div className="font-semibold text-xl text-gray-800 dark:text-gray-200 mb-2 text-center">
@@ -294,9 +294,9 @@ const HomePage2 = () => {
 
         {/* Section 6: Call to Action */}
         <section className="py-16   mx-auto w-full">
-          <div className="bg-gradient-to-tr from-primary-500 to-cyan-400 rounded-3xl shadow-2xl p-1">
+          <div className="bg-gradient-to-tr from-[#00bcd4] to-cyan-400 rounded-3xl shadow-2xl p-1">
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col items-center justify-center">
-              <h2 className="text-3xl font-bold mb-4 text-primary-500 text-center">
+              <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center">
                 Ready to Work Together?
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
@@ -305,7 +305,7 @@ const HomePage2 = () => {
               </p>
               <a
                 href="/contact-us"
-                className="px-10 py-4 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide"
+                className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide"
               >
                 Contact Me
               </a>

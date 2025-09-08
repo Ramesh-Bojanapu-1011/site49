@@ -49,7 +49,7 @@ const Footer = () => {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="hover:text-primary-500 transition-colors duration-200"
+                  className="hover:text-[#00bcd4] transition-colors duration-200"
                 >
                   {link.name}
                 </a>
@@ -80,27 +80,27 @@ const Footer = () => {
               Email:{" "}
               <a
                 href="mailto:hello@email.com"
-                className="hover:text-primary-500"
+                className="hover:text-[#00bcd4]"
               >
                 hello@email.com
               </a>
             </li>
             <li>
               Phone:{" "}
-              <a href="tel:+1234567890" className="hover:text-primary-500">
+              <a href="tel:+1234567890" className="hover:text-[#00bcd4]">
                 +1 234 567 890
               </a>
             </li>
             <li>Location: City, Country</li>
           </ul>
           <div className="flex space-x-3 mt-3">
-            <a href="#" aria-label="Twitter" className="hover:text-primary-500">
+            <a href="#" aria-label="Twitter" className="hover:text-[#00bcd4]">
               <TwitterIcon />
             </a>
             <a
               href="#"
               aria-label="LinkedIn"
-              className="hover:text-primary-500"
+              className="hover:text-[#00bcd4]"
             >
               <LinkedinIcon />
             </a>
