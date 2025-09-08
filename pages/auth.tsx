@@ -5,15 +5,17 @@ import { User2 } from "lucide-react";
 type User = {
   email: string;
   password: string;
-  name?: string;
+  first: string;
+  last: string;
   signupTime?: string;
   loginTime?: string;
+  logoutTime?: string;
 };
 
 const ADMIN_EMAIL = "admin@enckonix.in";
 const ADMIN_PASS = "admin123";
 
-const getUsers = (): User[] => {
+export const getUsers = (): User[] => {
   if (typeof window !== "undefined") {
     const users = localStorage.getItem("users");
     return users ? JSON.parse(users) : [];
@@ -30,7 +32,12 @@ const saveUsers = (users: User[]) => {
 const AuthPage = () => {
   const router = useRouter();
   const [isLogin, setIsLogin] = useState(true);
-  const [form, setForm] = useState({ email: "", password: "", name: "" });
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+    firstname: "",
+    lastname: "",
+  });
   const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -63,7 +70,7 @@ const AuthPage = () => {
       }
     } else {
       // Signup
-      if (!form.email || !form.password || !form.name) {
+      if (!form.email || !form.password || !form.firstname || !form.lastname) {
         setError("All fields required");
         return;
       }
@@ -74,14 +81,15 @@ const AuthPage = () => {
       const newUser: User = {
         email: form.email,
         password: form.password,
-        name: form.name,
+        first: form.firstname,
+        last: form.lastname,
         signupTime: new Date().toISOString(),
         loginTime: "",
       };
       users.push(newUser);
       saveUsers(users);
       setIsLogin(true);
-      setForm({ email: form.email, password: "", name: form.name });
+      setForm({ email: form.email, password: "", firstname: "", lastname: "" });
       setError("Signup successful! Please login.");
     }
   };
@@ -99,15 +107,26 @@ const AuthPage = () => {
         </h2>
         <form onSubmit={handleSubmit} className="space-y-5">
           {!isLogin && (
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={form.name}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 shadow-sm"
-              required
-            />
+            <>
+              <input
+                type="text"
+                name="firstname"
+                placeholder="First Name"
+                value={form.firstname}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 shadow-sm"
+                required
+              />
+              <input
+                type="text"
+                name="lastname"
+                placeholder="Last Name"
+                value={form.lastname}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 shadow-sm"
+                required
+              />
+            </>
           )}
           <input
             type="email"

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { ModeToggle } from "./theme/ModeToggle";
 import i18n from "@/i18n";
+import { getUsers } from "../../pages/auth";
 
 const services = [
   "Web Design",
@@ -18,6 +19,7 @@ const services = [
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [userInitials, setUserInitials] = React.useState(""); // Default initials
 
   // Supported languages
   const supportedLanguages = [
@@ -30,8 +32,46 @@ const Header: React.FC = () => {
   const router = useRouter();
   const { t } = useTranslation();
 
+  React.useEffect(() => {
+    // Runs only in the browser
+    const userData = localStorage.getItem("currentUser");
+    // console.log("User Data:", userData); // Debugging line
+
+    if (userData) {
+      try {
+        const user = JSON.parse(userData);
+        const firstInitial = user.first
+          ? user.first.charAt(0).toUpperCase()
+          : "";
+        const lastInitial = user.last ? user.last.charAt(0).toUpperCase() : "";
+        setUserInitials(firstInitial + lastInitial);
+      } catch (error) {
+        console.error("Failed to parse user data:", error);
+      }
+    }
+  }, []);
+
   function handleLogout(): void {
-    throw new Error("Function not implemented.");
+    // Implement logout logic here
+    const users = getUsers();
+    const userData = localStorage.getItem("currentUser");
+    if (userData) {
+      try {
+        const user = JSON.parse(userData);
+        const updatedUsers = users.map((u) =>
+          u.email === user.email
+            ? { ...u, logoutTime: new Date().toISOString() }
+            : u,
+        );
+        // Save updated users back to localStorage
+        localStorage.setItem("users", JSON.stringify(updatedUsers));
+      } catch (error) {
+        console.error("Failed to parse user data during logout:", error);
+      }
+    }
+
+    window.localStorage.removeItem("currentUser");
+    window.location.href = "/auth"; // Redirect to home or login page
   }
 
   // Dropdown handler: only one open at a time
@@ -181,8 +221,8 @@ const Header: React.FC = () => {
               onClick={() => handleDropdown("profile")}
               className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
             >
-              <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 dark:to-blue-300 text-white px-3 py-1 font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
-                FL
+              <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 flex w-10 h-10 justify-center items-center text-center dark:to-blue-300 text-white font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
+                {userInitials}
               </span>
               <span className="ml-1">Profile</span> <span>▼</span>
             </button>
@@ -306,19 +346,19 @@ const Header: React.FC = () => {
                 onClick={() => handleDropdown("profile")}
                 className="w-full text-left py-2 flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               >
-                <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 dark:to-blue-300 text-white px-3 py-1 font-bold text-lg shadow-md border-2 border-white dark:border-gray-900 mr-2">
-                  FL
+                <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 flex w-10 h-10 justify-center items-center text-center dark:to-blue-300 text-white font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
+                  {userInitials}
                 </span>
                 Profile <span>▼</span>
               </button>
               {openDropdown === "profile" && (
                 <div className="  px-3   absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700">
-                  <a
-                    href="#logout"
+                  <button
+                    onClick={handleLogout}
                     className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                   >
                     Logout
-                  </a>
+                  </button>
                 </div>
               )}
             </div>
