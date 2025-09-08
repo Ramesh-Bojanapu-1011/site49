@@ -274,13 +274,35 @@ const Services = () => {
 
         {/* Section 5: Service Stats (Animated Circular Grid) */}
         <section className="py-20 px-6 max-w-5xl mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">Our Impact</h2>
+          <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
+            Our Impact
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 justify-center items-stretch">
-            {[ 
-              { icon: "/award.svg", label: "Awards", value: 12, color: "from-[#00bcd4] to-amber-400" },
-              { icon: "/project.svg", label: "Projects", value: 120, color: "from-cyan-400 to-[#00bcd4]" },
-              { icon: "/happy.svg", label: "Happy Clients", value: 85, color: "from-amber-400 to-[#00bcd4]" },
-              { icon: "/globe.svg", label: "Countries", value: 18, color: "from-[#00bcd4] to-cyan-400" },
+            {[
+              {
+                icon: "/award.svg",
+                label: "Awards",
+                value: 12,
+                color: "from-[#00bcd4] to-amber-400",
+              },
+              {
+                icon: "/project.svg",
+                label: "Projects",
+                value: 120,
+                color: "from-cyan-400 to-[#00bcd4]",
+              },
+              {
+                icon: "/happy.svg",
+                label: "Happy Clients",
+                value: 85,
+                color: "from-amber-400 to-[#00bcd4]",
+              },
+              {
+                icon: "/globe.svg",
+                label: "Countries",
+                value: 18,
+                color: "from-[#00bcd4] to-cyan-400",
+              },
             ].map((fact, idx) => (
               <div
                 key={idx}
@@ -288,8 +310,15 @@ const Services = () => {
                 style={{ boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)" }}
               >
                 {/* Vertical Icon Banner */}
-                <div className={`absolute -left-6 top-1/2 -translate-y-1/2 w-16 h-32 flex items-center justify-center bg-gradient-to-b ${fact.color} rounded-2xl shadow-lg border-4 border-white dark:border-gray-900 animate-float`}>
-                  <Image src={fact.icon} alt={fact.label} width={40} height={40} />
+                <div
+                  className={`absolute -left-6 top-1/2 -translate-y-1/2 w-16 h-32 flex items-center justify-center bg-gradient-to-b ${fact.color} rounded-2xl shadow-lg border-4 border-white dark:border-gray-900 animate-float`}
+                >
+                  <Image
+                    src={fact.icon}
+                    alt={fact.label}
+                    width={40}
+                    height={40}
+                  />
                 </div>
                 {/* Animated Number */}
                 <div className="font-extrabold text-5xl text-[#00bcd4] mb-2 mt-2 animate-bounce drop-shadow-lg">
@@ -298,17 +327,32 @@ const Services = () => {
                 <div className="font-semibold text-lg text-gray-700 dark:text-gray-300 text-center mb-2">
                   {fact.label}
                 </div>
-                <div className={`w-full h-2 rounded-full bg-gradient-to-r ${fact.color} mt-4 opacity-60`} />
+                <div
+                  className={`w-full h-2 rounded-full bg-gradient-to-r ${fact.color} mt-4 opacity-60`}
+                />
                 <style jsx>{`
                   @keyframes float {
-                    0%, 100% { transform: translateY(0); }
-                    50% { transform: translateY(-10px); }
+                    0%,
+                    100% {
+                      transform: translateY(0);
+                    }
+                    50% {
+                      transform: translateY(-10px);
+                    }
                   }
-                  .animate-float { animation: float 2.5s ease-in-out infinite; }
-                  .animate-bounce { animation: bounce 1.5s infinite alternate; }
+                  .animate-float {
+                    animation: float 2.5s ease-in-out infinite;
+                  }
+                  .animate-bounce {
+                    animation: bounce 1.5s infinite alternate;
+                  }
                   @keyframes bounce {
-                    0% { transform: translateY(0); }
-                    100% { transform: translateY(-12px); }
+                    0% {
+                      transform: translateY(0);
+                    }
+                    100% {
+                      transform: translateY(-12px);
+                    }
                   }
                 `}</style>
               </div>
