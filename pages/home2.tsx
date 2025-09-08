@@ -3,13 +3,15 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "@/components/Hedder";
 import Footer from "@/components/Footer";
+import { useTranslation } from "react-i18next";
 
 const HomePage2 = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>Home2 - Freelancer Portfolio</title>
-        <meta name="description" content="Freelancer Portfolio Home2" />
+        <title>{t("home2.pageTitle")}</title>
+        <meta name="description" content={t("home2.pageDesc")} />
       </Head>
       <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col caret-transparent">
         <Header />
@@ -24,20 +26,17 @@ const HomePage2 = () => {
           >
             <source src="/home2-bg.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-black bg-opacity-30 z-10" />
+          <div className="absolute inset-0 bg-black opacity-80 z-10" />
           <div className="relative z-20 max-w-2xl mx-auto">
             <h1 className="text-5xl font-extrabold mb-6 text-white drop-shadow-lg">
-              Elevate Your Freelance Journey
+              {t("home2.heroTitle")}
             </h1>
-            <p className="text-xl text-gray-200 mb-8">
-              Discover new opportunities, connect with clients, and showcase
-              your expertise in a vibrant portfolio.
-            </p>
+            <p className="text-xl text-gray-200 mb-8">{t("home2.heroDesc")}</p>
             <a
               href="/contact-us"
               className="inline-block px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl"
             >
-              Get Started
+              {t("home2.heroBtn")}
             </a>
           </div>
         </section>
@@ -45,19 +44,22 @@ const HomePage2 = () => {
         {/* Section 2: Featured Skills */}
         <section className="py-24 px-6 max-w-6xl mx-auto w-full">
           <h2 className="text-4xl font-bold mb-16 text-center text-[#00bcd4]">
-            Featured Skills
+            {t("home2.skillsTitle")}
           </h2>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10">
             {[
-              { name: "React", icon: "/skills/react.svg" },
-              { name: "Next.js", icon: "/skills/nextjs.svg" },
-              { name: "Figma", icon: "/skills/figma.svg" },
-              { name: "Node.js", icon: "/skills/nodejs.svg" },
-              { name: "TypeScript", icon: "/skills/typescript.svg" },
-              { name: "Tailwind", icon: "/skills/tailwind.svg" },
-              { name: "SEO", icon: "/skills/seo.svg" },
-              { name: "Branding", icon: "/skills/branding.svg" },
+              { name: t("home2.skillReact"), icon: "/skills/react.svg" },
+              { name: t("home2.skillNextjs"), icon: "/skills/nextjs.svg" },
+              { name: t("home2.skillFigma"), icon: "/skills/figma.svg" },
+              { name: t("home2.skillNodejs"), icon: "/skills/nodejs.svg" },
+              {
+                name: t("home2.skillTypescript"),
+                icon: "/skills/typescript.svg",
+              },
+              { name: t("home2.skillTailwind"), icon: "/skills/tailwind.svg" },
+              { name: t("home2.skillSEO"), icon: "/skills/seo.svg" },
+              { name: t("home2.skillBranding"), icon: "/skills/branding.svg" },
             ].map((skill, index) => (
               <div
                 key={index}
@@ -87,28 +89,28 @@ const HomePage2 = () => {
         {/* Section 3: Process Timeline (Zigzag Layout) */}
         <section className="py-20 px-6   mx-auto w-full">
           <h2 className="text-4xl font-bold mb-16 text-center text-[#00bcd4]">
-            My Process
+            {t("home2.processTitle")}
           </h2>
           <div className="relative">
             {[
               {
-                step: "Discovery",
-                desc: "Understanding your goals and vision.",
+                step: t("home2.processDiscovery"),
+                desc: t("home2.processDiscoveryDesc"),
                 icon: "/icons/search.svg",
               },
               {
-                step: "Design",
-                desc: "Crafting wireframes and visual concepts.",
+                step: t("home2.processDesign"),
+                desc: t("home2.processDesignDesc"),
                 icon: "/icons/design.svg",
               },
               {
-                step: "Development",
-                desc: "Building robust, scalable solutions.",
+                step: t("home2.processDevelopment"),
+                desc: t("home2.processDevelopmentDesc"),
                 icon: "/icons/code.svg",
               },
               {
-                step: "Launch",
-                desc: "Deploying and celebrating your success!",
+                step: t("home2.processLaunch"),
+                desc: t("home2.processLaunchDesc"),
                 icon: "/icons/rocket.svg",
               },
             ].map((item, idx, _arr) => (
@@ -144,38 +146,34 @@ const HomePage2 = () => {
         {/* Section 4: Client Success Stories (Animated Carousel) */}
         <section className="py-16 px-6  mx-auto w-full">
           <h2 className="text-3xl font-bold mb-8 text-center text-[#00bcd4]">
-            Client Success Stories
+            {t("home2.clientStoriesTitle")}
           </h2>
           <div className="relative">
             <div className="flex   gap-8 pb-4   snap-x snap-mandatory">
               {[
                 {
-                  name: "Priya Sharma",
+                  name: t("home2.client1Name"),
                   avatar: "/avatars/priya.jpg",
-                  quote:
-                    "Working with you was a game-changer! My brand now stands out and my website gets more leads than ever.",
-                  role: "Startup Founder",
+                  quote: t("home2.client1Quote"),
+                  role: t("home2.client1Role"),
                 },
                 {
-                  name: "David Lee",
+                  name: t("home2.client2Name"),
                   avatar: "/avatars/david.jpg",
-                  quote:
-                    "The UI kit you designed made our e-commerce launch smooth and visually stunning. Highly recommended!",
-                  role: "E-commerce Manager",
+                  quote: t("home2.client2Quote"),
+                  role: t("home2.client2Role"),
                 },
                 {
-                  name: "Sara Cohen",
+                  name: t("home2.client3Name"),
                   avatar: "/avatars/sara.jpg",
-                  quote:
-                    "Your mobile app design is intuitive and beautiful. Our users love the new experience!",
-                  role: "Product Lead",
+                  quote: t("home2.client3Quote"),
+                  role: t("home2.client3Role"),
                 },
                 {
-                  name: "Alex Kim",
+                  name: t("home2.client4Name"),
                   avatar: "/avatars/alex.jpg",
-                  quote:
-                    "Professional, creative, and always on time. My portfolio website is now my best asset.",
-                  role: "Freelancer",
+                  quote: t("home2.client4Quote"),
+                  role: t("home2.client4Role"),
                 },
               ].map((client, idx) => (
                 <div
@@ -230,39 +228,39 @@ const HomePage2 = () => {
         {/* Section 5: Interactive Timeline (Career Milestones) */}
         <section className="py-20 px-6   mx-auto w-full">
           <h2 className="text-4xl font-bold mb-16 text-center text-[#00bcd4]">
-            Our Journey Timeline
+            {t("home2.timelineTitle")}
           </h2>
           <span className="flex h-20 w-20 rounded-full bg-amber-50 mx-auto mb-4" />
           <div className="flex gap-10  pb-4 hide-scrollbar">
             {[
               {
                 year: "2018",
-                title: "Started Freelancing",
-                desc: "Began my journey as a freelance designer & developer.",
+                title: t("home2.timeline2018Title"),
+                desc: t("home2.timeline2018Desc"),
                 icon: "/icons/start.svg",
               },
               {
                 year: "2019",
-                title: "First Major Project",
-                desc: "Completed a full branding and website for a startup.",
+                title: t("home2.timeline2019Title"),
+                desc: t("home2.timeline2019Desc"),
                 icon: "/icons/project.svg",
               },
               {
                 year: "2021",
-                title: "Award Winner",
-                desc: "Received a national award for creative web design.",
+                title: t("home2.timeline2021Title"),
+                desc: t("home2.timeline2021Desc"),
                 icon: "/icons/award.svg",
               },
               {
                 year: "2023",
-                title: "Global Clients",
-                desc: "Worked with clients from 10+ countries worldwide.",
+                title: t("home2.timeline2023Title"),
+                desc: t("home2.timeline2023Desc"),
                 icon: "/icons/globe.svg",
               },
               {
                 year: "2025",
-                title: "50+ Projects",
-                desc: "Celebrated 50+ successful freelance projects.",
+                title: t("home2.timeline2025Title"),
+                desc: t("home2.timeline2025Desc"),
                 icon: "/icons/rocket.svg",
               },
             ].map((milestone, idx) => (
@@ -296,17 +294,16 @@ const HomePage2 = () => {
         <section className="py-16   mx-auto w-full">
           <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col items-center justify-center">
             <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center">
-              Ready to Work Together?
+              {t("home2.ctaTitle")}
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
-              Let's connect and turn your ideas into reality. Reach out for a
-              free consultation or to discuss your next big project!
+              {t("home2.ctaDesc")}
             </p>
             <a
               href="/contact-us"
               className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide"
             >
-              Contact Me
+              {t("home2.ctaBtn")}
             </a>
           </div>
         </section>
