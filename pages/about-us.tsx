@@ -3,16 +3,15 @@ import Image from "next/image";
 import Header from "@/components/Hedder";
 import Head from "next/head";
 import Footer from "@/components/Footer";
+import { useTranslation } from "react-i18next";
 
 const AboutUs = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>About Us</title>
-        <meta
-          name="description"
-          content="Learn more about our company, mission, and team."
-        />
+        <title>{t("aboutUs.pageTitle")}</title>
+        <meta name="description" content={t("aboutUs.pageDesc")} />
       </Head>
       <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col caret-transparent">
         <Header />
@@ -31,11 +30,10 @@ const AboutUs = () => {
           <div className="absolute inset-0 bg-gradient-to-tr from-[#00bcd4]/30 to-cyan-400/30 z-0" />
           <div className="relative z-10 max-w-2xl mx-auto">
             <h1 className="text-5xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da] drop-shadow-lg">
-              About Us
+              {t("aboutUs.heroTitle")}
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
-              Discover our journey, values, and the passionate team behind our
-              success.
+              {t("aboutUs.heroDesc")}
             </p>
           </div>
         </section>
@@ -45,7 +43,7 @@ const AboutUs = () => {
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
               src="/about-main.jpg"
-              alt="Our Story"
+              alt={t("aboutUs.storyImgAlt")}
               width={400}
               height={400}
               className="rounded-3xl w-150 h-150 shadow-2xl object-cover"
@@ -53,29 +51,23 @@ const AboutUs = () => {
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-center">
             <h2 className="text-4xl font-bold mb-6 text-[#00bcd4]">
-              Our Story
+              {t("aboutUs.storyTitle")}
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300  ">
-              From humble beginnings as a small group of passionate freelancers,
-              we've grown into a creative collective serving clients worldwide.
-              Our journey is defined by innovation, collaboration, and a
-              relentless pursuit of excellence.
+              {t("aboutUs.storyDesc1")}
             </p>
             <p className="text-base text-gray-600 dark:text-gray-400 mb-8">
-              We believe that every project is an opportunity to learn, grow,
-              and make a positive impact. Our team thrives on creative
-              challenges and values building long-term relationships with our
-              clients.
+              {t("aboutUs.storyDesc2")}
             </p>
             <ul className="space-y-4">
               {[
-                { year: "2017", desc: "Founded as a creative team" },
-                { year: "2018", desc: "Launched our first digital campaign" },
-                { year: "2019", desc: "First major client success" },
-                { year: "2020", desc: "Expanded our team and skillset" },
-                { year: "2021", desc: "Awarded for creative excellence" },
-                { year: "2022", desc: "Reached 100+ successful projects" },
-                { year: "2024", desc: "Global expansion to 12+ countries" },
+                { year: "2017", desc: t("aboutUs.timeline2017") },
+                { year: "2018", desc: t("aboutUs.timeline2018") },
+                { year: "2019", desc: t("aboutUs.timeline2019") },
+                { year: "2020", desc: t("aboutUs.timeline2020") },
+                { year: "2021", desc: t("aboutUs.timeline2021") },
+                { year: "2022", desc: t("aboutUs.timeline2022") },
+                { year: "2024", desc: t("aboutUs.timeline2024") },
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
                   <span className="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-400 to-cyan-400 flex items-center justify-center text-white font-bold">
@@ -93,35 +85,35 @@ const AboutUs = () => {
         {/* Section 3: Meet the Team (Horizontal Scroll Carousel) */}
         <section className="py-20 px-6 justify-center flex flex-col items-center   mx-auto w-full">
           <h2 className="text-3xl font-bold mb-12 text-[#00bcd4] text-center">
-            Meet the Team
+            {t("aboutUs.teamTitle")}
           </h2>
           <div className="flex flex-wrap gap-10 pb-4">
             {[
               {
-                name: "Ramesh B.",
-                role: "Lead Designer",
+                name: t("aboutUs.team1Name"),
+                role: t("aboutUs.team1Role"),
                 img: "/avatars/ramesh.jpg",
-                fun: "Loves sketching and coffee",
+                fun: t("aboutUs.team1Fun"),
                 socials: [
                   { icon: "/linkedin.svg", url: "#" },
                   { icon: "/twitter.svg", url: "#" },
                 ],
               },
               {
-                name: "Priya S.",
-                role: "Frontend Developer",
+                name: t("aboutUs.team2Name"),
+                role: t("aboutUs.team2Role"),
                 img: "/avatars/priya.jpg",
-                fun: "React wizard & music lover",
+                fun: t("aboutUs.team2Fun"),
                 socials: [
                   { icon: "/linkedin.svg", url: "#" },
                   { icon: "/github.svg", url: "#" },
                 ],
               },
               {
-                name: "David L.",
-                role: "Brand Strategist",
+                name: t("aboutUs.team3Name"),
+                role: t("aboutUs.team3Role"),
                 img: "/avatars/david.jpg",
-                fun: "Branding guru & traveler",
+                fun: t("aboutUs.team3Fun"),
                 socials: [
                   { icon: "/linkedin.svg", url: "#" },
                   { icon: "/instagram.svg", url: "#" },
@@ -174,24 +166,24 @@ const AboutUs = () => {
         {/* Section 4: Our Values (Horizontal Stepper) */}
         <section className="py-20 px-6   mx-auto w-full">
           <h2 className="text-3xl font-bold mb-14 text-[#00bcd4] text-center">
-            Our Values
+            {t("aboutUs.valuesTitle")}
           </h2>
           <div className="flex flex-wrap gap-2  items-center justify-center md:gap-0 relative">
             {[
               {
                 icon: "/creativity.svg",
-                title: "Creativity",
-                desc: "We believe in original ideas and innovative solutions.",
+                title: t("aboutUs.valueCreativityTitle"),
+                desc: t("aboutUs.valueCreativityDesc"),
               },
               {
                 icon: "/collaboration.svg",
-                title: "Collaboration",
-                desc: "Teamwork and open communication drive our success.",
+                title: t("aboutUs.valueCollaborationTitle"),
+                desc: t("aboutUs.valueCollaborationDesc"),
               },
               {
                 icon: "/integrity.svg",
-                title: "Integrity",
-                desc: "Honesty and transparency in every project.",
+                title: t("aboutUs.valueIntegrityTitle"),
+                desc: t("aboutUs.valueIntegrityDesc"),
               },
             ].map((value, idx) => (
               <div
@@ -224,31 +216,31 @@ const AboutUs = () => {
         {/* Section 5: Achievements (Circular Stats Carousel) */}
         <section className="py-20 px-6 max-w-5xl mx-auto w-full">
           <h2 className="text-3xl font-bold mb-14 text-[#00bcd4] text-center">
-            Achievements
+            {t("aboutUs.achievementsTitle")}
           </h2>
           <div className="flex gap-10 justify-center items-center flex-wrap">
             {[
               {
                 icon: "/award.svg",
-                label: "Awards",
+                label: t("aboutUs.achievementsAwards"),
                 value: 7,
                 percent: 70,
               },
               {
                 icon: "/project.svg",
-                label: "Projects",
+                label: t("aboutUs.achievementsProjects"),
                 value: 54,
                 percent: 90,
               },
               {
                 icon: "/happy.svg",
-                label: "Happy Clients",
+                label: t("aboutUs.achievementsHappyClients"),
                 value: 38,
                 percent: 80,
               },
               {
                 icon: "/globe.svg",
-                label: "Countries",
+                label: t("aboutUs.achievementsCountries"),
                 value: 12,
                 percent: 60,
               },
@@ -317,7 +309,7 @@ const AboutUs = () => {
           <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
             <Image
               src="/contact-main.jpg"
-              alt="Contact Us"
+              alt={t("aboutUs.contactImgAlt")}
               width={400}
               height={400}
               className="rounded-3xl w-96 h-96 shadow-2xl object-cover"
@@ -363,18 +355,16 @@ const AboutUs = () => {
                   </a>
                 </div>
                 <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center drop-shadow-lg">
-                  Let's Connect!
+                  {t("aboutUs.contactTitle")}
                 </h2>
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
-                  Have a project in mind or just want to say hello? Reach out
-                  for a free consultation or to discuss your next big idea.
-                  We're excited to collaborate!
+                  {t("aboutUs.contactDesc")}
                 </p>
                 <a
                   href="/contact-us"
                   className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide animate-bounce"
                 >
-                  Get in Touch
+                  {t("aboutUs.contactBtn")}
                 </a>
               </div>
             </div>
