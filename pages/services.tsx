@@ -5,54 +5,57 @@ import Head from "next/head";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
-const servicesList = [
-  {
-    name: "Web Design",
-    icon: "/web-design.svg",
-    desc: "Modern, responsive websites tailored to your brand.",
-    link: "/web-design",
-  },
-  {
-    name: "Graphic Design",
-    icon: "/graphic-design.svg",
-    desc: "Stunning visuals and graphics to elevate your brand.",
-    link: "/graphic-design",
-  },
-  {
-    name: "SEO Optimization",
-    icon: "/seo-optimization.svg",
-    desc: "Enhance your website's visibility and ranking on search engines.",
-    link: "/seo-optimization",
-  },
-  {
-    name: "Content Writing",
-    icon: "/content-writing.svg",
-    desc: "Boost your online presence and reach your audience.",
-    link: "/content-writing",
-  },
-  {
-    name: "Branding",
-    icon: "/branding.svg",
-    desc: "Distinctive branding and identity creation.",
-    link: "/branding",
-  },
-  {
-    name: "Digital Marketing",
-    icon: "/digital-marketing.svg",
-    desc: "Expert strategies to enhance your online presence.",
-    link: "/digital-marketing",
-  },
-];
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 const Services = () => {
+  const { t } = useTranslation();
+  console.log(i18next.language);
+
+  const servicesList = [
+    {
+      name: t("services.webDesignTitle"),
+      icon: "/web-design.svg",
+      desc: t("services.webDesignDesc"),
+      link: "/web-design",
+    },
+    {
+      name: t("services.graphicDesignTitle"),
+      icon: "/graphic-design.svg",
+      desc: t("services.graphicDesignDesc"),
+      link: "/graphic-design",
+    },
+    {
+      name: t("services.seoTitle"),
+      icon: "/seo-optimization.svg",
+      desc: t("services.seoDesc"),
+      link: "/seo-optimization",
+    },
+    {
+      name: t("services.contentWritingTitle"),
+      icon: "/content-writing.svg",
+      desc: t("services.contentWritingDesc"),
+      link: "/content-writing",
+    },
+    {
+      name: t("services.brandingTitle"),
+      icon: "/branding.svg",
+      desc: t("services.brandingDesc"),
+      link: "/branding",
+    },
+    {
+      name: t("services.digitalMarketingTitle"),
+      icon: "/digital-marketing.svg",
+      desc: t("services.digitalMarketingDesc"),
+      link: "/digital-marketing",
+    },
+  ];
+
   return (
     <>
       <Head>
-        <title>Our Services</title>
-        <meta
-          name="description"
-          content="Explore our full range of creative and digital services."
-        />
+        <title>{t("services.pageTitle")}</title>
+        <meta name="description" content={t("services.pageDesc")} />
       </Head>
       <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col caret-transparent">
         <Header />
@@ -70,11 +73,10 @@ const Services = () => {
           <div className="absolute inset-0 bg-gradient-to-tr from-[#00bcd4]/30 to-cyan-400/30 z-0" />
           <div className="relative z-10 max-w-2xl mx-auto">
             <h1 className="text-5xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da] drop-shadow-lg">
-              Our Services
+              {t("services.heroTitle")}
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
-              Discover the creative solutions we offer to help your business
-              grow and thrive.
+              {t("services.heroDesc")}
             </p>
           </div>
         </section>
@@ -82,7 +84,7 @@ const Services = () => {
         {/* Section 2: Services Grid */}
         <section className="py-20 px-6 max-w-6xl mx-auto w-full">
           <h2 className="text-3xl font-bold mb-12 text-[#00bcd4] text-center">
-            What We Offer
+            {t("services.offerTitle")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             {servicesList.map((service, idx) => (
@@ -138,41 +140,41 @@ const Services = () => {
         {/* Section 3: Zig-Zag Timeline (Modern Look) */}
         <section className="py-20 px-6 mx-auto w-full">
           <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
-            How We Work
+            {t("services.timelineTitle")}
           </h2>
           <div className="relative   mx-auto">
             <div className="absolute left-1/2 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#00bcd4] via-cyan-400 to-amber-400 opacity-40 z-0" />
             <div className="flex flex-col gap-16 relative z-10">
               {[
                 {
-                  label: "Discovery",
+                  label: t("services.timelineDiscoveryTitle"),
                   icon: "/search.svg",
-                  desc: "We start by understanding your goals and challenges.",
+                  desc: t("services.timelineDiscoveryDesc"),
                 },
                 {
-                  label: "Strategy",
+                  label: t("services.timelineStrategyTitle"),
                   icon: "/strategy.svg",
-                  desc: "We craft a custom plan for your success.",
+                  desc: t("services.timelineStrategyDesc"),
                 },
                 {
-                  label: "Design",
+                  label: t("services.timelineDesignTitle"),
                   icon: "/design.svg",
-                  desc: "We create stunning visuals and user experiences.",
+                  desc: t("services.timelineDesignDesc"),
                 },
                 {
-                  label: "Development",
+                  label: t("services.timelineDevTitle"),
                   icon: "/dev.svg",
-                  desc: "We build robust, scalable solutions.",
+                  desc: t("services.timelineDevDesc"),
                 },
                 {
-                  label: "Launch",
+                  label: t("services.timelineLaunchTitle"),
                   icon: "/launch.svg",
-                  desc: "We deploy and celebrate your new product.",
+                  desc: t("services.timelineLaunchDesc"),
                 },
                 {
-                  label: "Support",
+                  label: t("services.timelineSupportTitle"),
                   icon: "/support.svg",
-                  desc: "We provide ongoing help and optimization.",
+                  desc: t("services.timelineSupportDesc"),
                 },
               ].map((step, idx) => (
                 <div
@@ -184,7 +186,9 @@ const Services = () => {
                   <div className="relative w-1/2 bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-cyan-100 dark:border-cyan-900">
                     <div
                       className={`absolute ${
-                        idx % 2 != 0 ? "-left-8" : "-right-8"
+                        idx % 2 != 0
+                          ? `${i18next.language == "ar" || i18next.language == "he" ? "-right-8" : "-left-8"}`
+                          : `${i18next.language == "ar" || i18next.language == "he" ? "-left-8" : "-right-8"}`
                       } top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900`}
                     >
                       <Image
@@ -211,14 +215,14 @@ const Services = () => {
         {/* Section 4: Service Highlights (Horizontal Scroll Cards) */}
         <section className="py-20 px-6   mx-auto w-full">
           <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
-            Why Choose Us
+            {t("services.whyTitle")}
           </h2>
           <div className="flex gap-8 justify-center items-center   pb-4  ">
             {[
-              "Expert Team",
-              "Cutting-Edge Tech",
-              "Personalized Approach",
-              "Proven Results",
+              t("services.whyExpertTeam"),
+              t("services.whyTech"),
+              t("services.whyPersonalized"),
+              t("services.whyResults"),
             ].map((highlight, idx) => (
               <div
                 key={idx}
@@ -275,31 +279,31 @@ const Services = () => {
         {/* Section 5: Service Stats (Animated Circular Grid) */}
         <section className="py-20 px-6 max-w-5xl mx-auto w-full">
           <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
-            Our Impact
+            {t("services.impactTitle")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 justify-center items-stretch">
             {[
               {
                 icon: "/award.svg",
-                label: "Awards",
+                label: t("services.impactAwards"),
                 value: 12,
                 color: "from-[#00bcd4] to-amber-400",
               },
               {
                 icon: "/project.svg",
-                label: "Projects",
+                label: t("services.impactProjects"),
                 value: 120,
                 color: "from-cyan-400 to-[#00bcd4]",
               },
               {
                 icon: "/happy.svg",
-                label: "Happy Clients",
+                label: t("services.impactClients"),
                 value: 85,
                 color: "from-amber-400 to-[#00bcd4]",
               },
               {
                 icon: "/globe.svg",
-                label: "Countries",
+                label: t("services.impactCountries"),
                 value: 18,
                 color: "from-[#00bcd4] to-cyan-400",
               },
@@ -365,7 +369,7 @@ const Services = () => {
           <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
             <Image
               src="/contact-main.jpg"
-              alt="Contact Us"
+              alt={t("services.contactImgAlt")}
               width={400}
               height={400}
               className="rounded-3xl w-96 h-96 shadow-2xl object-cover"
@@ -408,17 +412,16 @@ const Services = () => {
                   </a>
                 </div>
                 <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center drop-shadow-lg">
-                  Let's Connect!
+                  {t("services.contactTitle")}
                 </h2>
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
-                  Ready to start your next project or have questions? Reach out
-                  for a free consultation or to discuss your goals!
+                  {t("services.contactDesc")}
                 </p>
                 <a
                   href="/contact-us"
                   className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide animate-bounce"
                 >
-                  Get in Touch
+                  {t("services.contactBtn")}
                 </a>
               </div>
             </div>

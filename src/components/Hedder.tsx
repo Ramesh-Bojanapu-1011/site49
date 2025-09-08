@@ -9,6 +9,7 @@ import { getUsers } from "../../pages/auth";
 
 const Header: React.FC = () => {
   const { t } = useTranslation();
+
   // Services array with translations
   const services = [
     {
@@ -36,7 +37,7 @@ const Header: React.FC = () => {
       link: "digital-marketing",
     },
   ];
-  console.log(services);
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [userInitials, setUserInitials] = React.useState(""); // Default initials
@@ -54,7 +55,6 @@ const Header: React.FC = () => {
   React.useEffect(() => {
     // Runs only in the browser
     const userData = localStorage.getItem("currentUser");
-    // console.log("User Data:", userData); // Debugging line
 
     if (userData) {
       try {
