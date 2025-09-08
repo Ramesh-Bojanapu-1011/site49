@@ -36,5 +36,38 @@
     "phone": "Phone",
     "location": "Location",
     "copyright": "Freelancer Portfolio. All rights reserved"
+  },
+
+  "home1": {
+    "pageTitle": "Home1 Page",
+    "heroTitle": "Showcase Your Talent",
+    "heroDesc": "Welcome to your Freelancer Portfolio. Build your brand, attract clients, and display your best work.",
+    "heroBtn": "Get in Touch",
+    "aboutImgAlt": "About Me",
+    "aboutTitle": "About Us",
+    "aboutDesc": "As a dedicated freelancer, I specialize in crafting unique digital portfolios and professional websites that help individuals and businesses stand out. My journey is driven by creativity, attention to detail, and a commitment to delivering results that exceed expectations. Whether you need a personal brand, a showcase for your work, or a platform to attract new clients, I bring expertise in web development, design, and branding to every project. Let's build your online presence together and turn your vision into reality.",
+    "aboutBtn": "Learn More",
+    "whyTitle": "Why Choose Me?",
+    "projectsCompleted": "Projects Completed",
+    "happyClients": "Happy Clients",
+    "yearsExperience": "Years Experience",
+    "awardsWon": "Awards Won",
+    "featuredTitle": "Featured Success Stories",
+    "ecommerceTitle": "E-Commerce Launch",
+    "ecommerceDesc": "Helped a local business launch their online store, increasing sales by 300% in the first quarter.",
+    "brandTitle": "Personal Brand Transformation",
+    "brandDesc": "Revamped a freelancer's portfolio and personal brand, leading to new international clients.",
+    "nonprofitTitle": "Nonprofit Awareness",
+    "nonprofitDesc": "Created a campaign site for a nonprofit, boosting donations and community engagement.",
+    "reviewsTitle": "Client Reviews",
+    "review1Name": "Priya Sharma",
+    "review1Text": "Working with this freelancer was a game-changer for my business. The website looks stunning and works flawlessly!",
+    "review2Name": "David Lee",
+    "review2Text": "Great communication and creative ideas. My portfolio now truly reflects my brand. Highly recommended!",
+    "review3Name": "Sara Cohen",
+    "review3Text": "Professional, timely, and very talented. The branding work helped me attract new clients quickly.",
+    "collabTitle": "Let's Collaborate",
+    "collabDesc": "Ready to bring your ideas to life? Whether you have a project in mind or just want to connect, I'm here to help you achieve your goals. Let's work together to create something amazing!",
+    "collabBtn": "Start Your Project"
   }
 }

@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Hedder";
 import Head from "next/head";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import {
   AwardIcon,
   Clock10,
@@ -13,10 +14,11 @@ import {
 } from "lucide-react";
 
 const Home1 = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>Home1 Page</title>
+        <title>{t("home1.pageTitle")}</title>
       </Head>
       <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col caret-transparent">
         <Header />
@@ -36,17 +38,16 @@ const Home1 = () => {
           <div className="absolute inset-0   bg-opacity-30 dark:bg-opacity-50 z-10" />
           <div className="md:w-1/2 text-center md:text-left relative z-20">
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white drop-shadow-lg">
-              Showcase Your Talent
+              {t("home1.heroTitle")}
             </h1>
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 drop-shadow">
-              Welcome to your Freelancer Portfolio. Build your brand, attract
-              clients, and display your best work.
+              {t("home1.heroDesc")}
             </p>
             <a
               href="/contact-us"
               className="inline-block px-8 py-3 rounded-lg bg-amber-50 dark:bg-black dark:text-white font-semibold shadow-lg hover:bg-[#0097a7] transition-colors duration-200 text-lg"
             >
-              Get in Touch
+              {t("home1.heroBtn")}
             </a>
           </div>
           <div className="md:w-1/2 flex justify-center relative z-20">
@@ -64,7 +65,7 @@ const Home1 = () => {
             <div className="md:w-1/2 flex justify-center">
               <Image
                 src="/about-main.jpg"
-                alt="About Me"
+                alt={t("home1.aboutImgAlt")}
                 className="w-full h-[400px] rounded-3xl shadow-2xl object-cover"
                 width={500}
                 height={500}
@@ -74,25 +75,16 @@ const Home1 = () => {
               <div className="bg-gradient-to-tr from-[#00bcd4] to-cyan-400 rounded-3xl shadow-2xl p-1">
                 <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col   justify-center">
                   <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center">
-                    About Us
+                    {t("home1.aboutTitle")}
                   </h2>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 text-justify  ">
-                    As a dedicated freelancer, I specialize in crafting unique
-                    digital portfolios and professional websites that help
-                    individuals and businesses stand out. My journey is driven
-                    by creativity, attention to detail, and a commitment to
-                    delivering results that exceed expectations. Whether you
-                    need a personal brand, a showcase for your work, or a
-                    platform to attract new clients, I bring expertise in web
-                    development, design, and branding to every project. Let's
-                    build your online presence together and turn your vision
-                    into reality.
+                    {t("home1.aboutDesc")}
                   </p>
                   <a
                     href="/about-us"
                     className="inline-block px-8 py-3 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-lg tracking-wide text-center"
                   >
-                    Learn More
+                    {t("home1.aboutBtn")}
                   </a>
                 </div>
               </div>
@@ -103,13 +95,13 @@ const Home1 = () => {
         {/* Why Choose Me Section */}
         <section className="py-16 px-6 mx-auto w-full">
           <h2 className="text-3xl font-bold mb-6 text-center text-[#00bcd4]">
-            Why Choose Me?
+            {t("home1.whyTitle")}
           </h2>
           <div className="flex flex-wrap justify-center gap-8">
             {/* Stats Cards */}
             {[
               {
-                label: "Projects Completed",
+                label: t("home1.projectsCompleted"),
                 value: "120+",
                 icon: (
                   <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 shadow-lg mb-4">
@@ -118,7 +110,7 @@ const Home1 = () => {
                 ),
               },
               {
-                label: "Happy Clients",
+                label: t("home1.happyClients"),
                 value: "80+",
                 icon: (
                   <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-green-400 to-[#00bcd4] shadow-lg mb-4">
@@ -127,7 +119,7 @@ const Home1 = () => {
                 ),
               },
               {
-                label: "Years Experience",
+                label: t("home1.yearsExperience"),
                 value: "5+",
                 icon: (
                   <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-yellow-400 to-[#00bcd4] shadow-lg mb-4">
@@ -136,7 +128,7 @@ const Home1 = () => {
                 ),
               },
               {
-                label: "Awards Won",
+                label: t("home1.awardsWon"),
                 value: "10",
                 icon: (
                   <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-pink-400 to-[#00bcd4] shadow-lg mb-4">
@@ -164,24 +156,24 @@ const Home1 = () => {
         {/* Featured Success Stories Section */}
         <section className="py-16 px-6 max-w-7xl mx-auto w-full">
           <h2 className="text-3xl font-bold mb-6 text-center text-[#00bcd4]">
-            Featured Success Stories
+            {t("home1.featuredTitle")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "E-Commerce Launch",
+                title: t("home1.ecommerceTitle"),
                 img: "/success-ecommerce.jpg",
-                desc: "Helped a local business launch their online store, increasing sales by 300% in the first quarter.",
+                desc: t("home1.ecommerceDesc"),
               },
               {
-                title: "Personal Brand Transformation",
+                title: t("home1.brandTitle"),
                 img: "/success-brand.jpg",
-                desc: "Revamped a freelancer's portfolio and personal brand, leading to new international clients.",
+                desc: t("home1.brandDesc"),
               },
               {
-                title: "Nonprofit Awareness",
+                title: t("home1.nonprofitTitle"),
                 img: "/success-nonprofit.jpg",
-                desc: "Created a campaign site for a nonprofit, boosting donations and community engagement.",
+                desc: t("home1.nonprofitDesc"),
               },
             ].map((story) => (
               <div
@@ -211,27 +203,27 @@ const Home1 = () => {
         {/* Client Reviews Section */}
         <section className="py-16 px-6   mx-auto w-full">
           <h2 className="text-3xl  font-bold mb-6 text-center text-[#00bcd4]">
-            Client Reviews
+            {t("home1.reviewsTitle")}
           </h2>
           <div className="flex flex-col md:flex-row items-center justify-between   gap-8 pb-4  ">
             {[
               {
-                name: "Priya Sharma",
+                name: t("home1.review1Name"),
                 avatar: "/review1.jpg",
                 rating: 5,
-                text: "Working with this freelancer was a game-changer for my business. The website looks stunning and works flawlessly!",
+                text: t("home1.review1Text"),
               },
               {
-                name: "David Lee",
+                name: t("home1.review2Name"),
                 avatar: "/review2.jpg",
                 rating: 4.5,
-                text: "Great communication and creative ideas. My portfolio now truly reflects my brand. Highly recommended!",
+                text: t("home1.review2Text"),
               },
               {
-                name: "Sara Cohen",
+                name: t("home1.review3Name"),
                 avatar: "/review3.jpg",
                 rating: 5,
-                text: "Professional, timely, and very talented. The branding work helped me attract new clients quickly.",
+                text: t("home1.review3Text"),
               },
             ].map((review) => (
               <div
@@ -269,18 +261,16 @@ const Home1 = () => {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col items-center justify-center">
               <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center">
-                Let's Collaborate
+                {t("home1.collabTitle")}
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
-                Ready to bring your ideas to life? Whether you have a project in
-                mind or just want to connect, I'm here to help you achieve your
-                goals. Let's work together to create something amazing!
+                {t("home1.collabDesc")}
               </p>
               <a
                 href="/contact-us"
                 className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-xl tracking-wide"
               >
-                Start Your Project
+                {t("home1.collabBtn")}
               </a>
             </div>
           </div>
