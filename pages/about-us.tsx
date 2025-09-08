@@ -371,7 +371,7 @@ const AboutUs = () => {
                   We're excited to collaborate!
                 </p>
                 <a
-                  href="/contact"
+                  href="/contact-us"
                   className="px-10 py-4 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide animate-bounce"
                 >
                   Get in Touch

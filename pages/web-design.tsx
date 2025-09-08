@@ -44,7 +44,7 @@ const WebDesign = () => (
     <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col caret-transparent">
       <Header />
       {/* Section 1: Hero */}
-      <section className="relative flex flex-col items-center justify-center min-h-[80vh] text-center">
+      <section className="relative flex flex-col items-center justify-center min-h-[100vh] text-center">
         <div className="absolute inset-0 w-full h-full object-cover opacity-30 z-0 bg-gradient-to-tr from-primary-500/30 to-cyan-400/30" />
         <div className="relative z-10 max-w-2xl mx-auto">
           <h1 className="text-5xl font-extrabold mb-6 text-primary-600 dark:text-primary-400 drop-shadow-lg">
@@ -55,7 +55,7 @@ const WebDesign = () => (
             impact.
           </p>
           <Link
-            href="/contact"
+            href="/contact-us"
             className="px-8 py-4 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-lg tracking-wide animate-bounce"
           >
             Start Your Project
@@ -64,77 +64,63 @@ const WebDesign = () => (
       </section>
 
       {/* Section 2: Web Design Awards & Recognition */}
-      <section className="py-20 px-6 mx-auto w-full">
-        <h2 className="text-3xl font-bold mb-12 text-primary-500 text-center">
-          Awards & Recognition
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-          {[
-            {
-              title: "Best UI/UX 2024",
-              img: "/award.svg",
-              desc: "Awarded for outstanding user experience and interface design.",
-            },
-            {
-              title: "Top Web Agency",
-              img: "/logo-stackly.png",
-              desc: "Recognized as a leading web design agency in the region.",
-            },
-            {
-              title: "Innovation in Design",
-              img: "/next.svg",
-              desc: "Honored for creative and innovative web solutions.",
-            },
-            {
-              title: "Client Choice Award",
-              img: "/happy.svg",
-              desc: "Voted favorite by clients for exceptional service.",
-            },
-            {
-              title: "Global Impact",
-              img: "/globe.svg",
-              desc: "Celebrated for international reach and successful projects.",
-            },
-            {
-              title: "Tech Excellence",
-              img: "/vercel.svg",
-              desc: "Recognized for technical expertise and performance.",
-            },
-          ].map((award, idx) => (
-            <div
-              key={idx}
-              className="relative flex flex-col items-center justify-center rounded-3xl shadow-2xl p-8 bg-gradient-to-br from-primary-500 via-cyan-400 to-amber-400 hover:scale-105 transition-all duration-300 group"
-            >
-              <div className="w-16 h-16 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 rounded-full shadow-lg border-4 border-white dark:border-gray-900 mb-4 animate-float">
-                <Image
-                  src={award.img}
-                  alt={award.title}
-                  width={40}
-                  height={40}
-                />
-              </div>
-              <h4 className="font-bold text-xl text-primary-500 mb-2 text-center drop-shadow-lg">
-                {award.title}
-              </h4>
-              <p className="text-gray-700 dark:text-gray-300 text-center mb-2">
-                {award.desc}
-              </p>
-              <div className="absolute -bottom-4 -right-4 w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-400 to-primary-500 opacity-0 group-hover:opacity-80 blur-sm transition-all duration-300" />
+      <section className="  mx-auto w-full">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12 bg-gradient-to-br from-white via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900    p-10 backdrop-blur-xl">
+          <div className="w-full md:w-2/3 flex flex-col justify-center">
+            <h2 className="text-4xl font-extrabold mb-6 text-primary-500 dark:text-primary-400 drop-shadow-lg">
+              Achievements & Industry Recognition
+            </h2>
+            <p className="text-lg mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
+              Our commitment to excellence is reflected in the awards and
+              certifications we have earned. We strive to deliver innovative
+              solutions and outstanding service, recognized by leading
+              organizations in the industry.
+            </p>
+            <ul className="list-disc pl-6 text-base space-y-2 text-primary-500 dark:text-cyan-300">
+              <li>
+                <span className="font-semibold text-primary-600 dark:text-amber-300">
+                  Best Creative Agency 2025
+                </span>{" "}
+                – National Web Awards
+              </li>
+              <li>
+                <span className="font-semibold text-primary-600 dark:text-amber-300">
+                  Excellence in Client Satisfaction
+                </span>{" "}
+                – Global Business Review
+              </li>
+              <li>
+                <span className="font-semibold text-primary-600 dark:text-amber-300">
+                  Top 50 Innovative Companies
+                </span>{" "}
+                – Tech Innovators
+              </li>
+              <li>
+                <span className="font-semibold text-primary-600 dark:text-amber-300">
+                  ISO 27001:2022 Certified
+                </span>{" "}
+                for Information Security Management
+              </li>
+            </ul>
+          </div>
+          <div className="w-full md:w-1/3 flex justify-center">
+            <div className="relative bg-gradient-to-br from-primary-100 via-cyan-100 to-amber-100 dark:from-primary-900 dark:via-cyan-900 dark:to-amber-900 rounded-2xl shadow-2xl flex items-center justify-center p-2 min-w-[320px] min-h-[220px] group hover:scale-105 hover:shadow-amber-400/40 transition-all duration-300">
+              <div className="absolute inset-0 rounded-2xl bg-white/30 dark:bg-gray-900/40 backdrop-blur-md z-0" />
+              <Image
+                src="/award-star.png"
+                alt="Gold Star Award"
+                width={340}
+                height={220}
+                className="rounded-xl object-cover shadow-xl relative z-10 group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute -top-4 -right-4 w-14 h-14 rounded-full bg-gradient-to-tr from-cyan-400 to-primary-500 opacity-0 group-hover:opacity-80 blur-md transition-all duration-300" />
             </div>
-          ))}
+          </div>
         </div>
         <style jsx>{`
-          @keyframes float {
-            0%,
-            100% {
-              transform: translateY(0);
-            }
-            50% {
-              transform: translateY(-10px);
-            }
-          }
-          .animate-float {
-            animation: float 2.5s ease-in-out infinite;
+          .shadow-amber-400\/40 {
+            box-shadow: 0 8px 32px 0 rgba(251, 191, 36, 0.25),
+              0 1.5px 8px 0 rgba(6, 182, 212, 0.15);
           }
         `}</style>
       </section>
@@ -318,85 +304,119 @@ const WebDesign = () => (
         `}</style>
       </section>
 
-      {/* Section 5: Web Design Stats */}
-      <section className="py-20 px-6   mx-auto w-full">
+      {/* Section 5: Pricing Plans */}
+      <section className="py-20 px-6 mx-auto w-full">
         <h2 className="text-3xl font-bold mb-10 text-primary-500 text-center">
-          Our Web Design Impact
+          Choose Your Plan
         </h2>
-        <div className="flex flex-wrap gap-16 justify-center items-center pb-4">
-          {webDesignStats.map((fact, idx) => (
-            <div
-              key={idx}
-              className={`relative flex flex-col items-center justify-center w-70 h-70 rounded-4xl shadow-2xl bg-gradient-to-tr from-0% via-cyan-400 to-amber-400 hover:scale-105 transition-all duration-300 group animate-popin`}
-              style={{ animationDelay: `${idx * 0.18}s` }}
-            >
-              <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-16 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 rounded-full shadow-lg border-4 border-white dark:border-gray-900 animate-float z-10">
+        <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
+          {/* Basic Plan */}
+          <div className="relative flex flex-col items-center justify-center w-80 rounded-3xl shadow-2xl bg-gradient-to-br from-cyan-50 via-amber-50 to-white dark:from-cyan-900 dark:via-amber-900 dark:to-gray-900 group hover:scale-[1.07] transition-all duration-300">
+            <span className="absolute -top-7 left-1/2 -translate-x-1/2 px-7 py-2 rounded-full bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold text-lg shadow-lg tracking-wide border-2 border-white dark:border-gray-900">
+              Basic
+            </span>
+            <div className="flex flex-col items-center justify-center h-full pt-12 pb-10">
+              <div className="mb-4">
                 <Image
-                  src={fact.icon}
-                  alt={fact.label}
-                  width={40}
-                  height={40}
+                  src="/award.svg"
+                  alt="Basic"
+                  width={48}
+                  height={48}
+                  className="drop-shadow-lg"
                 />
               </div>
-              <div className="flex flex-col items-center justify-center h-full pt-16">
-                <div className="font-extrabold text-5xl text-white mb-2 text-center drop-shadow-lg animate-count">
-                  {fact.value}
-                </div>
-                <div className="font-semibold text-lg text-white mb-2 text-center">
-                  {fact.label}
-                </div>
-                <div className="text-white/80 dark:text-gray-200 text-center mb-2  px-2">
-                  {fact.desc}
-                </div>
+              <div className="font-extrabold text-4xl text-primary-500 dark:text-cyan-300 mb-2 text-center drop-shadow-2xl">
+                $299
               </div>
-              <div className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-400 to-primary-500 opacity-0 group-hover:opacity-80 blur-sm transition-all duration-300" />
-              <style jsx>{`
-                @keyframes float {
-                  0%,
-                  100% {
-                    transform: translateY(0);
-                  }
-                  50% {
-                    transform: translateY(-10px);
-                  }
-                }
-                .animate-float {
-                  animation: float 2.5s ease-in-out infinite;
-                }
-                @keyframes popin {
-                  0% {
-                    opacity: 0;
-                    transform: scale(0.8);
-                  }
-                  100% {
-                    opacity: 1;
-                    transform: scale(1);
-                  }
-                }
-                .animate-popin {
-                  animation: popin 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-                }
-                @keyframes count {
-                  0% {
-                    opacity: 0;
-                    transform: scale(0.7);
-                  }
-                  80% {
-                    opacity: 1;
-                    transform: scale(1.1);
-                  }
-                  100% {
-                    opacity: 1;
-                    transform: scale(1);
-                  }
-                }
-                .animate-count {
-                  animation: count 1.2s cubic-bezier(0.23, 1, 0.32, 1);
-                }
-              `}</style>
+              <div className="font-semibold text-lg text-primary-600 dark:text-cyan-200 mb-2 text-center tracking-wide">
+                Starter Website
+              </div>
+              <ul className="text-gray-800/80 dark:text-gray-200 text-center mb-2 px-4 space-y-1">
+                <li>1-3 Pages</li>
+                <li>Responsive Design</li>
+                <li>Basic SEO</li>
+                <li>Email Support</li>
+              </ul>
+              <Link
+                href="/contact-us"
+                className="mt-6 px-8 py-3 rounded-full bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-lg hover:scale-105 transition-all duration-200 text-base tracking-wide border-2 border-white dark:border-gray-900"
+              >
+                Get Started
+              </Link>
             </div>
-          ))}
+          </div>
+          {/* Advanced Plan */}
+          <div className="relative flex flex-col items-center justify-center w-80 rounded-3xl shadow-2xl bg-gradient-to-br from-cyan-50 via-amber-50 to-white dark:from-cyan-900 dark:via-amber-900 dark:to-gray-900 group hover:scale-[1.07] transition-all duration-300">
+            <span className="absolute -top-7 left-1/2 -translate-x-1/2 px-7 py-2 rounded-full bg-gradient-to-tr from-cyan-400 to-amber-400 text-white font-bold text-lg shadow-lg tracking-wide border-2 border-white dark:border-gray-900">
+              Advanced
+            </span>
+            <div className="flex flex-col items-center justify-center h-full pt-12 pb-10">
+              <div className="mb-4">
+                <Image
+                  src="/project.svg"
+                  alt="Advanced"
+                  width={48}
+                  height={48}
+                  className="drop-shadow-lg"
+                />
+              </div>
+              <div className="font-extrabold text-4xl text-cyan-400 dark:text-amber-300 mb-2 text-center drop-shadow-2xl">
+                $599
+              </div>
+              <div className="font-semibold text-lg text-cyan-600 dark:text-amber-200 mb-2 text-center tracking-wide">
+                Business Website
+              </div>
+              <ul className="text-gray-800/80 dark:text-gray-200 text-center mb-2 px-4 space-y-1">
+                <li>Up to 8 Pages</li>
+                <li>Custom Graphics</li>
+                <li>Advanced SEO</li>
+                <li>Chat & Contact Forms</li>
+              </ul>
+              <Link
+                href="/contact-us"
+                className="mt-6 px-8 py-3 rounded-full bg-gradient-to-tr from-cyan-400 to-amber-400 text-white font-bold shadow-lg hover:scale-105 transition-all duration-200 text-base tracking-wide border-2 border-white dark:border-gray-900"
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+          {/* Pro Plan */}
+          <div className="relative flex flex-col items-center justify-center w-80 rounded-3xl shadow-2xl bg-gradient-to-br from-cyan-50 via-amber-50 to-white dark:from-cyan-900 dark:via-amber-900 dark:to-gray-900 group hover:scale-[1.07] transition-all duration-300">
+            <span className="absolute -top-7 left-1/2 -translate-x-1/2 px-7 py-2 rounded-full bg-gradient-to-tr from-amber-400 to-primary-500 text-white font-bold text-lg shadow-lg tracking-wide border-2 border-white dark:border-gray-900">
+              Pro
+            </span>
+            <div className="flex flex-col items-center justify-center h-full pt-12 pb-10">
+              <div className="mb-4">
+                <Image
+                  src="/happy.svg"
+                  alt="Pro"
+                  width={48}
+                  height={48}
+                  className="drop-shadow-lg"
+                />
+              </div>
+              <div className="font-extrabold text-4xl text-amber-400 dark:text-primary-400 mb-2 text-center drop-shadow-2xl">
+                $999
+              </div>
+              <div className="font-semibold text-lg text-amber-600 dark:text-primary-200 mb-2 text-center tracking-wide">
+                Premium Website
+              </div>
+              <ul className="text-gray-800/80 dark:text-gray-200 text-center mb-2 px-4 space-y-1">
+                <li>Unlimited Pages</li>
+                <li>Full Customization</li>
+                <li>Priority Support</li>
+                <li>Integrations & Analytics</li>
+              </ul>
+              <Link
+                href="/contact-us"
+                className="mt-6 px-8 py-3 rounded-full bg-gradient-to-tr from-amber-400 to-primary-500 text-white font-bold shadow-lg hover:scale-105 transition-all duration-200 text-base tracking-wide border-2 border-white dark:border-gray-900"
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
         </div>
+        <style jsx>{``}</style>
       </section>
 
       {/* Section 6: Contact CTA */}
@@ -449,7 +469,7 @@ const WebDesign = () => (
                 free consultation or to discuss your goals!
               </p>
               <a
-                href="/contact"
+                href="/contact-us"
                 className="px-10 py-4 rounded-xl bg-gradient-to-tr from-primary-500 to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide animate-bounce"
               >
                 Get in Touch

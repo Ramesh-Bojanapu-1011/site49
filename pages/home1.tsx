@@ -43,7 +43,7 @@ const Home1 = () => {
               clients, and display your best work.
             </p>
             <a
-              href="/contact"
+              href="/contact-us"
               className="inline-block px-8 py-3 rounded-lg bg-amber-50 dark:bg-black dark:text-white font-semibold shadow-lg hover:bg-primary-600 transition-colors duration-200 text-lg"
             >
               Get in Touch
