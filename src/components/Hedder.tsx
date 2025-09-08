@@ -320,7 +320,7 @@ const Header: React.FC = () => {
             )}
           </div>
           <a
-            href="#about"
+            href="/about-us"
             className="block py-2 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
             {t("hedder.aboutUs")}
@@ -337,7 +337,7 @@ const Header: React.FC = () => {
                 {services.map((service, index) => (
                   <a
                     key={index}
-                    href={`#${service.link}`}
+                    href={`/${service.link}`}
                     className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                   >
                     {service.title}
@@ -347,13 +347,13 @@ const Header: React.FC = () => {
             )}
           </div>
           <a
-            href="#blog"
+            href="/blog"
             className="block py-2 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
             {t("hedder.blog")}
           </a>
           <a
-            href="#contact"
+            href="  /contact-us"
             className="block py-2 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
             {t("hedder.contactUs")}
