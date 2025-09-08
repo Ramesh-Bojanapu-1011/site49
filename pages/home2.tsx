@@ -294,22 +294,20 @@ const HomePage2 = () => {
 
         {/* Section 6: Call to Action */}
         <section className="py-16   mx-auto w-full">
-          <div className="bg-gradient-to-tr from-[#00bcd4] to-cyan-400 rounded-3xl shadow-2xl p-1">
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col items-center justify-center">
-              <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center">
-                Ready to Work Together?
-              </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
-                Let's connect and turn your ideas into reality. Reach out for a
-                free consultation or to discuss your next big project!
-              </p>
-              <a
-                href="/contact-us"
-                className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide"
-              >
-                Contact Me
-              </a>
-            </div>
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col items-center justify-center">
+            <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center">
+              Ready to Work Together?
+            </h2>
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
+              Let's connect and turn your ideas into reality. Reach out for a
+              free consultation or to discuss your next big project!
+            </p>
+            <a
+              href="/contact-us"
+              className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide"
+            >
+              Contact Me
+            </a>
           </div>
         </section>
         <Footer />

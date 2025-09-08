@@ -13,10 +13,22 @@ const servicesList = [
     link: "/web-design",
   },
   {
-    name: "Development",
-    icon: "/development.svg",
-    desc: "Robust web and mobile app development solutions.",
-    link: "/development",
+    name: "Graphic Design",
+    icon: "/graphic-design.svg",
+    desc: "Stunning visuals and graphics to elevate your brand.",
+    link: "/graphic-design",
+  },
+  {
+    name: "SEO Optimization",
+    icon: "/seo-optimization.svg",
+    desc: "Enhance your website's visibility and ranking on search engines.",
+    link: "/seo-optimization",
+  },
+  {
+    name: "Content Writing",
+    icon: "/content-writing.svg",
+    desc: "Boost your online presence and reach your audience.",
+    link: "/content-writing",
   },
   {
     name: "Branding",
@@ -25,22 +37,10 @@ const servicesList = [
     link: "/branding",
   },
   {
-    name: "SEO & Marketing",
-    icon: "/seo.svg",
-    desc: "Boost your online presence and reach your audience.",
-    link: "/seo",
-  },
-  {
-    name: "UI/UX Design",
-    icon: "/uiux.svg",
-    desc: "Intuitive interfaces and seamless user experiences.",
-    link: "/uiux",
-  },
-  {
-    name: "Consulting",
-    icon: "/consulting.svg",
-    desc: "Expert advice to elevate your digital strategy.",
-    link: "/consulting",
+    name: "Digital Marketing",
+    icon: "/digital-marketing.svg",
+    desc: "Expert strategies to enhance your online presence.",
+    link: "/digital-marketing",
   },
 ];
 
@@ -274,83 +274,43 @@ const Services = () => {
 
         {/* Section 5: Service Stats (Animated Circular Grid) */}
         <section className="py-20 px-6 max-w-5xl mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
-            Our Impact
-          </h2>
-          <div className="flex gap-10 justify-center items-center flex-wrap">
-            {[
-              { icon: "/award.svg", label: "Awards", value: 12, percent: 80 },
-              {
-                icon: "/project.svg",
-                label: "Projects",
-                value: 120,
-                percent: 95,
-              },
-              {
-                icon: "/happy.svg",
-                label: "Happy Clients",
-                value: 85,
-                percent: 90,
-              },
-              {
-                icon: "/globe.svg",
-                label: "Countries",
-                value: 18,
-                percent: 70,
-              },
+          <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">Our Impact</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 justify-center items-stretch">
+            {[ 
+              { icon: "/award.svg", label: "Awards", value: 12, color: "from-[#00bcd4] to-amber-400" },
+              { icon: "/project.svg", label: "Projects", value: 120, color: "from-cyan-400 to-[#00bcd4]" },
+              { icon: "/happy.svg", label: "Happy Clients", value: 85, color: "from-amber-400 to-[#00bcd4]" },
+              { icon: "/globe.svg", label: "Countries", value: 18, color: "from-[#00bcd4] to-cyan-400" },
             ].map((fact, idx) => (
               <div
                 key={idx}
-                className="relative flex flex-col items-center justify-center min-w-[180px] max-w-xs"
+                className={`relative flex flex-col items-center justify-center rounded-3xl shadow-2xl p-10 bg-white/60 dark:bg-gray-900/60 backdrop-blur-lg border border-cyan-200 dark:border-cyan-900 hover:scale-105 transition-all duration-300 group min-h-[260px]`}
+                style={{ boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)" }}
               >
-                <svg
-                  className="mb-4"
-                  width="100"
-                  height="100"
-                  viewBox="0 0 100 100"
-                >
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="40"
-                    stroke="#e5e7eb"
-                    strokeWidth="8"
-                    fill="none"
-                  />
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="40"
-                    stroke="url(#grad)"
-                    strokeWidth="8"
-                    fill="none"
-                    strokeDasharray={2 * Math.PI * 40}
-                    strokeDashoffset={
-                      2 * Math.PI * 40 * (1 - fact.percent / 100)
-                    }
-                    style={{ transition: "stroke-dashoffset 1s" }}
-                  />
-                  <defs>
-                    <linearGradient id="grad" x1="0" y1="0" x2="100" y2="0">
-                      <stop offset="0%" stopColor="#06b6d4" />
-                      <stop offset="100%" stopColor="#f59e42" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <div className="absolute top-8 left-1/2 -translate-x-1/2">
-                  <Image
-                    src={fact.icon}
-                    alt={fact.label}
-                    width={40}
-                    height={40}
-                  />
+                {/* Vertical Icon Banner */}
+                <div className={`absolute -left-6 top-1/2 -translate-y-1/2 w-16 h-32 flex items-center justify-center bg-gradient-to-b ${fact.color} rounded-2xl shadow-lg border-4 border-white dark:border-gray-900 animate-float`}>
+                  <Image src={fact.icon} alt={fact.label} width={40} height={40} />
                 </div>
-                <div className="font-extrabold text-3xl text-[#00bcd4] mb-2 mt-2">
+                {/* Animated Number */}
+                <div className="font-extrabold text-5xl text-[#00bcd4] mb-2 mt-2 animate-bounce drop-shadow-lg">
                   {fact.value}
                 </div>
-                <div className="font-semibold text-lg text-gray-700 dark:text-gray-300 text-center">
+                <div className="font-semibold text-lg text-gray-700 dark:text-gray-300 text-center mb-2">
                   {fact.label}
                 </div>
+                <div className={`w-full h-2 rounded-full bg-gradient-to-r ${fact.color} mt-4 opacity-60`} />
+                <style jsx>{`
+                  @keyframes float {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-10px); }
+                  }
+                  .animate-float { animation: float 2.5s ease-in-out infinite; }
+                  .animate-bounce { animation: bounce 1.5s infinite alternate; }
+                  @keyframes bounce {
+                    0% { transform: translateY(0); }
+                    100% { transform: translateY(-12px); }
+                  }
+                `}</style>
               </div>
             ))}
           </div>

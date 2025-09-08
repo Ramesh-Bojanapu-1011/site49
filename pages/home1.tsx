@@ -267,23 +267,21 @@ const Home1 = () => {
         {/* Let's Collaborate Section */}
         <section className="py-16 px-6   mx-auto w-full">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="bg-gradient-to-tr from-[#00bcd4] to-cyan-400 rounded-3xl shadow-2xl p-1">
-              <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col items-center justify-center">
-                <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center">
-                  Let's Collaborate
-                </h2>
-                <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
-                  Ready to bring your ideas to life? Whether you have a project
-                  in mind or just want to connect, I'm here to help you achieve
-                  your goals. Let's work together to create something amazing!
-                </p>
-                <a
-                  href="/contact-us"
-                  className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-xl tracking-wide"
-                >
-                  Start Your Project
-                </a>
-              </div>
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col items-center justify-center">
+              <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center">
+                Let's Collaborate
+              </h2>
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
+                Ready to bring your ideas to life? Whether you have a project in
+                mind or just want to connect, I'm here to help you achieve your
+                goals. Let's work together to create something amazing!
+              </p>
+              <a
+                href="/contact-us"
+                className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-xl tracking-wide"
+              >
+                Start Your Project
+              </a>
             </div>
           </div>
         </section>

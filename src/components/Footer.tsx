@@ -1,6 +1,5 @@
-import React from "react";
+import { LinkedinIcon, TwitterIcon } from "lucide-react";
 import Image from "next/image";
-import { LinkedinIcon, Twitter, TwitterIcon } from "lucide-react";
 import Link from "next/link";
 
 const quickLinks = [
@@ -78,10 +77,7 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             <li>
               Email:{" "}
-              <a
-                href="mailto:hello@email.com"
-                className="hover:text-[#00bcd4]"
-              >
+              <a href="mailto:hello@email.com" className="hover:text-[#00bcd4]">
                 hello@email.com
               </a>
             </li>
@@ -97,11 +93,7 @@ const Footer = () => {
             <a href="#" aria-label="Twitter" className="hover:text-[#00bcd4]">
               <TwitterIcon />
             </a>
-            <a
-              href="#"
-              aria-label="LinkedIn"
-              className="hover:text-[#00bcd4]"
-            >
+            <a href="#" aria-label="LinkedIn" className="hover:text-[#00bcd4]">
               <LinkedinIcon />
             </a>
           </div>
