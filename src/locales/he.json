@@ -1,1 +1,20 @@
-{}
+{
+ "hedder":{
+  "home": "בית",
+  "home1": "בית 1",
+  "home2": "בית 2",
+  "aboutUs": "אודותינו",
+  "services": "שירותים",
+  "webDesign": "עיצוב אתרים",
+  "graphicDesign": "עיצוב גרפי",
+  "seoOptimization": "אופטימיזציה למנועי חיפוש",
+  "contentWriting": "כתיבת תוכן",
+  "branding": "מיתוג",
+  "digitalMarketing": "שיווק דיגיטלי",
+  "blog": "בלוג",
+  "contactUs": "צור קשר",
+  "profile": "פרופיל",
+  "logout": "התנתק",
+  "language": "שפה"
+ }
+}

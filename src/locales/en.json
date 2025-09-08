@@ -1,1 +1,20 @@
-{}
+{
+"hedder":{
+      "home": "Home",
+  "home1": "Home1",
+  "home2": "Home2",
+  "aboutUs": "About Us",
+  "services": "Services",
+  "webDesign": "Web Design",
+  "graphicDesign": "Graphic Design",
+  "seoOptimization": "SEO Optimization",
+  "contentWriting": "Content Writing",
+  "branding": "Branding",
+  "digitalMarketing": "Digital Marketing",
+  "blog": "Blog",
+  "contactUs": "Contact Us",
+  "profile": "Profile",
+  "logout": "Logout",
+  "language": "Language"
+}
+}

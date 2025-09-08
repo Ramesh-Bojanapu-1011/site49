@@ -1,1 +1,19 @@
-{}
+{
+    "hedder":{
+  "home": "الرئيسية",
+  "home1": "الرئيسية 1",
+  "home2": "الرئيسية 2",
+  "aboutUs": "من نحن",
+  "services": "الخدمات",
+  "webDesign": "تصميم المواقع",
+  "graphicDesign": "التصميم الجرافيكي",
+  "seoOptimization": "تحسين محركات البحث",
+  "contentWriting": "كتابة المحتوى",
+  "branding": "العلامة التجارية",
+  "digitalMarketing": "التسويق الرقمي",
+  "blog": "المدونة",
+  "contactUs": "اتصل بنا",
+  "profile": "الملف الشخصي",
+  "logout": "تسجيل الخروج",
+  "language": "اللغة"
+}}

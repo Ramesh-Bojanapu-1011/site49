@@ -7,16 +7,38 @@ import { ModeToggle } from "./theme/ModeToggle";
 import i18n from "@/i18n";
 import { getUsers } from "../../pages/auth";
 
-const services = [
-  "Web Design",
-  "Graphic Design",
-  "SEO Optimization",
-  "Content Writing",
-  "Branding",
-  "Digital Marketing",
-];
+ 
 
 const Header: React.FC = () => {
+  const { t } = useTranslation();
+  // Services array with translations
+  const services = [
+    {
+      title: t("hedder.webDesign"),
+      link: "web-design",
+    },
+    {
+      title: t("hedder.graphicDesign"),
+      link: "graphic-design",
+    },
+    {
+      title: t("hedder.seoOptimization"),
+      link: "seo-optimization",
+    },
+    {
+      title: t("hedder.contentWriting"),
+      link: "content-writing",
+    },
+    {
+      title: t("hedder.branding"),
+      link: "branding",
+    },
+    {
+      title: t("hedder.digitalMarketing"),
+      link: "digital-marketing",
+    },
+  ];
+  console.log(services);
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [userInitials, setUserInitials] = React.useState(""); // Default initials
@@ -30,7 +52,6 @@ const Header: React.FC = () => {
   //   const [selectedLanguage, setSelectedLanguage] = useState("English");
   const [langReady, setLangReady] = useState(false);
   const router = useRouter();
-  const { t } = useTranslation();
 
   React.useEffect(() => {
     // Runs only in the browser
@@ -61,7 +82,7 @@ const Header: React.FC = () => {
         const updatedUsers = users.map((u) =>
           u.email === user.email
             ? { ...u, logoutTime: new Date().toISOString() }
-            : u,
+            : u
         );
         // Save updated users back to localStorage
         localStorage.setItem("users", JSON.stringify(updatedUsers));
@@ -148,7 +169,7 @@ const Header: React.FC = () => {
               onClick={() => handleDropdown("home")}
               className="hover:text-blue-500 dark:hover:text-blue-400 flex items-center gap-1 transition-colors"
             >
-              Home <span className="ml-1">▼</span>
+              {t("hedder.home")} <span className="ml-1">▼</span>
             </button>
             {openDropdown === "home" && (
               <div className="absolute left-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]">
@@ -156,13 +177,13 @@ const Header: React.FC = () => {
                   href="/home1"
                   className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                 >
-                  Home1
+                  {t("hedder.home1")}
                 </a>
                 <a
                   href="/home2"
                   className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                 >
-                  Home2
+                  {t("hedder.home2")}
                 </a>
               </div>
             )}
@@ -171,14 +192,14 @@ const Header: React.FC = () => {
             href="/about-us"
             className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
-            About Us
+            {t("hedder.aboutUs")}
           </a>
           <div className="relative group">
             <button
               onClick={() => handleDropdown("services")}
               className="hover:text-blue-500 dark:hover:text-blue-400 flex items-center gap-1 transition-colors"
             >
-              Services <span className="ml-1">▼</span>
+              {t("hedder.services")} <span className="ml-1">▼</span>
             </button>
             {openDropdown === "services" && (
               <div className="absolute left-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[160px]">
@@ -186,15 +207,15 @@ const Header: React.FC = () => {
                   href="/services"
                   className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors font-semibold text-blue-600 dark:text-blue-400"
                 >
-                  Services
+                  {t("hedder.services")}
                 </a>
-                {services.map((service) => (
+                {services.map((service, index) => (
                   <a
-                    key={service}
-                    href={`/${service.replace(/\s+/g, "-").toLowerCase()}`}
+                    key={index}
+                    href={`/${service.link}`}
                     className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 text-nowrap transition-colors"
                   >
-                    {service}
+                    {service.title}
                   </a>
                 ))}
               </div>
@@ -204,18 +225,18 @@ const Header: React.FC = () => {
             href="/blog"
             className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
-            Blog
+            {t("hedder.blog")}
           </a>
           <a
             href="/contact-us"
             className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
-            Contact Us
+            {t("hedder.contactUs")}
           </a>
         </nav>
         <div className="hidden md:flex items-center gap-4">
           <ModeToggle />
-          {/* Profile Dropdown */}
+          {/* Language Dropdown */}
           <div className="relative group">
             <button
               onClick={() => handleDropdown("profile")}
@@ -224,7 +245,7 @@ const Header: React.FC = () => {
               <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 flex w-10 h-10 justify-center items-center text-center dark:to-blue-300 text-white font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
                 {userInitials}
               </span>
-              <span className="ml-1">Profile</span> <span>▼</span>
+              <span className="ml-1">{t("hedder.profile")}</span> <span>▼</span>
             </button>
             {openDropdown === "profile" && (
               <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]">
@@ -232,12 +253,11 @@ const Header: React.FC = () => {
                   onClick={handleLogout}
                   className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                 >
-                  Logout
+                  {t("hedder.logout")}
                 </button>
               </div>
             )}
           </div>
-          {/* Language Dropdown */}
           <div className="relative group">
             <button
               onClick={() => handleDropdown("language")}
@@ -280,7 +300,7 @@ const Header: React.FC = () => {
               onClick={() => handleDropdown("home")}
               className="w-full text-left py-2 flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
             >
-              Home <span>▼</span>
+              {t("hedder.home")} <span>▼</span>
             </button>
             {openDropdown === "home" && (
               <div className="pl-4">
@@ -288,13 +308,13 @@ const Header: React.FC = () => {
                   href="#home1"
                   className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                 >
-                  Home1
+                  {t("hedder.home1")}
                 </a>
                 <a
                   href="#home2"
                   className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                 >
-                  Home2
+                  {t("hedder.home2")}
                 </a>
               </div>
             )}
@@ -303,24 +323,24 @@ const Header: React.FC = () => {
             href="#about"
             className="block py-2 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
-            About Us
+            {t("hedder.aboutUs")}
           </a>
           <div className="mb-2">
             <button
               onClick={() => handleDropdown("services")}
               className="w-full text-left py-2 flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
             >
-              Services <span>▼</span>
+              {t("hedder.services")} <span>▼</span>
             </button>
             {openDropdown === "services" && (
               <div className="pl-4">
-                {services.map((service) => (
+                {services.map((service, index) => (
                   <a
-                    key={service}
-                    href={`#${service.replace(/\s+/g, "-").toLowerCase()}`}
+                    key={index}
+                    href={`#${service.link}`}
                     className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                   >
-                    {service}
+                    {service.title}
                   </a>
                 ))}
               </div>
@@ -330,13 +350,13 @@ const Header: React.FC = () => {
             href="#blog"
             className="block py-2 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
-            Blog
+            {t("hedder.blog")}
           </a>
           <a
             href="#contact"
             className="block py-2 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
-            Contact Us
+            {t("hedder.contactUs")}
           </a>
           <div className="mt-4 border-t flex justify-between items-center   dark:border-gray-700 pt-4">
             <ModeToggle />
@@ -349,7 +369,7 @@ const Header: React.FC = () => {
                 <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 flex w-10 h-10 justify-center items-center text-center dark:to-blue-300 text-white font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
                   {userInitials}
                 </span>
-                Profile <span>▼</span>
+                {t("hedder.profile")} <span>▼</span>
               </button>
               {openDropdown === "profile" && (
                 <div className="  px-3   absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700">
@@ -357,7 +377,7 @@ const Header: React.FC = () => {
                     onClick={handleLogout}
                     className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                   >
-                    Logout
+                    {t("hedder.logout")}
                   </button>
                 </div>
               )}
@@ -367,7 +387,8 @@ const Header: React.FC = () => {
                 onClick={() => handleDropdown("language")}
                 className="w-full text-left py-2 flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               >
-                <span className="text-xl">🌐</span> Language <span>▼</span>
+                <span className="text-xl">🌐</span> {t("hedder.language")}{" "}
+                <span>▼</span>
               </button>
               {openDropdown === "language" && (
                 <div className="flex flex-col p-3 absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700">
