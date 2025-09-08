@@ -10,7 +10,6 @@ import i18next from "i18next";
 
 const Services = () => {
   const { t } = useTranslation();
-  console.log(i18next.language);
 
   const servicesList = [
     {
@@ -187,8 +186,18 @@ const Services = () => {
                     <div
                       className={`absolute ${
                         idx % 2 != 0
-                          ? `${i18next.language == "ar" || i18next.language == "he" ? "-right-8" : "-left-8"}`
-                          : `${i18next.language == "ar" || i18next.language == "he" ? "-left-8" : "-right-8"}`
+                          ? `${
+                              i18next.language == "ar" ||
+                              i18next.language == "he"
+                                ? "-right-8"
+                                : "-left-8"
+                            }`
+                          : `${
+                              i18next.language == "ar" ||
+                              i18next.language == "he"
+                                ? "-left-8"
+                                : "-right-8"
+                            }`
                       } top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900`}
                     >
                       <Image
