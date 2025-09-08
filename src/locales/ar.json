@@ -1,19 +1,40 @@
 {
-    "hedder":{
-  "home": "الرئيسية",
-  "home1": "الرئيسية 1",
-  "home2": "الرئيسية 2",
-  "aboutUs": "من نحن",
-  "services": "الخدمات",
-  "webDesign": "تصميم المواقع",
-  "graphicDesign": "التصميم الجرافيكي",
-  "seoOptimization": "تحسين محركات البحث",
-  "contentWriting": "كتابة المحتوى",
-  "branding": "العلامة التجارية",
-  "digitalMarketing": "التسويق الرقمي",
-  "blog": "المدونة",
-  "contactUs": "اتصل بنا",
-  "profile": "الملف الشخصي",
-  "logout": "تسجيل الخروج",
-  "language": "اللغة"
-}}
+  "hedder": {
+    "home": "الرئيسية",
+    "home1": "الرئيسية 1",
+    "home2": "الرئيسية 2",
+    "aboutUs": "من نحن",
+    "services": "الخدمات",
+    "webDesign": "تصميم المواقع",
+    "graphicDesign": "التصميم الجرافيكي",
+    "seoOptimization": "تحسين محركات البحث",
+    "contentWriting": "كتابة المحتوى",
+    "branding": "العلامة التجارية",
+    "digitalMarketing": "التسويق الرقمي",
+    "blog": "المدونة",
+    "contactUs": "اتصل بنا",
+    "profile": "الملف الشخصي",
+    "logout": "تسجيل الخروج",
+    "language": "اللغة"
+  },
+  "footer": {
+    "home1": "الرئيسية 1",
+    "home2": "الرئيسية 2",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "blog": "المدونة",
+    "contact": "اتصل بنا",
+    "webDesign": "تصميم المواقع",
+    "graphicDesign": "التصميم الجرافيكي",
+    "seoOptimization": "تحسين محركات البحث",
+    "contentWriting": "كتابة المحتوى",
+    "branding": "العلامة التجارية",
+    "digitalMarketing": "التسويق الرقمي",
+    "description": "عرض الأعمال الإبداعية، الخدمات، ومعلومات التواصل. دعونا نبني شيئًا رائعًا معًا!",
+    "quickLinks": "روابط سريعة",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "location": "الموقع",
+    "copyright": "محفظة المستقل. جميع الحقوق محفوظة"
+  }
+}

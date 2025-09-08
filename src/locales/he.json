@@ -1,20 +1,40 @@
 {
- "hedder":{
-  "home": "בית",
-  "home1": "בית 1",
-  "home2": "בית 2",
-  "aboutUs": "אודותינו",
-  "services": "שירותים",
-  "webDesign": "עיצוב אתרים",
-  "graphicDesign": "עיצוב גרפי",
-  "seoOptimization": "אופטימיזציה למנועי חיפוש",
-  "contentWriting": "כתיבת תוכן",
-  "branding": "מיתוג",
-  "digitalMarketing": "שיווק דיגיטלי",
-  "blog": "בלוג",
-  "contactUs": "צור קשר",
-  "profile": "פרופיל",
-  "logout": "התנתק",
-  "language": "שפה"
- }
+  "hedder": {
+    "home": "בית",
+    "home1": "בית 1",
+    "home2": "בית 2",
+    "aboutUs": "אודותינו",
+    "services": "שירותים",
+    "webDesign": "עיצוב אתרים",
+    "graphicDesign": "עיצוב גרפי",
+    "seoOptimization": "אופטימיזציה למנועי חיפוש",
+    "contentWriting": "כתיבת תוכן",
+    "branding": "מיתוג",
+    "digitalMarketing": "שיווק דיגיטלי",
+    "blog": "בלוג",
+    "contactUs": "צור קשר",
+    "profile": "פרופיל",
+    "logout": "התנתק",
+    "language": "שפה"
+  },
+  "footer": {
+    "home1": "בית 1",
+    "home2": "בית 2",
+    "about": "אודות",
+    "services": "שירותים",
+    "blog": "בלוג",
+    "contact": "צור קשר",
+    "webDesign": "עיצוב אתרים",
+    "graphicDesign": "עיצוב גרפי",
+    "seoOptimization": "קידום אתרים",
+    "contentWriting": "כתיבת תוכן",
+    "branding": "מיתוג",
+    "digitalMarketing": "שיווק דיגיטלי",
+    "description": "הצגת עבודות יצירתיות, שירותים ופרטי קשר. בואו נבנה משהו נהדר יחד!",
+    "quickLinks": "קישורים מהירים",
+    "email": "אימייל",
+    "phone": "טלפון",
+    "location": "מיקום",
+    "copyright": "פורטפוליו פרילנסר. כל הזכויות שמורות"
+  }
 }

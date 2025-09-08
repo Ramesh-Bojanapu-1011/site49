@@ -7,8 +7,6 @@ import { ModeToggle } from "./theme/ModeToggle";
 import i18n from "@/i18n";
 import { getUsers } from "../../pages/auth";
 
- 
-
 const Header: React.FC = () => {
   const { t } = useTranslation();
   // Services array with translations
@@ -82,7 +80,7 @@ const Header: React.FC = () => {
         const updatedUsers = users.map((u) =>
           u.email === user.email
             ? { ...u, logoutTime: new Date().toISOString() }
-            : u
+            : u,
         );
         // Save updated users back to localStorage
         localStorage.setItem("users", JSON.stringify(updatedUsers));

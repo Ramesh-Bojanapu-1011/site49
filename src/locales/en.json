@@ -1,20 +1,40 @@
 {
-"hedder":{
-      "home": "Home",
-  "home1": "Home1",
-  "home2": "Home2",
-  "aboutUs": "About Us",
-  "services": "Services",
-  "webDesign": "Web Design",
-  "graphicDesign": "Graphic Design",
-  "seoOptimization": "SEO Optimization",
-  "contentWriting": "Content Writing",
-  "branding": "Branding",
-  "digitalMarketing": "Digital Marketing",
-  "blog": "Blog",
-  "contactUs": "Contact Us",
-  "profile": "Profile",
-  "logout": "Logout",
-  "language": "Language"
-}
+  "hedder": {
+    "home": "Home",
+    "home1": "Home1",
+    "home2": "Home2",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "webDesign": "Web Design",
+    "graphicDesign": "Graphic Design",
+    "seoOptimization": "SEO Optimization",
+    "contentWriting": "Content Writing",
+    "branding": "Branding",
+    "digitalMarketing": "Digital Marketing",
+    "blog": "Blog",
+    "contactUs": "Contact Us",
+    "profile": "Profile",
+    "logout": "Logout",
+    "language": "Language"
+  },
+  "footer": {
+    "home1": "Home1",
+    "home2": "Home2",
+    "about": "About",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "webDesign": "Web Design",
+    "graphicDesign": "Graphic Design",
+    "seoOptimization": "SEO Optimization",
+    "contentWriting": "Content Writing",
+    "branding": "Branding",
+    "digitalMarketing": "Digital Marketing",
+    "description": "Showcasing creative work, services, and contact info. Let's build something great together!",
+    "quickLinks": "Quick Links",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "copyright": "Freelancer Portfolio. All rights reserved"
+  }
 }

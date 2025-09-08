@@ -1,26 +1,27 @@
 import { LinkedinIcon, TwitterIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-const quickLinks = [
-  { name: "Home1", href: "/home1" },
-  { name: "Home2", href: "/home2" },
-  { name: "About", href: "/about-us" },
-  { name: "Services", href: "/services" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
-];
-
-const services = [
-  "Web Design",
-  "Graphic Design",
-  "SEO Optimization",
-  "Content Writing",
-  "Branding",
-  "Digital Marketing",
-];
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const quickLinks = [
+    { name: t("footer.home1"), href: "/home1" },
+    { name: t("footer.home2"), href: "/home2" },
+    { name: t("footer.about"), href: "/about-us" },
+    { name: t("footer.services"), href: "/services" },
+    { name: t("footer.blog"), href: "/blog" },
+    { name: t("footer.contact"), href: "/contact" },
+  ];
+  const services = [
+    t("footer.webDesign"),
+    t("footer.graphicDesign"),
+    t("footer.seoOptimization"),
+    t("footer.contentWriting"),
+    t("footer.branding"),
+    t("footer.digitalMarketing"),
+  ];
+
   return (
     <footer className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 pt-10 pb-6 px-4 md:px-8 lg:px-16 justify-center caret-transparent">
       <div className="flex flex-col w-full sm:flex-row sm:justify-evenly sm:items-start gap-8">
@@ -34,15 +35,14 @@ const Footer = () => {
             className="mb-3"
           />
 
-          <p className="text-sm">
-            Showcasing creative work, services, and contact info. Let's build
-            something great together!
-          </p>
+          <p className="text-sm">{t("footer.description")}</p>
         </div>
 
         {/* Column 2: Quick Links */}
         <div className="sm:w-1/4 items-center">
-          <h3 className="font-semibold text-md mb-3">Quick Links</h3>
+          <h3 className="font-semibold text-md mb-3">
+            {t("footer.quickLinks")}
+          </h3>
           <ul className="space-y-2">
             {quickLinks.map((link) => (
               <li key={link.name}>
@@ -59,7 +59,7 @@ const Footer = () => {
 
         {/* Column 3: Services */}
         <div className="sm:w-1/4 items-center">
-          <h3 className="font-semibold text-md mb-3">Services</h3>
+          <h3 className="font-semibold text-md mb-3">{t("footer.services")}</h3>
           <ul className="space-y-2">
             {services.map((service) => (
               <li key={service}>
@@ -73,21 +73,21 @@ const Footer = () => {
 
         {/* Column 4: Contact */}
         <div className="sm:w-1/4 items-center">
-          <h3 className="font-semibold text-md mb-3">Contact</h3>
+          <h3 className="font-semibold text-md mb-3">{t("footer.contact")}</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              Email:{" "}
+              {t("footer.email")}:{" "}
               <a href="mailto:hello@email.com" className="hover:text-[#00bcd4]">
                 hello@email.com
               </a>
             </li>
             <li>
-              Phone:{" "}
+              {t("footer.phone")}:{" "}
               <a href="tel:+1234567890" className="hover:text-[#00bcd4]">
                 +1 234 567 890
               </a>
             </li>
-            <li>Location: City, Country</li>
+            <li>{t("footer.location")}: City, Country</li>
           </ul>
           <div className="flex space-x-3 mt-3">
             <a href="#" aria-label="Twitter" className="hover:text-[#00bcd4]">
@@ -100,8 +100,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-10 text-center text-xs text-gray-500 dark:text-gray-400">
-        &copy; {new Date().getFullYear()} Freelancer Portfolio. All rights
-        reserved.
+        &copy; {new Date().getFullYear()} {t("footer.copyright")}.
       </div>
     </footer>
   );
