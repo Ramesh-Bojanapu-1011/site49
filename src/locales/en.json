@@ -865,5 +865,29 @@
     "stayConnectedDesc": "Follow us on social media and subscribe to our newsletter for updates, tips, and inspiration.",
     "newsletterPlaceholder": "Your email address",
     "newsletterBtn": "Subscribe"
+  },
+  "adminDashboard": {
+    "pageTitle": "Admin Dashboard | User Overview",
+    "pageDesc": "Admin dashboard to view all user details and activity statistics.",
+    "heroTitle": "Admin Dashboard",
+    "heroDesc": "Overview of all users and their activity status.",
+    "userDetailsTitle": "All User Details",
+    "table": {
+      "id": "ID",
+      "name": "Name",
+      "email": "Email",
+      "registerTime": "Register time",
+      "loginTime": "Login time",
+      "logoutTime": "Logout time"
+    },
+    "activityTitle": "User Activity Overview",
+    "pie": {
+      "LoggedInUsers": "Logged In Users",
+      "AllUsers": "All Users"
+    },
+    "registrationsTitle": "Registrations Per Week",
+    "bar": {
+      "registrations": "Registrations"
+    }
   }
 }

@@ -873,5 +873,29 @@
     "stayConnectedDesc": "עקוב אחרינו ברשתות החברתיות והירשם לניוזלטר שלנו לעדכונים, טיפים והשראה.",
     "newsletterPlaceholder": "כתובת האימייל שלך",
     "newsletterBtn": "הירשם"
+  },
+  "adminDashboard": {
+    "pageTitle": "לוח מנהל | סקירת משתמשים",
+    "pageDesc": "לוח מנהל לצפייה בכל פרטי המשתמש וסטטיסטיקות פעילות.",
+    "heroTitle": "לוח מנהל",
+    "heroDesc": "סקירה של כל המשתמשים ומצב הפעילות שלהם.",
+    "userDetailsTitle": "כל פרטי המשתמשים",
+    "table": {
+      "id": "מזהה",
+      "name": "שם",
+      "email": "אימייל",
+      "registerTime": "זמן הרשמה",
+      "loginTime": "זמן כניסה",
+      "logoutTime": "זמן יציאה"
+    },
+    "activityTitle": "סקירת פעילות משתמשים",
+    "pie": {
+      "LoggedInUsers": "משתמשים מחוברים",
+      "AllUsers": "כל המשתמשים"
+    },
+    "registrationsTitle": "הרשמות לפי שבוע",
+    "bar": {
+      "registrations": "הרשמות"
+    }
   }
 }
