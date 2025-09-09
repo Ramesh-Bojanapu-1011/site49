@@ -44,6 +44,16 @@ const DigitalMarketing = () => {
         <Header />
         {/* Section 1: Hero */}
         <section className="relative flex flex-col items-center justify-center min-h-[100vh] text-center">
+          {/* Background Video */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
+          >
+            <source src="/digital-marketing-bg-video.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 w-full h-full object-cover opacity-30 z-0 bg-gradient-to-tr from-[#00bcd4]/30 to-cyan-400/30" />
           <div className="relative z-10 max-w-2xl mx-auto">
             <h1 className="text-5xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da] drop-shadow-lg">
@@ -199,17 +209,17 @@ const DigitalMarketing = () => {
                 desc: t("digitalMarketing.featureAwardDesc"),
               },
               {
-                icon: "/next.svg",
+                icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiMwMGE2ZWQiIGQ9Ik0yIDZhNCA0IDAgMCAxIDQtNGgyMGE0IDQgMCAwIDEgNCA0djIwYTQgNCAwIDAgMS00IDRINmE0IDQgMCAwIDEtNC00eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmIiBkPSJtMTcgMTYuOTYybC02LjMwNyA2LjA2OWMtLjYzNS42MTEtMS42OTMuMTYtMS42OTMtLjcyVjkuNjljMC0uODgyIDEuMDU4LTEuMzMyIDEuNjkzLS43MkwxNyAxNS4wMzdWOS42OWMwLS44ODIgMS4wNTgtMS4zMzIgMS42OTMtLjcybDYuNTU4IDYuMzFhMSAxIDAgMCAxIDAgMS40NGwtNi41NTggNi4zMWMtLjYzNS42MTItMS42OTMuMTYyLTEuNjkzLS43MnoiIC8+Cgk8L2c+Cjwvc3ZnPg==",
                 title: t("digitalMarketing.featureFastTitle"),
                 desc: t("digitalMarketing.featureFastDesc"),
               },
               {
-                icon: "/file.svg",
+                icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KCTxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiMwMDY2ZDEiIGQ9Ik0xNC4yNSAyLjFhMS4yNSAxLjI1IDAgMCAwLTEuMTctLjFMNi45MSA0LjQzYTEuMiAxLjIgMCAwIDEtLjQ2LjA5SDIuNWExLjI1IDEuMjUgMCAwIDAtMS4yNSAxLjI1di4xSDB2M2gxLjI1VjlhMS4yNSAxLjI1IDAgMCAwIDEuMjUgMS4yMkw0IDEzLjRhMS4yNiAxLjI2IDAgMCAwIDEuMTMuNzJoLjYzQTEuMjUgMS4yNSAwIDAgMCA3IDEyLjg3di0yLjUzbDYuMDggMi40M2ExLjMgMS4zIDAgMCAwIC40Ny4wOWExLjMgMS4zIDAgMCAwIC43LS4yMmExLjI1IDEuMjUgMCAwIDAgLjU1LTFWMy4xM2ExLjI1IDEuMjUgMCAwIDAtLjU1LTEuMDNtLTguNSAzLjY3VjlIMi41VjUuNzd6bTAgNy4xaC0uNjNsLTEuMjMtMi42NWgxLjg2em0xLjYyLTMuNzJBMi4zIDIuMyAwIDAgMCA3IDlWNS43YTIuMyAyLjMgMCAwIDAgLjM3LS4xMWw2LjE4LTIuNDZ2OC40OHptNy40Ni0zLjAzdjIuNWExLjI1IDEuMjUgMCAwIDAgMC0yLjUiIC8+Cjwvc3ZnPg==",
                 title: t("digitalMarketing.featureCustomTitle"),
                 desc: t("digitalMarketing.featureCustomDesc"),
               },
               {
-                icon: "/window.svg",
+                icon: "https://2793236.fs1.hubspotusercontent-na1.net/hub/2793236/hubfs/Brand-consistency.png?width=1600&name=Brand-consistency.png",
                 title: t("digitalMarketing.featureBrandTitle"),
                 desc: t("digitalMarketing.featureBrandDesc"),
               },
@@ -219,7 +229,7 @@ const DigitalMarketing = () => {
                 desc: t("digitalMarketing.featureGlobalDesc"),
               },
               {
-                icon: "/vercel.svg",
+                icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9IiMwMDY2ZDEiPgoJCTxwYXRoIGQ9Ik0yNSA1aC0uMTd2MkgyNWExIDEgMCAwIDEgMSAxdjIwYTEgMSAwIDAgMS0xIDFIN2ExIDEgMCAwIDEtMS0xVjhhMSAxIDAgMCAxIDEtMWguMTdWNUg3YTMgMyAwIDAgMC0zIDN2MjBhMyAzIDAgMCAwIDMgM2gxOGEzIDMgMCAwIDAgMy0zVjhhMyAzIDAgMCAwLTMtMyIgLz4KCQk8cGF0aCBkPSJNMjMgM2gtM1YwaC04djNIOXY2aDE0em0tMiA0SDExVjVoM1YyaDR2M2gzeiIgLz4KCQk8cGF0aCBkPSJNMTAgMTNoMTJ2MkgxMHptMCA1aDEydjJIMTB6bTAgNWgxMnYySDEweiIgY2xhc3M9Im91aUljb25fX2ZpbGxTZWNvbmRhcnkiIC8+Cgk8L2c+Cjwvc3ZnPg==",
                 title: t("digitalMarketing.featureReportingTitle"),
                 desc: t("digitalMarketing.featureReportingDesc"),
               },
