@@ -6,8 +6,11 @@ import { Menu, X } from "lucide-react";
 import { ModeToggle } from "./theme/ModeToggle";
 import i18n from "@/i18n";
 import { getUsers } from "../../pages/auth";
+import Link from "next/link";
 
 const Header: React.FC = () => {
+  // Ref for dropdown menus
+  const dropdownRef = React.useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
 
   // Services array with translations
@@ -98,6 +101,23 @@ const Header: React.FC = () => {
     setOpenDropdown((prev) => (prev === menu ? null : menu));
   };
 
+  // Close dropdown when clicking outside
+  React.useEffect(() => {
+    if (!openDropdown) return;
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setOpenDropdown(null);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [openDropdown]);
+
   // Restore language from localStorage on mount and on route change
   React.useEffect(() => {
     if (typeof window !== "undefined") {
@@ -149,7 +169,10 @@ const Header: React.FC = () => {
 
   return (
     <header className=" caret-transparent bg-white dark:bg-gray-900 max-w-screen sticky top-0 z-100  ">
-      <div className="  mx-auto flex items-center justify-between px-4 py-3">
+      <div
+        ref={dropdownRef}
+        className="  mx-auto flex items-center justify-between px-4 py-3"
+      >
         {/* Logo */}
         <div className="flex items-center gap-2">
           <Image
@@ -171,27 +194,27 @@ const Header: React.FC = () => {
             </button>
             {openDropdown === "home" && (
               <div className="absolute left-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]">
-                <a
+                <Link
                   href="/home1"
                   className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                 >
                   {t("hedder.home1")}
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/home2"
                   className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                 >
                   {t("hedder.home2")}
-                </a>
+                </Link>
               </div>
             )}
           </div>
-          <a
+          <Link
             href="/about-us"
             className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
             {t("hedder.aboutUs")}
-          </a>
+          </Link>
           <div className="relative group">
             <button
               onClick={() => handleDropdown("services")}
@@ -201,36 +224,36 @@ const Header: React.FC = () => {
             </button>
             {openDropdown === "services" && (
               <div className="absolute left-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[160px]">
-                <a
+                <Link
                   href="/services"
                   className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors font-semibold text-blue-600 dark:text-blue-400"
                 >
                   {t("hedder.services")}
-                </a>
+                </Link>
                 {services.map((service, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={`/${service.link}`}
                     className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 text-nowrap transition-colors"
                   >
                     {service.title}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
           </div>
-          <a
+          <Link
             href="/blog"
             className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
             {t("hedder.blog")}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact-us"
             className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
             {t("hedder.contactUs")}
-          </a>
+          </Link>
         </nav>
         <div className="hidden md:flex items-center gap-4">
           <ModeToggle />
@@ -304,27 +327,27 @@ const Header: React.FC = () => {
             </button>
             {openDropdown === "home" && (
               <div className="pl-4">
-                <a
-                  href="#home1"
+                <Link
+                  href="/home1"
                   className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                 >
                   {t("hedder.home1")}
-                </a>
-                <a
-                  href="#home2"
+                </Link>
+                <Link
+                  href="/home2"
                   className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                 >
                   {t("hedder.home2")}
-                </a>
+                </Link>
               </div>
             )}
           </div>
-          <a
+          <Link
             href="/about-us"
             className="block py-2 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
             {t("hedder.aboutUs")}
-          </a>
+          </Link>
           <div className="mb-2">
             <button
               onClick={() => handleDropdown("services")}
@@ -335,29 +358,29 @@ const Header: React.FC = () => {
             {openDropdown === "services" && (
               <div className="pl-4">
                 {services.map((service, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={`/${service.link}`}
                     className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                   >
                     {service.title}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
           </div>
-          <a
+          <Link
             href="/blog"
             className="block py-2 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
             {t("hedder.blog")}
-          </a>
-          <a
-            href="  /contact-us"
+          </Link>
+          <Link
+            href="/contact-us"
             className="block py-2 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
             {t("hedder.contactUs")}
-          </a>
+          </Link>
           <div className="mt-4 border-t flex justify-between items-center   dark:border-gray-700 pt-4">
             <ModeToggle />
 
