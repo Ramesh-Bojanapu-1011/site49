@@ -23,7 +23,7 @@ const Home1 = () => {
       <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col caret-transparent">
         <Header />
         {/* Hero Section */}
-        <section className="relative flex min-h-screen flex-col md:flex-row items-center justify-between px-6 py-16   mx-auto w-full  ">
+        <section className="  flex min-h-screen   items-center   px-6 py-16   mx-auto w-full  ">
           {/* Background Video */}
           <video
             autoPlay
@@ -34,9 +34,8 @@ const Home1 = () => {
           >
             <source src="/home1-bg-video.mp4" type="video/mp4" />
           </video>
-          {/* Overlay for readability */}
-          <div className="absolute inset-0   bg-opacity-30 dark:bg-opacity-50 z-10" />
-          <div className="md:w-1/2 text-center md:text-left relative z-20">
+
+          <div className="flex text-center w-full flex-col items-center z-20">
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white drop-shadow-lg">
               {t("home1.heroTitle")}
             </h1>
@@ -45,17 +44,10 @@ const Home1 = () => {
             </p>
             <a
               href="/contact-us"
-              className="inline-block px-8 py-3 rounded-lg bg-amber-50 dark:bg-black dark:text-white font-semibold shadow-lg hover:bg-[#0097a7] transition-colors duration-200 text-lg"
+              className="inline-block px-8 py-3 w-fit   rounded-lg bg-amber-50 dark:bg-black dark:text-white font-semibold shadow-lg hover:bg-[#0097a7] transition-colors duration-200 text-lg"
             >
               {t("home1.heroBtn")}
             </a>
-          </div>
-          <div className="md:w-1/2 flex justify-center relative z-20">
-            <img
-              src="/globe.svg"
-              alt="Portfolio Hero"
-              className="w-64 h-64 object-contain"
-            />
           </div>
         </section>
 

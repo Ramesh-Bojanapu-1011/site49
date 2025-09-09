@@ -169,7 +169,7 @@ const EcommerceSuccess = () => {
                 "ecommerceSuccess.readyToTransform",
                 "Ready to transform your business?",
               )}{" "}
-              <Link href="/contact">
+              <Link href="/contact-us">
                 <span className="text-[#00bcd4] font-bold hover:underline">
                   {t("ecommerceSuccess.contactTeam", "Contact our team")}
                 </span>

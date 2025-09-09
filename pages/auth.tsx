@@ -12,8 +12,8 @@ type User = {
   logoutTime?: string;
 };
 
-const ADMIN_EMAIL = "admin@enckonix.in";
-const ADMIN_PASS = "admin123";
+const ADMIN_EMAIL = "admin@enkonix.in";
+const ADMIN_PASSWORD = "admin123";
 
 export const getUsers = (): User[] => {
   if (typeof window !== "undefined") {
@@ -51,8 +51,7 @@ const AuthPage = () => {
 
     if (isLogin) {
       // Admin login
-      if (form.email === ADMIN_EMAIL && form.password === ADMIN_PASS) {
-        localStorage.setItem("adminLoginTime", new Date().toISOString());
+      if (form.email === ADMIN_EMAIL && form.password === ADMIN_PASSWORD) {
         router.push("/admin-dashbord");
         return;
       }

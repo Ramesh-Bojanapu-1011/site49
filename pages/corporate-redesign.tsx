@@ -96,7 +96,7 @@ const CorporateRedesign = () => {
             </div>
             <p>
               {t("corporateRedesign.thinkingRedesign")}{" "}
-              <Link href="/contact">
+              <Link href="/contact-us">
                 <span className="text-[#00bcd4] font-bold hover:underline">
                   {t("corporateRedesign.contactTeam")}
                 </span>
