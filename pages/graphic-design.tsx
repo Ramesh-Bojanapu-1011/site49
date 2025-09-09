@@ -43,8 +43,18 @@ const GraphicDesign = () => {
       <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col caret-transparent">
         <Header />
         {/* Section 1: Hero */}
-        <section className="relative flex flex-col items-center justify-center min-h-[100vh] text-center">
-          <div className="absolute inset-0 w-full h-full object-cover opacity-30 z-0 bg-gradient-to-tr from-[#00bcd4]/30 to-cyan-400/30" />
+        <section className="relative flex flex-col items-center justify-center min-h-[100vh] text-center overflow-hidden">
+          {/* Background Video */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
+          >
+            <source src="/graphic-design-bg-video.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 w-full h-full object-cover opacity-30 z-0 bg-gradient-to-tr from-[#00bcd4]/30 to-cyan-400/30 pointer-events-none" />
           <div className="relative z-10 max-w-2xl mx-auto">
             <h1 className="text-5xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da] drop-shadow-lg">
               {t("graphicDesign.heroTitle")}
@@ -203,17 +213,17 @@ const GraphicDesign = () => {
                 desc: t("graphicDesign.featureAwardDesc"),
               },
               {
-                icon: "/next.svg",
+                icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiMwMGE2ZWQiIGQ9Ik0yIDZhNCA0IDAgMCAxIDQtNGgyMGE0IDQgMCAwIDEgNCA0djIwYTQgNCAwIDAgMS00IDRINmE0IDQgMCAwIDEtNC00eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmIiBkPSJtMTcgMTYuOTYybC02LjMwNyA2LjA2OWMtLjYzNS42MTEtMS42OTMuMTYtMS42OTMtLjcyVjkuNjljMC0uODgyIDEuMDU4LTEuMzMyIDEuNjkzLS43MkwxNyAxNS4wMzdWOS42OWMwLS44ODIgMS4wNTgtMS4zMzIgMS42OTMtLjcybDYuNTU4IDYuMzFhMSAxIDAgMCAxIDAgMS40NGwtNi41NTggNi4zMWMtLjYzNS42MTItMS42OTMuMTYyLTEuNjkzLS43MnoiIC8+Cgk8L2c+Cjwvc3ZnPg==",
                 title: t("graphicDesign.featureFastTitle"),
                 desc: t("graphicDesign.featureFastDesc"),
               },
               {
-                icon: "/file.svg",
+                icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDYiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTA2IDUxMiI+Cgk8cmVjdCB3aWR0aD0iNTA2IiBoZWlnaHQ9IjUxMiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiMwMDY2ZDEiIGQ9Ik0yMDguOTY0LjAwN0w1MS40NSA3My45NzdjLTE4LjcxIDEwLjMzNy0xMi4zNiAyNy41OTQgMTMuNDYgNDMuMTE5bDEyMS4xMDEgNzIuMjY3YzIuNzA1IDEzLjQyNi02LjQxMyAyOC40NDctMjAuMTUgMzAuOTRjLTQyLjU2Ny0yNS4wNDgtODQuNTE2LTUxLjItMTI3LjQ3NS03NS41MjVjLTQ4LjI1Ny0xNS41Ni0zNy4yOTQgMzAuMzg1LTM3LjM2NSA1Ny4wM2w5LjYzIDEzMS40YzIuNzIgMTkuNjc2IDIwLjgzIDIwLjYzMyA0My44NTMgNi42bDk4LjI5MS01OS4zOTZjMTEuNDc4IDQuNDUyIDIyLjcyNSAxNy40MDYgMjIuMzQ1IDMwLjI4N0w1Ny4xOTQgMzgyLjMxMWMtOS43IDguMzUyLTEwLjc4IDI2Ljc3NiAxLjYxNCAzMy4yM2M0NS44ODQgMzIuMDcgOTEuODA2IDY0LjE5NiAxMzguMTA1IDk1LjU5NmMxNC40MyA0LjI5NyAzMS4xOTQtOC4wNzIgMzAuMDI1LTIzLjQ0bDIuNDE3LTE0OS40MzNjOS42ODQtMTEuMzczIDI5LjEyLTEwLjg2MiAzOS43MS4wMzdsLTEuNTY3IDE0Ny4zNTJjMi4wNTggMjkuNzA2IDM0LjEzNSAyNi40MzkgNTQuOTk3IDEwLjE3M0w0NDIuMzA4IDQxMy45YzIyLjY0OS0yMC4wODkgMy41NDEtMzIuMzc0LTEyLjI1My00MS41MUwzMjcuNzcgMzE1LjU1NGMtMi4zNi0xMy43MDUgNC41OTQtMzAuODczIDE5LjMxNS0zMy45NDdsMTE3LjQ5NyA2Ni45MDdjOS43MjggNC4wNDQgMjYuMjAxIDMuNzYzIDI1LjgzOC0xMS4xMjNjNi4yMTYtNTguNzYgMTEuODk2LTEyNC4wMiAxNC45NDYtMTc3LjIxM2MtNS4yODItMTMuODQ3LTI0LjQ3OS0xOS4zOTItMzYuNzk1LTExLjU1MUwzMzguNjkgMjIxLjMxYy04LjU2LTYuODc4LTMwLjE5NC0yNC4xODItMTEuNzQtMzMuNDUybDEyMy41MTYtNjkuMzk2YzI0Ljk0MS0xNy40NiA1LjI0MS00MC40MDMtMTMuMzMtNDkuOUwyOTkuMjQgMi4wNTJjLTI1LjcxNy00Ljc3OC0yNy42ODggOC45MDUtMjkuMDcyIDI0LjgzOWwuNjQ1IDEyNC44ODZjLTEwLjM2NyA5LjIzMi0yNy45MjQgOS4zMzEtMzcuNzY3LS41ODNsLS4yODQtMTMxLjI3QzIyOS41MjQgOS43NjUgMjIwLjI3OC0uMyAyMDguOTY0LjAwNm0tMjIuMDEzIDY4Ljc0MXEuNjM2IDI4LjI2IDEuMjc2IDU2LjUyMmwtNTMuOTg0LTMyLjIzOGMxNy41NDYtOS4xODMgMzUuMDg5LTE4LjM3MiA1Mi42MzQtMjcuNTU2em0xODYuMzggMjcuMTE3bC01Ni4xMSAzMS4wOWwxLjkyNS01OC42MDR6bS04Ny4wMiAxNDkuMDhjNC4wNDggMy40MTYtMS42OTQgNy4xNTMtNC4zOTkgOC44NGMtOS4yNTEgOC4yNjctMTIuNDkyIDIxLjEyNy0xMi42MDUgMzMuMTI2Yy03LjUwNS0xMC45NDktMjQuOTY2LTE1LjA0NS0zNC44NTUtNS4xMDFjLTMuNiAyLjczLTQuNzczLTMuOTUyLTQuNDE1LTYuNzk1Yy0xLjA2Mi0xMS43ODctOS4xNzktMjEuMzA3LTE4LjQ0NC0yNy44NjJjMTAuMDM4LTUuOTE4IDE4Ljg5LTE1LjI2IDE5LjkwOS0yNy40MjRjMy4zNC0zLjg3OCA3LjI4NS0uMDA4IDExLjM5NSAyLjUxNGMxMC42NDMgMy4xMyAyMiAuMjk2IDMxLjY4NC00LjUxNmMtNS45MTQgMTMuNjY0IDIuMzggMjMuODM0IDExLjczIDI3LjIxOG0tMTc3LjAyIDkuMDdsLTUxLjI1NiAyNy45NTRsLTMuMjc4LTYwLjc0em0zMzUuNjgyIDMwLjEwNGwtNTQuMTItMjcuNTgzbDU2LjU3LTMxLjU1OXpNMTcxLjg2MSA0MjkuNzFsLTQ5Ljg3Ny0zMS42Mmw1MC44NDktMzQuNTQ2em0yMDQuNDcyLTMyLjI1M2wtNTAuOTEyIDMzLjE2bDEuMTM5LTY0LjMxNXoiIC8+Cjwvc3ZnPg==",
                 title: t("graphicDesign.featureGraphicsTitle"),
                 desc: t("graphicDesign.featureGraphicsDesc"),
               },
               {
-                icon: "/window.svg",
+                icon: "https://2793236.fs1.hubspotusercontent-na1.net/hub/2793236/hubfs/Brand-consistency.png?width=1600&name=Brand-consistency.png",
                 title: t("graphicDesign.featureBrandTitle"),
                 desc: t("graphicDesign.featureBrandDesc"),
               },
@@ -223,7 +233,7 @@ const GraphicDesign = () => {
                 desc: t("graphicDesign.featureGlobalDesc"),
               },
               {
-                icon: "/vercel.svg",
+                icon: "https://www.svgrepo.com/show/489674/delivery-package.svg",
                 title: t("graphicDesign.featureDeliveryTitle"),
                 desc: t("graphicDesign.featureDeliveryDesc"),
               },
