@@ -54,20 +54,17 @@ const Blog = () => {
     {
       name: t("blog.author1Name"),
       bio: t("blog.author1Bio"),
-      img: "/avatars/ramesh.jpg",
-      link: "/authors/ramesh-b",
+      img: "/avatar2.jpg",
     },
     {
       name: t("blog.author2Name"),
       bio: t("blog.author2Bio"),
-      img: "/avatars/priya.jpg",
-      link: "/authors/priya-s",
+      img: "/avatar1.jpg",
     },
     {
       name: t("blog.author3Name"),
       bio: t("blog.author3Bio"),
-      img: "/avatars/david.jpg",
-      link: "/authors/david-l",
+      img: "/avatar3.jpg",
     },
   ];
   const tips = [
@@ -118,6 +115,16 @@ const Blog = () => {
         <Header />
         {/* Section 1: Hero */}
         <section className="relative flex flex-col items-center justify-center min-h-[100vh] text-center">
+          {/* Background Video */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
+          >
+            <source src="/blog-bg-video.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 w-full h-full object-cover opacity-30 z-0 bg-gradient-to-tr from-[#00bcd4]/30 to-cyan-400/30" />
           <div className="relative z-10 max-w-2xl mx-auto">
             <h1 className="text-5xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da] drop-shadow-lg">
@@ -151,7 +158,7 @@ const Blog = () => {
                   alt={study.title}
                   width={500}
                   height={220}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-60   object-cover"
                 />
                 <div className="p-6 flex flex-col flex-1">
                   <h4 className="font-bold text-xl mb-2 text-[#00bcd4]">
@@ -162,7 +169,7 @@ const Blog = () => {
                   </p>
                   <a
                     href={study.link}
-                    className="inline-block mt-auto px-6 py-2 rounded-lg bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 text-base"
+                    className="inline-block mt-auto px-6 py-2 rounded-lg bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 text-base text-center"
                   >
                     {t("blog.caseStudyReadMore")}
                   </a>
@@ -207,9 +214,8 @@ const Blog = () => {
           </h2>
           <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
             {authors.map((author, idx) => (
-              <Link
+              <div
                 key={idx}
-                href={author.link}
                 className="w-[320px] max-w-xs bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-10 flex flex-col items-center hover:-translate-y-2 hover:scale-105 transition-all duration-300"
               >
                 <Image
@@ -217,7 +223,7 @@ const Blog = () => {
                   alt={author.name}
                   width={80}
                   height={80}
-                  className="rounded-full mb-6 border-4 border-[#00bcd4] shadow-lg"
+                  className="rounded-full w-30 h-30 object-cover object-top mb-6 border-4 border-[#00bcd4] shadow-lg"
                 />
                 <div className="font-bold text-xl text-[#00bcd4] mb-1 text-center">
                   {author.name}
@@ -225,10 +231,7 @@ const Blog = () => {
                 <div className="text-base text-gray-500 dark:text-gray-400 mb-2 text-center">
                   {author.bio}
                 </div>
-                <span className="text-cyan-500 font-bold hover:underline">
-                  {t("blog.authorsViewProfile")}
-                </span>
-              </Link>
+              </div>
             ))}
           </div>
         </section>
