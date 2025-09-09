@@ -12,34 +12,34 @@ const ContactUs = () => {
     {
       city: t("contactUs.locations.ny.city"),
       address: t("contactUs.locations.ny.address"),
-      img: "/public/location-ny.jpg",
+      img: "/new_york.jpg",
     },
     {
       city: t("contactUs.locations.london.city"),
       address: t("contactUs.locations.london.address"),
-      img: "/public/location-london.jpg",
+      img: "/london.jpg",
     },
     {
       city: t("contactUs.locations.sydney.city"),
       address: t("contactUs.locations.sydney.address"),
-      img: "/public/location-sydney.jpg",
+      img: "/sydney.jpg",
     },
   ];
   const team = [
     {
       name: t("contactUs.team.ramesh.name"),
       role: t("contactUs.team.ramesh.role"),
-      img: "/avatars/ramesh.jpg",
+      img: "/avatar2.jpg",
     },
     {
       name: t("contactUs.team.priya.name"),
       role: t("contactUs.team.priya.role"),
-      img: "/avatars/priya.jpg",
+      img: "/avatar1.jpg",
     },
     {
       name: t("contactUs.team.david.name"),
       role: t("contactUs.team.david.role"),
-      img: "/avatars/david.jpg",
+      img: "/avatar3.jpg",
     },
   ];
   const faqs = [
@@ -56,16 +56,67 @@ const ContactUs = () => {
       a: t("contactUs.faqs.a3"),
     },
   ];
+  const formRef = React.useRef<HTMLFormElement | null>(null);
+  const [success, setSuccess] = React.useState(false);
+  const handleCloseSuccess = () => setSuccess(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = formRef.current;
+    if (!form) return;
+
+    const formData = new FormData(form);
+    const action = form.getAttribute("action");
+
+    if (!action) {
+      alert("Form action URL not found.");
+      return;
+    }
+
+    try {
+      const response = await fetch(action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      const content = await response.json();
+      console.log("Form submission successful:", content);
+
+      if (response.ok) {
+        form.reset();
+        setSuccess(true);
+      } else {
+        alert("Oops! Something went wrong.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Oops! Something went wrong.");
+    }
+  };
+
   return (
     <>
       <Head>
         <title>{t("contactUs.pageTitle")}</title>
         <meta name="description" content={t("contactUs.pageDesc")} />
       </Head>
-      <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col caret-transparent">
+      <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col  ">
         <Header />
         {/* Section 1: Hero */}
         <section className="relative flex flex-col items-center justify-center min-h-[100vh] text-center">
+          {/* Background Video */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
+          >
+            <source src="/contact-us-bg-video.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 w-full h-full object-cover opacity-30 z-0 bg-gradient-to-tr from-[#00bcd4]/30 to-cyan-400/30" />
           <div className="relative z-10 max-w-2xl mx-auto">
             <h1 className="text-5xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da] drop-shadow-lg">
@@ -92,15 +143,55 @@ const ContactUs = () => {
                 className="rounded-2xl shadow-xl object-cover"
               />
             </div>
-            <form className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col gap-6 md:w-1/2 w-full">
+
+            {success && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+                <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-8 flex flex-col items-center relative min-w-[320px] animate-popin">
+                  <button
+                    onClick={handleCloseSuccess}
+                    className="absolute top-4 right-4 text-gray-500 dark:text-gray-300 hover:text-red-500 text-2xl font-bold focus:outline-none"
+                    aria-label="Close"
+                  >
+                    &times;
+                  </button>
+                  <div className="bg-green-100 dark:bg-green-900 rounded-full p-4 mb-2 shadow-lg flex items-center justify-center animate-bounce">
+                    <svg
+                      className="w-10 h-10 text-green-600 dark:text-green-400"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <p className="text-green-700 dark:text-green-300 font-bold text-lg text-center">
+                    {t("Contact_Form_Success")}
+                  </p>
+                </div>
+              </div>
+            )}
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              action="https://formspree.io/f/xovlekvg"
+              method="POST"
+              className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col gap-6 md:w-1/2 w-full"
+            >
               <input
                 type="text"
+                name="name"
                 placeholder={t("contactUs.formName")}
                 className="px-6 py-4 rounded-xl border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] text-lg"
                 required
               />
               <input
                 type="email"
+                name="email"
                 placeholder={t("contactUs.formEmail")}
                 className="px-6 py-4 rounded-xl border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] text-lg"
                 required
@@ -108,6 +199,7 @@ const ContactUs = () => {
               <textarea
                 placeholder={t("contactUs.formMessage")}
                 rows={5}
+                name="message"
                 className="px-6 py-4 rounded-xl border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] text-lg"
                 required
               />
@@ -155,7 +247,7 @@ const ContactUs = () => {
           <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
             {t("contactUs.teamTitle")}
           </h2>
-          <div className="flex gap-8 overflow-x-auto pb-4">
+          <div className="flex gap-8  justify-center pb-4">
             {team.map((member, idx) => (
               <div
                 key={idx}
@@ -166,7 +258,7 @@ const ContactUs = () => {
                   alt={member.name}
                   width={80}
                   height={80}
-                  className="rounded-full mb-4 border-4 border-[#00bcd4] shadow-lg"
+                  className="rounded-full w-30 h-30 object-cover object-top mb-4 border-4 border-[#00bcd4] shadow-lg"
                 />
                 <div className="font-bold text-xl text-[#00bcd4] mb-1 text-center">
                   {member.name}
