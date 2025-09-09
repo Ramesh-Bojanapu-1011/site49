@@ -828,5 +828,42 @@
     "contactTeam": "Contact our team",
     "expertAdvice": "for expert advice.",
     "backToBlog": "Back to Blog"
+  },
+  "contactUs": {
+    "pageTitle": "Contact Us | Get in Touch",
+    "pageDesc": "Reach out to our team for inquiries, support, or collaboration.",
+    "heroTitle": "Contact Us",
+    "heroDesc": "We're here to help! Reach out for project inquiries, support, or creative collaboration.",
+    "formTitle": "Send Us a Message",
+    "formImgAlt": "Contact Us",
+    "formName": "Your Name",
+    "formEmail": "Your Email",
+    "formMessage": "Your Message",
+    "formBtn": "Send Message",
+    "locationsTitle": "Our Locations",
+    "locations": {
+      "ny": { "city": "New York", "address": "123 Madison Ave, NY 10010" },
+      "london": { "city": "London", "address": "45 Oxford St, London W1D 2DZ" },
+      "sydney": { "city": "Sydney", "address": "88 George St, Sydney NSW 2000" }
+    },
+    "teamTitle": "Meet the Team",
+    "team": {
+      "ramesh": { "name": "Ramesh B.", "role": "Lead Designer" },
+      "priya": { "name": "Priya S.", "role": "Frontend Developer" },
+      "david": { "name": "David L.", "role": "Brand Strategist" }
+    },
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": {
+      "q1": "How can I start a project?",
+      "a1": "Just fill out the contact form above and our team will get in touch with you soon.",
+      "q2": "Do you offer support after launch?",
+      "a2": "Yes, we provide ongoing support and maintenance for all our clients.",
+      "q3": "Can I visit your office?",
+      "a3": "Absolutely! Check our locations above and schedule a visit."
+    },
+    "stayConnectedTitle": "Stay Connected!",
+    "stayConnectedDesc": "Follow us on social media and subscribe to our newsletter for updates, tips, and inspiration.",
+    "newsletterPlaceholder": "Your email address",
+    "newsletterBtn": "Subscribe"
   }
 }
