@@ -44,6 +44,16 @@ const Branding = () => {
         <Header />
         {/* Section 1: Hero */}
         <section className="relative flex flex-col items-center justify-center min-h-[100vh] text-center">
+          {/* Background Video */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
+          >
+            <source src="/branding-bg-video.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 w-full h-full object-cover opacity-30 z-0 bg-gradient-to-tr from-[#00bcd4]/30 to-cyan-400/30" />
           <div className="relative z-10 max-w-2xl mx-auto">
             <h1 className="text-5xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da] drop-shadow-lg">
@@ -203,17 +213,17 @@ const Branding = () => {
                 desc: t("branding.featureAwardDesc"),
               },
               {
-                icon: "/next.svg",
+                icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiMwMGE2ZWQiIGQ9Ik0yIDZhNCA0IDAgMCAxIDQtNGgyMGE0IDQgMCAwIDEgNCA0djIwYTQgNCAwIDAgMS00IDRINmE0IDQgMCAwIDEtNC00eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmIiBkPSJtMTcgMTYuOTYybC02LjMwNyA2LjA2OWMtLjYzNS42MTEtMS42OTMuMTYtMS42OTMtLjcyVjkuNjljMC0uODgyIDEuMDU4LTEuMzMyIDEuNjkzLS43MkwxNyAxNS4wMzdWOS42OWMwLS44ODIgMS4wNTgtMS4zMzIgMS42OTMtLjcybDYuNTU4IDYuMzFhMSAxIDAgMCAxIDAgMS40NGwtNi41NTggNi4zMWMtLjYzNS42MTItMS42OTMuMTYyLTEuNjkzLS43MnoiIC8+Cgk8L2c+Cjwvc3ZnPg==",
                 title: t("branding.featureFastTitle"),
                 desc: t("branding.featureFastDesc"),
               },
               {
-                icon: "/file.svg",
+                icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KCTxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2NhZDNmNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJtMS44NyA4bC43LTIuNzRhMSAxIDAgMCAxIC45Ni0uNzZoMTAuOTRhMSAxIDAgMCAxIC45NyAxLjI0TDE1LjEyIDdNNiAxMy41SDJBMS41IDEuNSAwIDAgMSAuNSAxMlYzLjVhMSAxIDAgMCAxIDEtMWg1YTEgMSAwIDAgMSAxIDF2MSIgc3Ryb2tlLXdpZHRoPSIxIiAvPgoJPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWVkNDlmIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNMTIuOTIzIDExLjkwNEg3LjVMMTAuMjEgN1oiIHN0cm9rZS13aWR0aD0iMSIgLz4KCTxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2VlZDQ5ZiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTExLjY2MiA5LjY0MWEyLjU2OSAyLjU5NiAwIDEgMS0xLjMwOCAyLjI2MyIgc3Ryb2tlLXdpZHRoPSIxIiAvPgo8L3N2Zz4=",
                 title: t("branding.featureCustomTitle"),
                 desc: t("branding.featureCustomDesc"),
               },
               {
-                icon: "/window.svg",
+                icon: "https://2793236.fs1.hubspotusercontent-na1.net/hub/2793236/hubfs/Brand-consistency.png?width=1600&name=Brand-consistency.png",
                 title: t("branding.featureBrandTitle"),
                 desc: t("branding.featureBrandDesc"),
               },
@@ -223,7 +233,7 @@ const Branding = () => {
                 desc: t("branding.featureGlobalDesc"),
               },
               {
-                icon: "/vercel.svg",
+                icon: "https://www.svgrepo.com/show/489674/delivery-package.svg",
                 title: t("branding.featureDeliveryTitle"),
                 desc: t("branding.featureDeliveryDesc"),
               },
