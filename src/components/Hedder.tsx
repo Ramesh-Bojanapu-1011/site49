@@ -148,7 +148,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className=" caret-transparent bg-white dark:bg-gray-900    sticky top-0 z-100  ">
+    <header className=" caret-transparent bg-white dark:bg-gray-900 max-w-screen sticky top-0 z-100  ">
       <div className="  mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -264,7 +264,9 @@ const Header: React.FC = () => {
               <span className="text-xl">🌐</span> <span>▼</span>
             </button>
             {openDropdown === "language" && (
-              <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]">
+              <div
+                className={`absolute ${i18n.language === "en" ? "right-0" : "left-0"} mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]`}
+              >
                 {supportedLanguages.map((lang) => (
                   <button
                     key={lang.code}
