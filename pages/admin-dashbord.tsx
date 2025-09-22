@@ -193,7 +193,11 @@ const AdminDashboard = () => {
               {t("adminDashboard.registrationsTitle")}
             </h2>
             <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center">
-              <ResponsiveContainer className={'text-[#00bcd4]'} width="100%" height={300}>
+              <ResponsiveContainer
+                className={"text-[#00bcd4]"}
+                width="100%"
+                height={300}
+              >
                 <BarChart
                   data={barData}
                   margin={{ top: 20, right: 30, left: 0, bottom: 5 }}
@@ -206,7 +210,6 @@ const AdminDashboard = () => {
                   <Bar
                     dataKey="count"
                     fill="#00bcd4"
-                     
                     name={t("adminDashboard.bar.registrations")}
                   />
                 </BarChart>
@@ -214,8 +217,7 @@ const AdminDashboard = () => {
             </div>
           </div>
         </section>
-        {/* Bar Chart Section: Weekly Registrations */}
-        <section className="py-10 px-6 mx-auto w-full"></section>
+
         <Footer />
       </main>
     </>
