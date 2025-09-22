@@ -284,23 +284,23 @@ const ContactUs = () => {
         <section className=" caret-transparent bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 ">
           <div className="py-20 px-6 mx-auto w-full  ">
             <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
-            {t("contactUs.faqsTitle")}
-          </h2>
-          <div className="  mx-auto">
-            {faqs.map((faq, idx) => (
-              <details
-                key={idx}
-                className="mb-6 bg-white dark:bg-gray-900 rounded-xl shadow p-6"
-              >
-                <summary className="font-bold text-[#00bcd4] cursor-pointer text-lg mb-2">
-                  {faq.q}
-                </summary>
-                <div className="text-gray-700 dark:text-gray-300 mt-2">
-                  {faq.a}
-                </div>
-              </details>
-            ))}
-          </div>
+              {t("contactUs.faqsTitle")}
+            </h2>
+            <div className="  mx-auto">
+              {faqs.map((faq, idx) => (
+                <details
+                  key={idx}
+                  className="mb-6 bg-white dark:bg-gray-900 rounded-xl shadow p-6"
+                >
+                  <summary className="font-bold text-[#00bcd4] cursor-pointer text-lg mb-2">
+                    {faq.q}
+                  </summary>
+                  <div className="text-gray-700 dark:text-gray-300 mt-2">
+                    {faq.a}
+                  </div>
+                </details>
+              ))}
+            </div>
           </div>
         </section>
 
