@@ -307,7 +307,7 @@ const Blog = () => {
         <title>{t("blog.pageTitle")}</title>
         <meta name="description" content={t("blog.pageDesc")} />
       </Head>
-      <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col caret-transparent">
+      <main className=" min-h-screen flex flex-col caret-transparent">
         <Header />
         {/* Section 1: Hero */}
         <section className="relative flex flex-col items-center justify-center min-h-[100vh] text-center">
@@ -339,165 +339,204 @@ const Blog = () => {
         </section>
 
         {/* Featured Case Studies Section */}
-        <section id="latest" className="py-16 px-6 max-w-7xl mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-6 text-center text-[#00bcd4]">
-            {t("blog.caseStudiesTitle")}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {caseStudies.map((study) => (
-              <div
-                key={study.title}
-                className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden flex flex-col"
-              >
-                <Image
-                  src={study.img}
-                  alt={study.title}
-                  width={500}
-                  height={220}
-                  className="w-full h-60   object-cover"
-                />
-                <div className="p-6 flex flex-col flex-1">
-                  <h4 className="font-bold text-xl mb-2 text-[#00bcd4]">
-                    {study.title}
-                  </h4>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4 flex-1">
-                    {study.desc}
-                  </p>
-                  <a
-                    href={study.link}
-                    className="inline-block mt-auto px-6 py-2 rounded-lg bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 text-base text-center"
-                  >
-                    {t("blog.caseStudyReadMore")}
-                  </a>
+        <section
+          id="latest"
+          className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 "
+        >
+          <div className="py-16 px-6 max-w-7xl mx-auto w-full">
+            <h2 className="text-3xl font-bold mb-6 text-center text-[#00bcd4]">
+              {t("blog.caseStudiesTitle")}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {caseStudies.map((study) => (
+                <div
+                  key={study.title}
+                  className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden flex flex-col"
+                >
+                  <Image
+                    src={study.img}
+                    alt={study.title}
+                    width={500}
+                    height={220}
+                    className="w-full h-60   object-cover"
+                  />
+                  <div className="p-6 flex flex-col flex-1">
+                    <h4 className="font-bold text-xl mb-2 text-[#00bcd4]">
+                      {study.title}
+                    </h4>
+                    <p className="text-gray-700 dark:text-gray-300 mb-4 flex-1">
+                      {study.desc}
+                    </p>
+                    <a
+                      href={study.link}
+                      className="inline-block mt-auto px-6 py-2 rounded-lg bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 text-base text-center"
+                    >
+                      {t("blog.caseStudyReadMore")}
+                    </a>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Section 3: Explore Blog Categories */}
-        <section className="py-20 px-6 mx-auto w-full flex flex-col md:flex-row md:items-start gap-12">
-          <div className="md:w-1/2 flex  flex-col justify-center mb-10 md:mb-0">
-            <h2 className="text-4xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da]">
-              {t("blog.categoriesTitle")}
-            </h2>
-            <p className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-6">
-              {t("blog.categoriesDesc1")}
-            </p>
-            <p className="text-base text-gray-600 dark:text-gray-400">
-              {t("blog.categoriesDesc2")}
-            </p>
-          </div>
-          <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {categories.map((cat, idx) => (
-              <div
-                key={idx}
-                className={`group ${cat.color} rounded-2xl shadow-xl p-8 flex flex-col items-start hover:scale-105 transition-all duration-300`}
-              >
-                <div className="font-bold text-2xl text-white mb-2">
-                  {cat.title}
+        <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+          <div className="py-20 px-6 mx-auto w-full flex flex-col md:flex-row md:items-start gap-12">
+            <div className="md:w-1/2 flex  flex-col justify-center mb-10 md:mb-0">
+              <h2 className="text-4xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da]">
+                {t("blog.categoriesTitle")}
+              </h2>
+              <p className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-6">
+                {t("blog.categoriesDesc1")}
+              </p>
+              <p className="text-base text-gray-600 dark:text-gray-400">
+                {t("blog.categoriesDesc2")}
+              </p>
+            </div>
+            <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+              {categories.map((cat, idx) => (
+                <div
+                  key={idx}
+                  className={`group ${cat.color} rounded-2xl shadow-xl p-8 flex flex-col items-start hover:scale-105 transition-all duration-300`}
+                >
+                  <div className="font-bold text-2xl text-white mb-2">
+                    {cat.title}
+                  </div>
+                  <div className="text-white/90 text-base mb-2">{cat.desc}</div>
                 </div>
-                <div className="text-white/90 text-base mb-2">{cat.desc}</div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Section 4: Author Spotlight (Vertical Cards) */}
-        <section className="py-20 px-6 mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
-            {t("blog.authorsTitle")}
-          </h2>
-          <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
-            {authors.map((author, idx) => (
-              <div
-                key={idx}
-                className="w-[320px] max-w-xs bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-10 flex flex-col items-center hover:-translate-y-2 hover:scale-105 transition-all duration-300"
-              >
-                <Image
-                  src={author.img}
-                  alt={author.name}
-                  width={80}
-                  height={80}
-                  className="rounded-full w-30 h-30 object-cover object-top mb-6 border-4 border-[#00bcd4] shadow-lg"
-                />
-                <div className="font-bold text-xl text-[#00bcd4] mb-1 text-center">
-                  {author.name}
+        <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+          <div className="py-20 px-6 mx-auto w-full">
+            <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
+              {t("blog.authorsTitle")}
+            </h2>
+            <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
+              {authors.map((author, idx) => (
+                <div
+                  key={idx}
+                  className="w-[320px] max-w-xs bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-10 flex flex-col items-center hover:-translate-y-2 hover:scale-105 transition-all duration-300"
+                >
+                  <Image
+                    src={author.img}
+                    alt={author.name}
+                    width={80}
+                    height={80}
+                    className="rounded-full w-30 h-30 object-cover object-top mb-6 border-4 border-[#00bcd4] shadow-lg"
+                  />
+                  <div className="font-bold text-xl text-[#00bcd4] mb-1 text-center">
+                    {author.name}
+                  </div>
+                  <div className="text-base text-gray-500 dark:text-gray-400 mb-2 text-center">
+                    {author.bio}
+                  </div>
                 </div>
-                <div className="text-base text-gray-500 dark:text-gray-400 mb-2 text-center">
-                  {author.bio}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Section 5: Quick Tips (Masonry Grid) */}
-        <section className="py-20 px-6 mx-auto w-full">
-          <h2 className="text-4xl font-extrabold mb-10 text-[#0097a7] dark:text-[#26c6da] text-left md:text-center">
-            {t("blog.tipsTitle")}
-          </h2>
-          <div className="flex gap-8 flex-wrap justify-center pb-4">
-            {tips.map((item, idx) => (
-              <div
-                key={idx}
-                className={`min-w-[320px] max-w-xs bg-gradient-to-tr ${item.color} rounded-2xl shadow-2xl p-8 flex flex-col items-center justify-center hover:-translate-y-2 hover:scale-105 transition-all duration-300 text-white relative`}
-              >
-                <div className="absolute top-6 left-6 text-4xl drop-shadow-lg">
-                  {item.icon}
+        <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+          <div className="py-20 px-6 mx-auto w-full">
+            <h2 className="text-4xl font-extrabold mb-10 text-[#0097a7] dark:text-[#26c6da] text-left md:text-center">
+              {t("blog.tipsTitle")}
+            </h2>
+            <div className="flex gap-8 flex-wrap justify-center pb-4">
+              {tips.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={`min-w-[320px] max-w-xs bg-gradient-to-tr ${item.color} rounded-2xl shadow-2xl p-8 flex flex-col items-center justify-center hover:-translate-y-2 hover:scale-105 transition-all duration-300 text-white relative`}
+                >
+                  <div className="absolute top-6 left-6 text-4xl drop-shadow-lg">
+                    {item.icon}
+                  </div>
+                  <div className="text-lg font-semibold mb-4 mt-8 text-center">
+                    {item.tip}
+                  </div>
+                  <div className="text-sm font-bold text-cyan-100 text-center">
+                    {item.author}
+                  </div>
                 </div>
-                <div className="text-lg font-semibold mb-4 mt-8 text-center">
-                  {item.tip}
-                </div>
-                <div className="text-sm font-bold text-cyan-100 text-center">
-                  {item.author}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Section 6: Subscribe CTA (Gradient Card) */}
-        <section className="py-20   mx-auto w-full flex flex-col items-center justify-center">
-          <div className="relative group w-full  ">
-            <div className="relative bg-white dark:bg-gray-900     p-12 flex flex-col items-center justify-center min-w-[340px]">
-              <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center drop-shadow-lg">
-                {t("blog.subscribeTitle")}
-              </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
-                {t("blog.subscribeDesc")}
-              </p>
-              <form className="w-full flex max-w-2xl  justify-center items-center gap-4">
-                <input
-                  type="email"
-                  placeholder={t("blog.subscribePlaceholder")}
-                  className="w-full px-6 py-3 rounded-xl border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] text-lg"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105   text-xl tracking-wide  "
-                >
-                  {t("blog.subscribeBtn")}
-                </button>
-              </form>
+        {/* Section 6: Contact CTA */}
+        <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-20 px-6">
+          <div className="py-20 px-6 mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-16">
+            <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
+              <Image
+                src="/contact-main.jpg"
+                alt={t("digitalMarketing.contactImgAlt")}
+                width={400}
+                height={400}
+                className="rounded-3xl w-100 h-100 shadow-2xl object-cover"
+              />
+            </div>
+            <div className="w-full md:w-1/2 flex justify-center">
+              <div className="relative group w-full max-w-lg">
+                <div className="absolute inset-0 rounded-3xl p-[3px] bg-gradient-to-tr from-[#00bcd4] via-cyan-400 to-amber-400 animate-gradient-x blur-sm opacity-80 group-hover:opacity-100 transition-all duration-500" />
+                <div className="relative bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-12 flex flex-col items-center justify-center min-w-[340px]">
+                  <div className="flex gap-6 mb-6 animate-float">
+                    <a
+                      href="mailto:hello@site49.com"
+                      className="hover:scale-110 transition"
+                    >
+                      <Image
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSIyMiIgeD0iMSIgeT0iNSIgZmlsbD0iI2I0YWNiYyIgcng9IjEuNSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiNiNGFjYmMiIC8+CgkJPHJlY3Qgd2lkdGg9IjI4IiBoZWlnaHQ9IjE4IiB4PSIyIiB5PSI3IiBmaWxsPSIjY2RjNGQ2IiByeD0iMSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiNjZGM0ZDYiIC8+CgkJPHBhdGggZmlsbD0iI2UxZDhlYyIgZD0ibTMwIDIzLjRsLTEyLjk3MS03Ljc4MmEyIDIgMCAwIDAtMi4wNTggMEwyIDIzLjRWMjVhMSAxIDAgMCAwIDEgMWgyNmExIDEgMCAwIDAgMS0xeiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiNlMWQ4ZWMiIC8+CgkJPHBhdGggZmlsbD0iIzk5OGVhNCIgZD0iTTIgOS43NjZWOGgyOHYxLjc2NkwxNy41NDQgMTcuMjRhMyAzIDAgMCAxLTMuMDg4IDB6IiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZT0iIzk5OGVhNCIgLz4KCQk8cGF0aCBmaWxsPSIjZjNlZWY4IiBkPSJNMiA4LjZWN2ExIDEgMCAwIDEgMS0xaDI2YTEgMSAwIDAgMSAxIDF2MS42bC0xMi45NzEgNy43ODNhMiAyIDAgMCAxLTIuMDU4IDB6IiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZT0iI2YzZWVmOCIgLz4KCQk8cGF0aCBmaWxsPSIjMDBhNmVkIiBkPSJNMTYgMjNhNyA3IDAgMSAwIDAtMTRhNyA3IDAgMCAwIDAgMTQiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlPSIjMDBhNmVkIiAvPgoJCTxwYXRoIGZpbGw9IiNmNGY0ZjQiIGQ9Ik0xNiAxMS41Yy0xLjIxLS4wMi0yLjM2LjQ0LTMuMjIgMS4zYy0uODcuODUtMS4zNCAxLjk5LTEuMzQgMy4yYzAgMi40OCAyLjAyIDQuNSA0LjUgNC41YS40Ny40NyAwIDEgMCAwLS45NGMtMS45NiAwLTMuNTYtMS42LTMuNTYtMy41NmMwLS45Ni4zOC0xLjg2IDEuMDYtMi41M3MxLjU5LTEuMDMgMi41NS0xLjAzYzEuOTMuMDMgMy41MSAxLjY1IDMuNTEgMy42MnYuODFhLjY3LjY3IDAgMCAxLTEuMzQgMHYtMy4wOGEuNDcuNDcgMCAwIDAtLjQ3LS40N2MtLjI2IDAtLjQ5LjIxLS40OS40N3YuMDljLS40NC0uMzUtLjk5LS41Ny0xLjYtLjU3Yy0xLjQgMC0yLjU0IDEuMTQtMi41NCAyLjU0czEuMTQgMi41NCAyLjU0IDIuNTRjLjcgMCAxLjM0LS4yOSAxLjgtLjc1Yy4yOC41LjgxLjg0IDEuNDIuODRjLjg5IDAgMS42Mi0uNzMgMS42Mi0xLjYydi0uODFjMC0yLjQ3LTEuOTktNC41Mi00LjQ0LTQuNTVtLS4zOSA1Ljk2Yy0uODggMC0xLjYtLjcyLTEuNi0xLjZzLjcyLTEuNiAxLjYtMS42czEuNi43MiAxLjYgMS42cy0uNzIgMS42LTEuNiAxLjYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlPSIjZjRmNGY0IiAvPgoJPC9nPgo8L3N2Zz4="
+                        alt="Email"
+                        width={36}
+                        height={36}
+                      />
+                    </a>
+                    <a
+                      href="tel:+1234567890"
+                      className="hover:scale-110 transition"
+                    >
+                      <Image
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwNjZkMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0xMy44MzIgMTYuNTY4YTEgMSAwIDAgMCAxLjIxMy0uMzAzbC4zNTUtLjQ2NUEyIDIgMCAwIDEgMTcgMTVoM2EyIDIgMCAwIDEgMiAydjNhMiAyIDAgMCAxLTIgMkExOCAxOCAwIDAgMSAyIDRhMiAyIDAgMCAxIDItMmgzYTIgMiAwIDAgMSAyIDJ2M2EyIDIgMCAwIDEtLjggMS42bC0uNDY4LjM1MWExIDEgMCAwIDAtLjI5MiAxLjIzM2ExNCAxNCAwIDAgMCA2LjM5MiA2LjM4NCIgLz4KPC9zdmc+"
+                        alt="Phone"
+                        width={36}
+                        height={36}
+                      />
+                    </a>
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:scale-110 transition"
+                    >
+                      <Image
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjU2IDI1NiI+Cgk8cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxyZWN0IHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiBmaWxsPSIjZmZmIiByeD0iNjAiIHN0cm9rZS13aWR0aD0iNi41IiBzdHJva2U9IiNmZmYiIC8+CgkJPHJlY3Qgd2lkdGg9IjI1NiIgaGVpZ2h0PSIyNTYiIGZpbGw9IiMwYTY2YzIiIHJ4PSI2MCIgc3Ryb2tlLXdpZHRoPSI2LjUiIHN0cm9rZT0iIzBhNjZjMiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTg0LjcxNSAyMTcuNjg1aDI5LjI3YTQgNCAwIDAgMCA0LTMuOTk5bC4wMTUtNjEuODQyYzAtMzIuMzIzLTYuOTY1LTU3LjE2OC00NC43MzgtNTcuMTY4Yy0xNC4zNTktLjUzNC0yNy45IDYuODY4LTM1LjIwNyAxOS4yMjhhLjMyLjMyIDAgMCAxLS41OTUtLjE2MVYxMDEuNjZhNCA0IDAgMCAwLTQtNGgtMjcuNzc3YTQgNCAwIDAgMC00IDR2MTEyLjAyYTQgNCAwIDAgMCA0IDRoMjkuMjY4YTQgNCAwIDAgMCA0LTR2LTU1LjM3M2MwLTE1LjY1NyAyLjk3LTMwLjgyIDIyLjM4MS0zMC44MmMxOS4xMzUgMCAxOS4zODMgMTcuOTE2IDE5LjM4MyAzMS44MzR2NTQuMzY0YTQgNCAwIDAgMCA0IDRNMzggNTkuNjI4YzAgMTEuODY0IDkuNzY3IDIxLjYyNiAyMS42MzIgMjEuNjI2YzExLjg2Mi0uMDAxIDIxLjYyMy05Ljc2OSAyMS42MjMtMjEuNjMxQzgxLjI1MyA0Ny43NjEgNzEuNDkxIDM4IDU5LjYyOCAzOEM0Ny43NjIgMzggMzggNDcuNzYzIDM4IDU5LjYyN202Ljk1OSAxNTguMDU4aDI5LjMwN2E0IDQgMCAwIDAgNC00VjEwMS42NmE0IDQgMCAwIDAtNC00SDQ0Ljk1OWE0IDQgMCAwIDAtNCA0djExMi4wMjVhNCA0IDAgMCAwIDQgNCIgc3Ryb2tlLXdpZHRoPSI2LjUiIHN0cm9rZT0iI2ZmZiIgLz4KCTwvZz4KPC9zdmc+"
+                        alt="LinkedIn"
+                        width={36}
+                        height={36}
+                      />
+                    </a>
+                  </div>
+                  <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center drop-shadow-lg">
+                    {t("digitalMarketing.contactTitle")}
+                  </h2>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
+                    {t("digitalMarketing.contactDesc")}
+                  </p>
+                  <a
+                    href="/contact-us"
+                    className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide animate-bounce"
+                  >
+                    {t("digitalMarketing.contactBtn")}
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <style jsx>{`
-            @keyframes gradient-x {
-              0%,
-              100% {
-                background-position: 0% 50%;
-              }
-              50% {
-                background-position: 100% 50%;
-              }
-            }
-            .animate-gradient-x {
-              background-size: 200% 200%;
-              animation: gradient-x 4s ease-in-out infinite;
-            }
-          `}</style>
         </section>
         <Footer />
       </main>
