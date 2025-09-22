@@ -70,7 +70,7 @@ const Services = () => {
             <source src="/services-bg.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-tr from-[#00bcd4]/30 to-cyan-400/30 z-0" />
-          <div className="relative z-10 max-w-2xl mx-auto">
+          <div className="relative z-10 mx-auto">
             <h1 className="text-5xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da] drop-shadow-lg">
               {t("services.heroTitle")}
             </h1>
