@@ -34,7 +34,7 @@ const DigitalMarketing = () => {
             <h1 className="text-5xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da] drop-shadow-lg">
               {t("digitalMarketing.heroTitle")}
             </h1>
-            <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
+            <p className="text-xl  dark:text-gray-300 mb-8">
               {t("digitalMarketing.heroDesc")}
             </p>
             <Link
