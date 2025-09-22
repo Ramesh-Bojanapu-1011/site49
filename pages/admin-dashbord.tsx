@@ -143,7 +143,7 @@ const AdminDashboard = () => {
                       {user.loginTime.toLocaleString()}
                     </td>
                     <td className="py-3 px-6">
-                      {user.logoutTime.toLocaleString()}
+                      {user.logoutTime ? user.logoutTime.toLocaleString() : "-"}
                     </td>
                   </tr>
                 ))}
@@ -153,63 +153,69 @@ const AdminDashboard = () => {
         </section>
 
         {/* Pie Chart Section */}
-        <section className="py-10 px-6 max-w-3xl mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-8 text-[#00bcd4] text-center">
-            {t("adminDashboard.activityTitle")}
-          </h2>
-          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center">
-            <ResponsiveContainer width="100%" height={300}>
-              <PieChart>
-                <Pie
-                  data={pieData}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  label={({ name, percent }) =>
-                    `${name}: ${percent ? (percent * 100).toFixed(0) : 0}%`
-                  }
-                  outerRadius={100}
-                  fill="#8884d8"
-                  dataKey="value"
+        <section className="py-10 px-6 flex   mx-auto w-full">
+          <div className="flex-1 ">
+            <h2 className="text-3xl font-bold mb-8 text-[#00bcd4] text-center">
+              {t("adminDashboard.activityTitle")}
+            </h2>
+            <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center">
+              <ResponsiveContainer width="100%" height={300}>
+                <PieChart>
+                  <Pie
+                    data={pieData}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    label={({ name, percent }) =>
+                      `${name}: ${
+                        percent ? (Number(percent) * 100).toFixed(0) : 0
+                      }%`
+                    }
+                    outerRadius={100}
+                    fill="#8884d8"
+                    dataKey="value"
+                  >
+                    {pieData.map((entry, index) => (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={COLORS[index % COLORS.length]}
+                      />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+          <div className="flex-1 ml-10">
+            <h2 className="text-3xl font-bold mb-8 text-[#00bcd4] text-center">
+              {t("adminDashboard.registrationsTitle")}
+            </h2>
+            <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center">
+              <ResponsiveContainer className={'text-[#00bcd4]'} width="100%" height={300}>
+                <BarChart
+                  data={barData}
+                  margin={{ top: 20, right: 30, left: 0, bottom: 5 }}
                 >
-                  {pieData.map((entry, index) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={COLORS[index % COLORS.length]}
-                    />
-                  ))}
-                </Pie>
-                <Tooltip />
-                <Legend />
-              </PieChart>
-            </ResponsiveContainer>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="week" />
+                  <YAxis allowDecimals={false} />
+                  <Tooltip />
+                  <Legend />
+                  <Bar
+                    dataKey="count"
+                    fill="#00bcd4"
+                     
+                    name={t("adminDashboard.bar.registrations")}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           </div>
         </section>
         {/* Bar Chart Section: Weekly Registrations */}
-        <section className="py-10 px-6 mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-8 text-[#00bcd4] text-center">
-            {t("adminDashboard.registrationsTitle")}
-          </h2>
-          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center">
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart
-                data={barData}
-                margin={{ top: 20, right: 30, left: 0, bottom: 5 }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="week" />
-                <YAxis allowDecimals={false} />
-                <Tooltip />
-                <Legend />
-                <Bar
-                  dataKey="count"
-                  fill="#00bcd4"
-                  name={t("adminDashboard.bar.registrations")}
-                />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        </section>
+        <section className="py-10 px-6 mx-auto w-full"></section>
         <Footer />
       </main>
     </>
