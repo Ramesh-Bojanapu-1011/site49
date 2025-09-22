@@ -15,6 +15,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "cdni.iconscout.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
         hostname: "cdn-icons-png.freepik.com",
         port: "",
         pathname: "/**",

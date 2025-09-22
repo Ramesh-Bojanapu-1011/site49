@@ -40,9 +40,9 @@ const CorporateRedesign = () => {
             <Image
               src="/case-study3.jpg"
               alt={t("corporateRedesign.heroTitle")}
-              width={800}
-              height={400}
-              className="rounded-2xl shadow-xl mb-8 object-cover w-full h-64"
+              width={500}
+              height={200}
+              className="rounded-2xl shadow-xl mb-8 object-cover   w-full h-[500px]  "
             />
             <p>{t("corporateRedesign.intro")}</p>
             <blockquote className="bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white rounded-xl p-6 shadow-xl my-8">

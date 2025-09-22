@@ -165,6 +165,7 @@ const Header: React.FC = () => {
         }
       }
     }
+    setOpenDropdown(null); // Close language dropdown after selection
   };
 
   return (
@@ -174,14 +175,14 @@ const Header: React.FC = () => {
         className="  mx-auto flex items-center justify-between px-4 py-3"
       >
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <Link href={"/home1"} className="flex items-center gap-2">
           <Image
             src={"/logo-stackly.png"}
             alt="Logo"
             width={100}
             height={100}
           />
-        </div>
+        </Link>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-6 text-gray-700 dark:text-gray-200 font-medium">
@@ -257,14 +258,14 @@ const Header: React.FC = () => {
         </nav>
         <div className="hidden md:flex items-center gap-4">
           <ModeToggle />
-          {/* Language Dropdown */}
+          {/* Profile Dropdown */}
           <div className="relative group">
             <button
               onClick={() => handleDropdown("profile")}
               className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
             >
               <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 flex w-10 h-10 justify-center items-center text-center dark:to-blue-300 text-white font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
-                {userInitials}
+                {userInitials || "AD"}
               </span>
               <span className="ml-1">{t("hedder.profile")}</span> <span>▼</span>
             </button>
@@ -288,13 +289,15 @@ const Header: React.FC = () => {
             </button>
             {openDropdown === "language" && (
               <div
-                className={`absolute ${i18n.language === "en" ? "right-0" : "left-0"} mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]`}
+                className={`absolute ${
+                  i18n.language === "en" ? "right-0" : "left-0"
+                } mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg `}
               >
                 {supportedLanguages.map((lang) => (
                   <button
                     key={lang.code}
                     onClick={() => handleLanguageChange(lang.label)}
-                    className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                    className="block px-4 w-full py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                   >
                     {lang.label}
                   </button>
@@ -390,7 +393,7 @@ const Header: React.FC = () => {
                 className="w-full text-left py-2 flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               >
                 <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 flex w-10 h-10 justify-center items-center text-center dark:to-blue-300 text-white font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
-                  {userInitials}
+                  {userInitials || "AD"}
                 </span>
                 {t("hedder.profile")} <span>▼</span>
               </button>

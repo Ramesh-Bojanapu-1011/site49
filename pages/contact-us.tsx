@@ -138,8 +138,8 @@ const ContactUs = () => {
               <Image
                 src="/contact-form-side.jpg"
                 alt={t("contactUs.formImgAlt")}
-                width={350}
-                height={350}
+                width={500}
+                height={500}
                 className="rounded-2xl shadow-xl object-cover"
               />
             </div>
@@ -247,7 +247,7 @@ const ContactUs = () => {
           <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
             {t("contactUs.teamTitle")}
           </h2>
-          <div className="flex gap-8  justify-center pb-4">
+          <div className="flex gap-8 flex-wrap  justify-center pb-4">
             {team.map((member, idx) => (
               <div
                 key={idx}
@@ -296,7 +296,7 @@ const ContactUs = () => {
         {/* Section 6: Social & Newsletter CTA (Gradient Card) */}
         <section className="py-20 mx-auto w-full flex flex-col items-center justify-center">
           <div className="relative group w-full">
-            <div className="relative bg-white dark:bg-gray-900 p-12 flex flex-col items-center justify-center min-w-[340px]">
+            <div className="relative bg-white dark:bg-gray-900 p-12 flex flex-col items-center justify-center  ">
               <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center drop-shadow-lg">
                 {t("contactUs.stayConnectedTitle")}
               </h2>
@@ -323,7 +323,7 @@ const ContactUs = () => {
                   <i className="fab fa-linkedin"></i>
                 </a>
               </div>
-              <form className="w-full flex max-w-2xl justify-center items-center gap-4">
+              <form className="w-full flex not-md:flex-wrap max-w-2xl justify-center items-center gap-4">
                 <input
                   type="email"
                   placeholder={t("contactUs.newsletterPlaceholder")}

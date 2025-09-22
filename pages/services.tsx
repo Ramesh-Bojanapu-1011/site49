@@ -32,7 +32,7 @@ const Services = () => {
     },
     {
       name: t("services.contentWritingTitle"),
-      icon: "https://cdn-icons-png.freepik.com/256/16683/16683214.png",
+      icon: "https://cdni.iconscout.com/illustration/premium/thumb/content-writing-illustration-svg-download-png-6059221.png",
       desc: t("services.contentWritingDesc"),
       link: "/content-writing",
     },

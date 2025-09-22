@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import { User2 } from "lucide-react";
+import Image from "next/image";
 
 type User = {
   email: string;
@@ -97,9 +97,12 @@ const AuthPage = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
       <div className="w-full max-w-md mx-auto bg-white/80 dark:bg-gray-900/80 rounded-3xl shadow-2xl border-4 border-transparent bg-clip-padding p-8 md:p-12 relative z-10 animate-gradient-border">
         <div className="flex justify-center mb-6">
-          <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 shadow-lg">
-            <User2 />
-          </span>
+          <Image
+            src={"/logo-stackly.png"}
+            alt="Logo"
+            width={100}
+            height={100}
+          />
         </div>
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-white drop-shadow-lg">
           {isLogin ? "Login" : "Sign Up"}
@@ -158,17 +161,33 @@ const AuthPage = () => {
           </button>
         </form>
         <div className="mt-6 text-center">
-          <button
-            className="text-[#00bcd4] hover:underline font-semibold"
-            onClick={() => {
-              setIsLogin(!isLogin);
-              setError("");
-            }}
-          >
-            {isLogin
-              ? "Don't have an account? Sign Up"
-              : "Already have an account? Login"}
-          </button>
+          {!isLogin ? (
+            <button className="font-semibold">
+              Already have an account?{" "}
+              <span
+                onClick={() => {
+                  setIsLogin(!isLogin);
+                  setError("");
+                }}
+                className="text-[#00bcd4] hover:underline "
+              >
+                Login
+              </span>
+            </button>
+          ) : (
+            <button className="font-semibold">
+              Don't have an account?{" "}
+              <span
+                onClick={() => {
+                  setIsLogin(!isLogin);
+                  setError("");
+                }}
+                className="text-[#00bcd4] hover:underline "
+              >
+                Sign Up
+              </span>{" "}
+            </button>
+          )}
         </div>
       </div>
     </div>

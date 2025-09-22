@@ -20,31 +20,32 @@ const Home1 = () => {
       <Head>
         <title>{t("home1.pageTitle")}</title>
       </Head>
-      <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col caret-transparent">
+      <main className=" min-h-screen flex flex-col caret-transparent">
         <Header />
         {/* Hero Section */}
-        <section className="  flex min-h-screen   items-center   px-6 py-16   mx-auto w-full  ">
+        <section className="relative flex min-h-screen items-center px-6 py-16 mx-auto w-full overflow-hidden">
           {/* Background Video */}
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="absolute inset-0 opacity-50 w-full h-full object-cover z-0"
+            className="absolute inset-0 opacity-50 w-full object-cover min-h-screen z-0"
           >
             <source src="/home1-bg-video.mp4" type="video/mp4" />
           </video>
-
+          {/* Overlay */}
+          <div className="absolute inset-0 z-10 bg-white/60 dark:bg-black/60 pointer-events-none" />
           <div className="flex text-center w-full flex-col items-center z-20">
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white drop-shadow-lg">
               {t("home1.heroTitle")}
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 drop-shadow">
+            <p className="text-lg md:text-xl text-gray-900 dark:text-gray-300 mb-8 drop-shadow">
               {t("home1.heroDesc")}
             </p>
             <a
               href="/contact-us"
-              className="inline-block px-8 py-3 w-fit   rounded-lg bg-amber-50 dark:bg-black dark:text-white font-semibold shadow-lg hover:bg-[#0097a7] transition-colors duration-200 text-lg"
+              className="inline-block px-8 py-3 w-fit rounded-lg bg-amber-50 dark:bg-black dark:text-white font-semibold shadow-lg hover:bg-[#0097a7] transition-colors duration-200 text-lg"
             >
               {t("home1.heroBtn")}
             </a>
@@ -52,32 +53,34 @@ const Home1 = () => {
         </section>
 
         {/* About Section */}
-        <section className="py-16 px-6 max-w-5xl mx-auto w-full">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2 flex justify-center">
-              <Image
-                src="/about-main.jpg"
-                alt={t("home1.aboutImgAlt")}
-                className="w-full h-[400px] rounded-3xl shadow-2xl object-cover"
-                width={500}
-                height={500}
-              />
-            </div>
-            <div className="md:w-1/2">
-              <div className="bg-gradient-to-tr from-[#00bcd4] to-cyan-400 rounded-3xl shadow-2xl p-1">
-                <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col   justify-center">
-                  <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center">
-                    {t("home1.aboutTitle")}
-                  </h2>
-                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 text-justify  ">
-                    {t("home1.aboutDesc")}
-                  </p>
-                  <a
-                    href="/about-us"
-                    className="inline-block px-8 py-3 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-lg tracking-wide text-center"
-                  >
-                    {t("home1.aboutBtn")}
-                  </a>
+        <section className="  w-full bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 ">
+          <div className="py-16 px-6 max-w-6xl mx-auto w-full">
+            <div className="flex flex-col md:flex-row items-center gap-12">
+              <div className="md:w-1/2 flex justify-center">
+                <Image
+                  src="/about-main.jpg"
+                  alt={t("home1.aboutImgAlt")}
+                  className="w-full h-[400px] rounded-3xl shadow-2xl object-cover"
+                  width={500}
+                  height={500}
+                />
+              </div>
+              <div className="md:w-1/2">
+                <div className="bg-gradient-to-tr from-[#00bcd4] to-cyan-400 rounded-3xl shadow-2xl p-1">
+                  <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col justify-center">
+                    <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center">
+                      {t("home1.aboutTitle")}
+                    </h2>
+                    <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 text-justify  ">
+                      {t("home1.aboutDesc")}
+                    </p>
+                    <a
+                      href="/about-us"
+                      className="inline-block px-8 py-3 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-lg tracking-wide text-center"
+                    >
+                      {t("home1.aboutBtn")}
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -85,7 +88,7 @@ const Home1 = () => {
         </section>
 
         {/* Why Choose Me Section */}
-        <section className="py-16 px-6 mx-auto w-full">
+        <section className="py-16 px-6 mx-auto w-full bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
           <h2 className="text-3xl font-bold mb-6 text-center text-[#00bcd4]">
             {t("home1.whyTitle")}
           </h2>
@@ -146,54 +149,56 @@ const Home1 = () => {
         </section>
 
         {/* Featured Success Stories Section */}
-        <section className="py-16 px-6 max-w-7xl mx-auto w-full">
-          <h2 className="text-3xl font-bold mb-6 text-center text-[#00bcd4]">
-            {t("home1.featuredTitle")}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: t("home1.ecommerceTitle"),
-                img: "/success-ecommerce.jpg",
-                desc: t("home1.ecommerceDesc"),
-              },
-              {
-                title: t("home1.brandTitle"),
-                img: "/success-brand.jpg",
-                desc: t("home1.brandDesc"),
-              },
-              {
-                title: t("home1.nonprofitTitle"),
-                img: "/success-nonprofit.jpg",
-                desc: t("home1.nonprofitDesc"),
-              },
-            ].map((story) => (
-              <div
-                key={story.title}
-                className="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden flex flex-col"
-              >
-                <Image
-                  src={story.img}
-                  alt={story.title}
-                  width={400}
-                  height={200}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4 flex-1 flex flex-col justify-between">
-                  <h4 className="font-bold text-lg mb-2 text-[#00bcd4]">
-                    {story.title}
-                  </h4>
-                  <p className="text-gray-700 dark:text-gray-300">
-                    {story.desc}
-                  </p>
+        <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 ">
+          <div className="px-6 max-w-7xl mx-auto w-full">
+            <h2 className="text-3xl font-bold mb-6 text-center text-[#00bcd4]">
+              {t("home1.featuredTitle")}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: t("home1.ecommerceTitle"),
+                  img: "/success-ecommerce.jpg",
+                  desc: t("home1.ecommerceDesc"),
+                },
+                {
+                  title: t("home1.brandTitle"),
+                  img: "/success-brand.jpg",
+                  desc: t("home1.brandDesc"),
+                },
+                {
+                  title: t("home1.nonprofitTitle"),
+                  img: "/success-nonprofit.jpg",
+                  desc: t("home1.nonprofitDesc"),
+                },
+              ].map((story) => (
+                <div
+                  key={story.title}
+                  className="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden flex flex-col"
+                >
+                  <Image
+                    src={story.img}
+                    alt={story.title}
+                    width={400}
+                    height={200}
+                    className="w-full h-48 object-top object-cover"
+                  />
+                  <div className="p-4 flex-1 flex flex-col justify-between">
+                    <h4 className="font-bold text-lg mb-2 text-[#00bcd4]">
+                      {story.title}
+                    </h4>
+                    <p className="text-gray-700 dark:text-gray-300">
+                      {story.desc}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Client Reviews Section */}
-        <section className="py-16 px-6   mx-auto w-full">
+        <section className="py-16 px-6   mx-auto w-full bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
           <h2 className="text-3xl  font-bold mb-6 text-center text-[#00bcd4]">
             {t("home1.reviewsTitle")}
           </h2>
@@ -249,7 +254,7 @@ const Home1 = () => {
         </section>
 
         {/* Let's Collaborate Section */}
-        <section className="py-16 px-6   mx-auto w-full">
+        <section className="py-16 px-6 bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900  mx-auto w-full">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-10 flex flex-col items-center justify-center">
               <h2 className="text-3xl font-bold mb-4 text-[#00bcd4] text-center">

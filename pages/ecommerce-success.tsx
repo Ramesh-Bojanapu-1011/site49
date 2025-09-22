@@ -43,9 +43,9 @@ const EcommerceSuccess = () => {
             <Image
               src="/case-study1.jpg"
               alt={t("blog.caseStudy1Title")}
-              width={800}
-              height={400}
-              className="rounded-2xl shadow-xl mb-8 object-cover w-full h-64"
+              width={500}
+              height={200}
+              className="rounded-2xl shadow-xl mb-8 object-cover w-full h-[500px]"
             />
             <p>
               {t(
