@@ -50,7 +50,7 @@ const HomePage2 = () => {
 
         {/* Section 2: Featured Skills */}
         <section className="    w-full bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-          <div className="py-24 px-6 max-w-6xl flex flex-col justify-self-center">
+          <div className="py-24 px-6 max-w-6xl grid grid-cols-1 mx-auto">
             <h2 className="text-4xl font-bold mb-16 text-center text-[#00bcd4]">
               {t("home2.skillsTitle")}
             </h2>
@@ -430,7 +430,7 @@ const HomePage2 = () => {
                   className="relative rounded-3xl p-8 flex flex-col items-center justify-center bg-gradient-to-br from-white/60 to-[#b3eaf2]/40 dark:from-gray-800/60 dark:to-[#002d32]/40 backdrop-blur-xl border-2 border-[#26c6da] shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-105"
                 >
                   {/* Floating Icon Circle */}
-                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900 z-20">
+                  <div className="absolute -top-8  w-16 h-16 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900 z-20">
                     {skill.icon}
                   </div>
                   {/* Card Content */}
