@@ -21,7 +21,7 @@ const Home1 = () => {
       <Head>
         <title>{t("home1.pageTitle")}</title>
       </Head>
-      <main className=" max-h-screen flex flex-col caret-transparent overflow-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <main className=" max-h-screen flex flex-col caret-transparent overflow-auto  [&::-webkit-scrollbar]:hidden">
         <Header />
         {/* Hero Section */}
         <section className="relative flex min-h-screen items-center px-6 py-16 mx-auto w-full overflow-hidden">

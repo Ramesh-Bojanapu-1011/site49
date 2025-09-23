@@ -15,7 +15,7 @@ const WebDesign = () => {
         <title>{t("webDesign.pageTitle")}</title>
         <meta name="description" content={t("webDesign.pageDesc")} />
       </Head>
-      <main className="max-h-screen flex flex-col caret-transparent overflow-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <main className="max-h-screen flex flex-col caret-transparent overflow-auto  [&::-webkit-scrollbar]:hidden">
         <Header />
         {/* Section 1: Hero */}
         <section className="relative flex flex-col items-center justify-center min-h-[100vh] text-center overflow-hidden">
