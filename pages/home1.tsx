@@ -12,6 +12,7 @@ import {
   StarHalfIcon,
   User2,
 } from "lucide-react";
+import Link from "next/link";
 
 const Home1 = () => {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ const Home1 = () => {
       <Head>
         <title>{t("home1.pageTitle")}</title>
       </Head>
-      <main className=" min-h-screen flex flex-col caret-transparent">
+      <main className=" max-h-screen flex flex-col caret-transparent overflow-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <Header />
         {/* Hero Section */}
         <section className="relative flex min-h-screen items-center px-6 py-16 mx-auto w-full overflow-hidden">
@@ -43,12 +44,12 @@ const Home1 = () => {
             <p className="text-lg md:text-xl text-gray-900 dark:text-gray-300 mb-8 drop-shadow">
               {t("home1.heroDesc")}
             </p>
-            <a
+            <Link
               href="/contact-us"
               className="inline-block px-8 py-3 w-fit rounded-lg bg-amber-50 dark:bg-black dark:text-white font-semibold shadow-lg hover:bg-[#0097a7] transition-colors duration-200 text-lg"
             >
               {t("home1.heroBtn")}
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -74,12 +75,12 @@ const Home1 = () => {
                     <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 text-justify  ">
                       {t("home1.aboutDesc")}
                     </p>
-                    <a
+                    <Link
                       href="/about-us"
                       className="inline-block px-8 py-3 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-lg tracking-wide text-center"
                     >
                       {t("home1.aboutBtn")}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -263,12 +264,12 @@ const Home1 = () => {
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
                 {t("home1.collabDesc")}
               </p>
-              <a
+              <Link
                 href="/contact-us"
                 className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 text-xl tracking-wide"
               >
                 {t("home1.collabBtn")}
-              </a>
+              </Link>
             </div>
           </div>
         </section>

@@ -103,7 +103,7 @@ const ContactUs = () => {
         <title>{t("contactUs.pageTitle")}</title>
         <meta name="description" content={t("contactUs.pageDesc")} />
       </Head>
-      <main className=" min-h-screen flex flex-col  ">
+      <main className=" max-h-screen flex flex-col overflow-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ">
         <Header />
         {/* Section 1: Hero */}
         <section className="relative flex flex-col items-center justify-center min-h-[100vh] text-center">
@@ -315,24 +315,24 @@ const ContactUs = () => {
                 {t("contactUs.stayConnectedDesc")}
               </p>
               <div className="flex gap-6 mb-8">
-                <a
+                <Link
                   href="#"
                   className="text-[#00bcd4] hover:text-cyan-400 text-3xl"
                 >
                   <i className="fab fa-facebook"></i>
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   className="text-[#00bcd4] hover:text-cyan-400 text-3xl"
                 >
                   <i className="fab fa-twitter"></i>
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   className="text-[#00bcd4] hover:text-cyan-400 text-3xl"
                 >
                   <i className="fab fa-linkedin"></i>
-                </a>
+                </Link>
               </div>
               <form className="w-full flex not-md:flex-wrap max-w-2xl justify-center items-center gap-4">
                 <input

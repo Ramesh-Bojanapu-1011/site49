@@ -16,7 +16,7 @@ const CorporateRedesign = () => {
         </title>
         <meta name="description" content={t("corporateRedesign.pageDesc")} />
       </Head>
-      <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex flex-col caret-transparent">
+      <main className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 max-h-screen flex flex-col caret-transparent overflow-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <Header />
         {/* Hero Section */}
         <section className="relative flex flex-col items-center justify-center min-h-[50vh] text-center">

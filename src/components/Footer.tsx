@@ -1,4 +1,3 @@
-import { LinkedinIcon, TwitterIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
@@ -46,12 +45,12 @@ const Footer = () => {
           <ul className="space-y-2">
             {quickLinks.map((link) => (
               <li key={link.name}>
-                <a
+                <Link
                   href={link.href}
                   className="hover:text-[#00bcd4] transition-colors duration-200"
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -77,9 +76,12 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             <li>
               {t("footer.email")}:{" "}
-              <a href="mailto:hello@email.com" className="hover:text-[#00bcd4]">
+              <Link
+                href="mailto:hello@email.com"
+                className="hover:text-[#00bcd4]"
+              >
                 hello@email.com
-              </a>
+              </Link>
             </li>
             <li>
               {t("footer.phone")}:{" "}

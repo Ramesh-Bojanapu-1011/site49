@@ -11,6 +11,7 @@ import {
   Search,
   SearchIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 const HomePage2 = () => {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ const HomePage2 = () => {
         <title>{t("home2.pageTitle")}</title>
         <meta name="description" content={t("home2.pageDesc")} />
       </Head>
-      <main className="min-h-screen flex flex-col caret-transparent">
+      <main className="max-h-screen flex flex-col caret-transparent overflow-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <Header />
         {/* Hero Section */}
         <section className="relative flex flex-col items-center justify-center min-h-[100vh] px-6 py-20 text-center overflow-hidden">
@@ -39,12 +40,12 @@ const HomePage2 = () => {
               {t("home2.heroTitle")}
             </h1>
             <p className="text-xl   mb-8">{t("home2.heroDesc")}</p>
-            <a
+            <Link
               href="/contact-us"
               className="inline-block px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl"
             >
               {t("home2.heroBtn")}
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -659,12 +660,12 @@ const HomePage2 = () => {
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
               {t("home2.ctaDesc")}
             </p>
-            <a
+            <Link
               href="/contact-us"
               className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide"
             >
               {t("home2.ctaBtn")}
-            </a>
+            </Link>
           </div>
         </section>
         <Footer />
