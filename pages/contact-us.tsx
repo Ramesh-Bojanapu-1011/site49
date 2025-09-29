@@ -106,7 +106,7 @@ const ContactUs = () => {
       <main className=" max-h-screen flex flex-col overflow-auto  [&::-webkit-scrollbar]:hidden ">
         <Header />
         {/* Section 1: Hero */}
-        <section className="relative flex flex-col items-center justify-center min-h-[100vh] text-center">
+        <section className="relative flex flex-col items-center justify-center min-h-[100vh] text-center caret-transparent">
           {/* Background Video */}
           <video
             autoPlay
