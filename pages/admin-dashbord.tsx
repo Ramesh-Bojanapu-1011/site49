@@ -1,20 +1,20 @@
-import React from "react";
-import Head from "next/head";
-import Header from "@/components/Hedder";
 import Footer from "@/components/Footer";
+import Header from "@/components/Hedder";
+import Head from "next/head";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import {
-  PieChart,
-  Pie,
+  Bar,
+  BarChart,
+  CartesianGrid,
   Cell,
   Legend,
-  Tooltip,
+  Pie,
+  PieChart,
   ResponsiveContainer,
-  BarChart,
-  Bar,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
 } from "recharts";
 
 const COLORS = ["#00bcd4", "#ff6384"];

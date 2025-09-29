@@ -15,19 +15,17 @@ export default function Home() {
             <div className="flex justify-center mb-6">
               <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 shadow-lg">
                 <svg
-                  width="36"
-                  height="36"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={30}
+                  height={30}
+                  viewBox="0 0 20 20"
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 4v16m8-8H4"
-                  />
+                    fill="currentColor"
+                    d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9zm3-8V2H8v1z"
+                    strokeWidth={0.5}
+                    stroke="currentColor"
+                  ></path>
                 </svg>
               </span>
             </div>
@@ -56,7 +54,7 @@ export default function Home() {
             >
               Go to Login
             </Link>
-            <div className="mt-8 flex justify-center gap-4">
+            <div className=" absolute  top-4 right-4">
               <ModeToggle />
             </div>
           </div>

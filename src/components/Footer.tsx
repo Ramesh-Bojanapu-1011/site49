@@ -45,12 +45,12 @@ const Footer = () => {
           <ul className="space-y-2">
             {quickLinks.map((link) => (
               <li key={link.name}>
-                <Link
+                <a
                   href={link.href}
                   className="hover:text-[#00bcd4] transition-colors duration-200"
                 >
                   {link.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
@@ -76,12 +76,9 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             <li>
               {t("footer.email")}:{" "}
-              <Link
-                href="mailto:hello@email.com"
-                className="hover:text-[#00bcd4]"
-              >
+              <a href="mailto:hello@email.com" className="hover:text-[#00bcd4]">
                 hello@email.com
-              </Link>
+              </a>
             </li>
             <li>
               {t("footer.phone")}:{" "}

@@ -1,12 +1,12 @@
+import i18n from "@/i18n";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import { Menu, X } from "lucide-react";
-import { ModeToggle } from "./theme/ModeToggle";
-import i18n from "@/i18n";
 import { getUsers } from "../../pages/auth";
-import Link from "next/link";
+import { ModeToggle } from "./theme/ModeToggle";
 
 const Header: React.FC = () => {
   // Ref for dropdown menus
@@ -52,7 +52,7 @@ const Header: React.FC = () => {
     { code: "he", label: "Hebrew" },
   ];
   //   const [selectedLanguage, setSelectedLanguage] = useState("English");
-  const [langReady, setLangReady] = useState(false);
+  // const [langReady, setLangReady] = useState(false);
   const router = useRouter();
 
   React.useEffect(() => {
@@ -140,7 +140,7 @@ const Header: React.FC = () => {
         }
       };
       setLangFromStorage();
-      setLangReady(true);
+      // setLangReady(true);
       // Listen for route changes to re-apply language
       const handleRouteChange = () => {
         setLangFromStorage();
@@ -320,7 +320,10 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <nav className="md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-700 shadow-lg px-4 py-3 transition-colors">
+        <nav
+          ref={dropdownRef}
+          className="md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-700 shadow-lg px-4 py-3 transition-colors"
+        >
           <div className="mb-2">
             <button
               onClick={() => handleDropdown("home")}
@@ -329,16 +332,16 @@ const Header: React.FC = () => {
               {t("hedder.home")} <span>▼</span>
             </button>
             {openDropdown === "home" && (
-              <div className="pl-4">
+              <div className="pl-4 mt-2 bg-white dark:bg-gray-800 rounded shadow-md border dark:border-gray-700 w-full">
                 <Link
                   href="/home1"
-                  className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                  className="block py-2 w-full text-left hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                 >
                   {t("hedder.home1")}
                 </Link>
                 <Link
                   href="/home2"
-                  className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                  className="block py-2 w-full text-left hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                 >
                   {t("hedder.home2")}
                 </Link>
@@ -359,12 +362,18 @@ const Header: React.FC = () => {
               {t("hedder.services")} <span>▼</span>
             </button>
             {openDropdown === "services" && (
-              <div className="pl-4">
+              <div className="pl-4 mt-2 bg-white dark:bg-gray-800 rounded shadow-md border dark:border-gray-700 w-full">
+                <Link
+                  href={`/services`}
+                  className="block py-2 w-full text-left hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                >
+                  {t("hedder.services")}
+                </Link>
                 {services.map((service, index) => (
                   <Link
                     key={index}
                     href={`/${service.link}`}
-                    className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                    className="block py-2 w-full text-left hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                   >
                     {service.title}
                   </Link>

@@ -1,17 +1,9 @@
-import React from "react";
+import Footer from "@/components/Footer";
+import Header from "@/components/Hedder";
+import { CodeIcon, DessertIcon, RocketIcon, SearchIcon } from "lucide-react";
 import Head from "next/head";
 import Image from "next/image";
-import Header from "@/components/Hedder";
-import Footer from "@/components/Footer";
 import { useTranslation } from "react-i18next";
-import {
-  CodeIcon,
-  DessertIcon,
-  RocketIcon,
-  Search,
-  SearchIcon,
-} from "lucide-react";
-import Link from "next/link";
 
 const HomePage2 = () => {
   const { t } = useTranslation();
@@ -40,12 +32,12 @@ const HomePage2 = () => {
               {t("home2.heroTitle")}
             </h1>
             <p className="text-xl   mb-8">{t("home2.heroDesc")}</p>
-            <Link
+            <a
               href="/contact-us"
               className="inline-block px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl"
             >
               {t("home2.heroBtn")}
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -660,12 +652,12 @@ const HomePage2 = () => {
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
               {t("home2.ctaDesc")}
             </p>
-            <Link
+            <a
               href="/contact-us"
               className="px-10 py-4 rounded-xl bg-gradient-to-tr from-[#00bcd4] to-cyan-400 text-white font-bold shadow-xl hover:scale-105 transition-all duration-200 text-xl tracking-wide"
             >
               {t("home2.ctaBtn")}
-            </Link>
+            </a>
           </div>
         </section>
         <Footer />
