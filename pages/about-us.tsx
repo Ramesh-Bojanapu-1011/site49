@@ -84,13 +84,7 @@ const AboutUs = () => {
         </section>
 
         {/* Section 3: Meet the Team (Horizontal Scroll Carousel) */}
-        <section className="relative bg-gradient-to-br from-indigo-50 via-white to-cyan-50 dark:from-gray-900 dark:via-indigo-900/30 dark:to-gray-800 overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full filter blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
-          </div>
-
+        <section className="relative bg-gradient-to-br from-indigo-50 via-white to-cyan-50 dark:from-gray-900 dark:via-indigo-900/30 dark:to-gray-800  ">
           <div className="relative py-20 px-6 justify-center flex flex-col items-center mx-auto w-full">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#00bcd4] via-purple-500 to-cyan-400 bg-clip-text text-transparent">
@@ -98,7 +92,7 @@ const AboutUs = () => {
               </h2>
               <div className="w-32 h-1 bg-gradient-to-r from-[#00bcd4] to-cyan-400 mx-auto rounded-full"></div>
               <p className="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
-                Meet the talented individuals who make our vision a reality
+                {t("aboutUs.teamDesc")}
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-10 pb-4">

@@ -104,6 +104,84 @@ const WebDesign = () => {
           `}</style>
         </section>
 
+        {/* Section 4: Web Design Features (Horizontal Cards) */}
+        <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+          <div className="py-20 px-6 mx-auto w-full">
+            <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
+              {t("webDesign.featuresTitle")}
+            </h2>
+            <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
+              {[
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiNmZmVmNWUiIGQ9Ik0xMiA2Ljc0QTIuODcgMi44NyAwIDEgMCAxMiAxYTIuODcgMi44NyAwIDAgMCAwIDUuNzQiIC8+CgkJPHBhdGggZmlsbD0iI2ZmZjliZiIgZD0iTTkuMTMgMy44N2MuMDAxLjI3LjA0LjU0LjExNi44QTIuODcgMi44NyAwIDAgMCAxMy44IDEuNjM0QTIuODcgMi44NyAwIDAgMCA5LjEzIDMuODciIC8+CgkJPHBhdGggZmlsbD0iI2ZmYmM0NCIgZD0ibTkuMDIgMTEuMjg1bC0yLjQzMSAxLjE0YTEuNTk4IDEuNTk4IDAgMCAwLS42NyAyLjQwMmw0LjE2OSA2LjI0aDMuODI2bDQuMTY4LTYuMjRhMS42IDEuNiAwIDAgMC0uNjctMi40MDJsLTIuNjE0LTEuMjI3eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZlZjVlIiBkPSJNMTUuNjEgOS41NjlhLjQ3Ny40NzcgMCAwIDAtLjY0LS41NTRhNy45NCA3Ljk0IDAgMCAxLTUuOTQzLS4wMDhhLjQ3OC40NzggMCAwIDAtLjYzOC41NTRsMi42NTUgMTEuNTA1aDEuOTEzeiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmOWJmIiBkPSJNMTIgOS41ODhhOC4zIDguMyAwIDAgMS0yLjk3My0uNTgxYS40NzguNDc4IDAgMCAwLS42MzguNTU0bDIuNjU1IDExLjUwNUgxMnoiIC8+CgkJPHBhdGggc3Ryb2tlPSIjMTkxOTE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xNy40NjcgMjIuNjI5YTQuMjYgNC4yNiAwIDAgMC0zLjA0NS0xLjU0Mkg5LjYzOWE0LjQgNC40IDAgMCAwLTMuMDc2IDEuNTE5TDYuMjYyIDIzSDE3Ljc0ek0xNS42MSA5LjU2OWEuNDc3LjQ3NyAwIDAgMC0uNjQtLjU1NGE3Ljk0IDcuOTQgMCAwIDEtNS45NDMtLjAwOGEuNDc4LjQ3OCAwIDAgMC0uNjM4LjU1NGwyLjY1NSAxMS41MDVoMS45MTN6TTEyIDYuNzRBMi44NyAyLjg3IDAgMSAwIDEyIDFhMi44NyAyLjg3IDAgMCAwIDAgNS43NG00LjUyOCA1LjI3bC44ODQuNDE1YTEuNTk4IDEuNTk4IDAgMCAxIC42NyAyLjQwM2wtNC4xNjkgNi4yNG0tNi40NC05LjA1OGwtLjg4NC40MTVhMS41OTggMS41OTggMCAwIDAtLjY3IDIuNDAzbDQuMTY5IDYuMjQiIHN0cm9rZS13aWR0aD0iMSIgLz4KCTwvZz4KPC9zdmc+",
+                  title: t("webDesign.featureAwardTitle"),
+                  desc: t("webDesign.featureAwardDesc"),
+                },
+                {
+                  icon: "https://pic.onlinewebfonts.com/thumbnails/icons_448371.svg",
+                  title: t("webDesign.featureFastTitle"),
+                  desc: t("webDesign.featureFastDesc"),
+                },
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDYiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTA2IDUxMiI+Cgk8cmVjdCB3aWR0aD0iNTA2IiBoZWlnaHQ9IjUxMiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiMwMDY2ZDEiIGQ9Ik0yMDguOTY0LjAwN0w1MS40NSA3My45NzdjLTE4LjcxIDEwLjMzNy0xMi4zNiAyNy41OTQgMTMuNDYgNDMuMTE5bDEyMS4xMDEgNzIuMjY3YzIuNzA1IDEzLjQyNi02LjQxMyAyOC40NDctMjAuMTUgMzAuOTRjLTQyLjU2Ny0yNS4wNDgtODQuNTE2LTUxLjItMTI3LjQ3NS03NS41MjVjLTQ4LjI1Ny0xNS41Ni0zNy4yOTQgMzAuMzg1LTM3LjM2NSA1Ny4wM2w5LjYzIDEzMS40YzIuNzIgMTkuNjc2IDIwLjgzIDIwLjYzMyA0My44NTMgNi42bDk4LjI5MS01OS4zOTZjMTEuNDc4IDQuNDUyIDIyLjcyNSAxNy40MDYgMjIuMzQ1IDMwLjI4N0w1Ny4xOTQgMzgyLjMxMWMtOS43IDguMzUyLTEwLjc4IDI2Ljc3NiAxLjYxNCAzMy4yM2M0NS44ODQgMzIuMDcgOTEuODA2IDY0LjE5NiAxMzguMTA1IDk1LjU5NmMxNC40MyA0LjI5NyAzMS4xOTQtOC4wNzIgMzAuMDI1LTIzLjQ0bDIuNDE3LTE0OS40MzNjOS42ODQtMTEuMzczIDI5LjEyLTEwLjg2MiAzOS43MS4wMzdsLTEuNTY3IDE0Ny4zNTJjMi4wNTggMjkuNzA2IDM0LjEzNSAyNi40MzkgNTQuOTk3IDEwLjE3M0w0NDIuMzA4IDQxMy45YzIyLjY0OS0yMC4wODkgMy41NDEtMzIuMzc0LTEyLjI1My00MS41MUwzMjcuNzcgMzE1LjU1NGMtMi4zNi0xMy43MDUgNC41OTQtMzAuODczIDE5LjMxNS0zMy45NDdsMTE3LjQ5NyA2Ni45MDdjOS43MjggNC4wNDQgMjYuMjAxIDMuNzYzIDI1LjgzOC0xMS4xMjNjNi4yMTYtNTguNzYgMTEuODk2LTEyNC4wMiAxNC45NDYtMTc3LjIxM2MtNS4yODItMTMuODQ3LTI0LjQ3OS0xOS4zOTItMzYuNzk1LTExLjU1MUwzMzguNjkgMjIxLjMxYy04LjU2LTYuODc4LTMwLjE5NC0yNC4xODItMTEuNzQtMzMuNDUybDEyMy41MTYtNjkuMzk2YzI0Ljk0MS0xNy40NiA1LjI0MS00MC40MDMtMTMuMzMtNDkuOUwyOTkuMjQgMi4wNTJjLTI1LjcxNy00Ljc3OC0yNy42ODggOC45MDUtMjkuMDcyIDI0LjgzOWwuNjQ1IDEyNC44ODZjLTEwLjM2NyA5LjIzMi0yNy45MjQgOS4zMzEtMzcuNzY3LS41ODNsLS4yODQtMTMxLjI3QzIyOS41MjQgOS43NjUgMjIwLjI3OC0uMyAyMDguOTY0LjAwNm0tMjIuMDEzIDY4Ljc0MXEuNjM2IDI4LjI2IDEuMjc2IDU2LjUyMmwtNTMuOTg0LTMyLjIzOGMxNy41NDYtOS4xODMgMzUuMDg5LTE4LjM3MiA1Mi42MzQtMjcuNTU2em0xODYuMzggMjcuMTE3bC01Ni4xMSAzMS4wOWwxLjkyNS01OC42MDR6bS04Ny4wMiAxNDkuMDhjNC4wNDggMy40MTYtMS42OTQgNy4xNTMtNC4zOTkgOC44NGMtOS4yNTEgOC4yNjctMTIuNDkyIDIxLjEyNy0xMi42MDUgMzMuMTI2Yy03LjUwNS0xMC45NDktMjQuOTY2LTE1LjA0NS0zNC44NTUtNS4xMDFjLTMuNiAyLjczLTQuNzczLTMuOTUyLTQuNDE1LTYuNzk1Yy0xLjA2Mi0xMS43ODctOS4xNzktMjEuMzA3LTE4LjQ0NC0yNy44NjJjMTAuMDM4LTUuOTE4IDE4Ljg5LTE1LjI2IDE5LjkwOS0yNy40MjRjMy4zNC0zLjg3OCA3LjI4NS0uMDA4IDExLjM5NSAyLjUxNGMxMC42NDMgMy4xMyAyMiAuMjk2IDMxLjY4NC00LjUxNmMtNS45MTQgMTMuNjY0IDIuMzggMjMuODM0IDExLjczIDI3LjIxOG0tMTc3LjAyIDkuMDdsLTUxLjI1NiAyNy45NTRsLTMuMjc4LTYwLjc0em0zMzUuNjgyIDMwLjEwNGwtNTQuMTItMjcuNTgzbDU2LjU3LTMxLjU1OXpNMTcxLjg2MSA0MjkuNzFsLTQ5Ljg3Ny0zMS42Mmw1MC44NDktMzQuNTQ2em0yMDQuNDcyLTMyLjI1M2wtNTAuOTEyIDMzLjE2bDEuMTM5LTY0LjMxNXoiIC8+Cjwvc3ZnPg==",
+                  title: t("webDesign.featureGraphicsTitle"),
+                  desc: t("webDesign.featureGraphicsDesc"),
+                },
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiMxZTg4ZTUiIGQ9Ik0yOC45NjcgMTJIOS40NDJhMiAyIDAgMCAwLTEuODk4IDEuMzY4TDQgMjRWMTBoMjRhMiAyIDAgMCAwLTItMkgxNS4xMjRhMiAyIDAgMCAxLTEuMjgtLjQ2NGwtMS4yODgtMS4wNzJBMiAyIDAgMCAwIDExLjI3NiA2SDRhMiAyIDAgMCAwLTIgMnYxNmEyIDIgMCAwIDAgMiAyaDIybDQuODA1LTExLjIxMkEyIDIgMCAwIDAgMjguOTY3IDEyIiAvPgoJPHBhdGggZmlsbD0iI2JiZGVmYiIgZD0iTTIxLjk5OCAxMEMxNiAxMCAxMiAxNCAxMiAyMGExMCAxMCAwIDAgMCAxMCAxMGMuOTIgMCAyIDAgMi0yYzAtLjQzNi0uNTY5LS43ODUtLjk2NC0xLjE4QTIuMzcgMi4zNyAwIDAgMSAyMiAyNWMwLTEgMS0xIDItMWg0YzQgMCA0LTQgNC02YzAtNC00LTgtMTAuMDAyLThNMTYgMjBhMiAyIDAgMSAxIDItMmEyIDIgMCAwIDEtMiAybTYtNGEyIDIgMCAxIDEgMi0yYTIgMiAwIDAgMS0yIDJtNiA0YTIgMiAwIDEgMSAyLTJhMiAyIDAgMCAxLTIgMiIgLz4KPC9zdmc+",
+                  title: t("webDesign.featureModesTitle"),
+                  desc: t("webDesign.featureModesDesc"),
+                },
+                {
+                  icon: "/globe.svg",
+                  title: t("webDesign.featureGlobalTitle"),
+                  desc: t("webDesign.featureGlobalDesc"),
+                },
+                {
+                  icon: "/vercel.svg",
+                  title: t("webDesign.featureDeployTitle"),
+                  desc: t("webDesign.featureDeployDesc"),
+                },
+              ].map((feature, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col items-center justify-center min-w-[220px] max-w-xs rounded-2xl shadow-xl p-8 bg-gradient-to-br from-[#7a8387] via-[#00BFFF] to-[#8e4747] hover:scale-105 transition-all duration-300 group"
+                >
+                  <div className="w-14 h-14 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 rounded-full shadow-lg border-4 border-white dark:border-gray-900 mb-4 animate-float">
+                    <Image
+                      src={feature.icon}
+                      alt={feature.title}
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                  <div className="font-extrabold text-xl text-white mb-2 text-center drop-shadow-lg text-nowrap">
+                    {feature.title}
+                  </div>
+                  <div className="text-white/80 dark:text-gray-200 text-center mb-2">
+                    {feature.desc}
+                  </div>
+                  <div className="w-8 h-1 bg-gradient-to-r from-[#00bcd4] to-cyan-400 rounded-full mt-2" />
+                </div>
+              ))}
+            </div>
+          </div>
+          <style jsx>{`
+            @keyframes float {
+              0%,
+              100% {
+                transform: translateY(0);
+              }
+              50% {
+                transform: translateY(-10px);
+              }
+            }
+            .animate-float {
+              animation: float 2.5s ease-in-out infinite;
+            }
+          `}</style>
+        </section>
+
         {/* Section 3: Web Design Process Steps (Vertical Stepper) */}
         <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 ">
           <div className="py-20 px-6   mx-auto w-full ">
@@ -205,84 +283,6 @@ const WebDesign = () => {
             }
             .animate-popin {
               animation: popin 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
-            }
-          `}</style>
-        </section>
-
-        {/* Section 4: Web Design Features (Horizontal Cards) */}
-        <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-          <div className="py-20 px-6 mx-auto w-full">
-            <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
-              {t("webDesign.featuresTitle")}
-            </h2>
-            <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
-              {[
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiNmZmVmNWUiIGQ9Ik0xMiA2Ljc0QTIuODcgMi44NyAwIDEgMCAxMiAxYTIuODcgMi44NyAwIDAgMCAwIDUuNzQiIC8+CgkJPHBhdGggZmlsbD0iI2ZmZjliZiIgZD0iTTkuMTMgMy44N2MuMDAxLjI3LjA0LjU0LjExNi44QTIuODcgMi44NyAwIDAgMCAxMy44IDEuNjM0QTIuODcgMi44NyAwIDAgMCA5LjEzIDMuODciIC8+CgkJPHBhdGggZmlsbD0iI2ZmYmM0NCIgZD0ibTkuMDIgMTEuMjg1bC0yLjQzMSAxLjE0YTEuNTk4IDEuNTk4IDAgMCAwLS42NyAyLjQwMmw0LjE2OSA2LjI0aDMuODI2bDQuMTY4LTYuMjRhMS42IDEuNiAwIDAgMC0uNjctMi40MDJsLTIuNjE0LTEuMjI3eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZlZjVlIiBkPSJNMTUuNjEgOS41NjlhLjQ3Ny40NzcgMCAwIDAtLjY0LS41NTRhNy45NCA3Ljk0IDAgMCAxLTUuOTQzLS4wMDhhLjQ3OC40NzggMCAwIDAtLjYzOC41NTRsMi42NTUgMTEuNTA1aDEuOTEzeiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmOWJmIiBkPSJNMTIgOS41ODhhOC4zIDguMyAwIDAgMS0yLjk3My0uNTgxYS40NzguNDc4IDAgMCAwLS42MzguNTU0bDIuNjU1IDExLjUwNUgxMnoiIC8+CgkJPHBhdGggc3Ryb2tlPSIjMTkxOTE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xNy40NjcgMjIuNjI5YTQuMjYgNC4yNiAwIDAgMC0zLjA0NS0xLjU0Mkg5LjYzOWE0LjQgNC40IDAgMCAwLTMuMDc2IDEuNTE5TDYuMjYyIDIzSDE3Ljc0ek0xNS42MSA5LjU2OWEuNDc3LjQ3NyAwIDAgMC0uNjQtLjU1NGE3Ljk0IDcuOTQgMCAwIDEtNS45NDMtLjAwOGEuNDc4LjQ3OCAwIDAgMC0uNjM4LjU1NGwyLjY1NSAxMS41MDVoMS45MTN6TTEyIDYuNzRBMi44NyAyLjg3IDAgMSAwIDEyIDFhMi44NyAyLjg3IDAgMCAwIDAgNS43NG00LjUyOCA1LjI3bC44ODQuNDE1YTEuNTk4IDEuNTk4IDAgMCAxIC42NyAyLjQwM2wtNC4xNjkgNi4yNG0tNi40NC05LjA1OGwtLjg4NC40MTVhMS41OTggMS41OTggMCAwIDAtLjY3IDIuNDAzbDQuMTY5IDYuMjQiIHN0cm9rZS13aWR0aD0iMSIgLz4KCTwvZz4KPC9zdmc+",
-                  title: t("webDesign.featureAwardTitle"),
-                  desc: t("webDesign.featureAwardDesc"),
-                },
-                {
-                  icon: "https://pic.onlinewebfonts.com/thumbnails/icons_448371.svg",
-                  title: t("webDesign.featureFastTitle"),
-                  desc: t("webDesign.featureFastDesc"),
-                },
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDYiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTA2IDUxMiI+Cgk8cmVjdCB3aWR0aD0iNTA2IiBoZWlnaHQ9IjUxMiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiMwMDY2ZDEiIGQ9Ik0yMDguOTY0LjAwN0w1MS40NSA3My45NzdjLTE4LjcxIDEwLjMzNy0xMi4zNiAyNy41OTQgMTMuNDYgNDMuMTE5bDEyMS4xMDEgNzIuMjY3YzIuNzA1IDEzLjQyNi02LjQxMyAyOC40NDctMjAuMTUgMzAuOTRjLTQyLjU2Ny0yNS4wNDgtODQuNTE2LTUxLjItMTI3LjQ3NS03NS41MjVjLTQ4LjI1Ny0xNS41Ni0zNy4yOTQgMzAuMzg1LTM3LjM2NSA1Ny4wM2w5LjYzIDEzMS40YzIuNzIgMTkuNjc2IDIwLjgzIDIwLjYzMyA0My44NTMgNi42bDk4LjI5MS01OS4zOTZjMTEuNDc4IDQuNDUyIDIyLjcyNSAxNy40MDYgMjIuMzQ1IDMwLjI4N0w1Ny4xOTQgMzgyLjMxMWMtOS43IDguMzUyLTEwLjc4IDI2Ljc3NiAxLjYxNCAzMy4yM2M0NS44ODQgMzIuMDcgOTEuODA2IDY0LjE5NiAxMzguMTA1IDk1LjU5NmMxNC40MyA0LjI5NyAzMS4xOTQtOC4wNzIgMzAuMDI1LTIzLjQ0bDIuNDE3LTE0OS40MzNjOS42ODQtMTEuMzczIDI5LjEyLTEwLjg2MiAzOS43MS4wMzdsLTEuNTY3IDE0Ny4zNTJjMi4wNTggMjkuNzA2IDM0LjEzNSAyNi40MzkgNTQuOTk3IDEwLjE3M0w0NDIuMzA4IDQxMy45YzIyLjY0OS0yMC4wODkgMy41NDEtMzIuMzc0LTEyLjI1My00MS41MUwzMjcuNzcgMzE1LjU1NGMtMi4zNi0xMy43MDUgNC41OTQtMzAuODczIDE5LjMxNS0zMy45NDdsMTE3LjQ5NyA2Ni45MDdjOS43MjggNC4wNDQgMjYuMjAxIDMuNzYzIDI1LjgzOC0xMS4xMjNjNi4yMTYtNTguNzYgMTEuODk2LTEyNC4wMiAxNC45NDYtMTc3LjIxM2MtNS4yODItMTMuODQ3LTI0LjQ3OS0xOS4zOTItMzYuNzk1LTExLjU1MUwzMzguNjkgMjIxLjMxYy04LjU2LTYuODc4LTMwLjE5NC0yNC4xODItMTEuNzQtMzMuNDUybDEyMy41MTYtNjkuMzk2YzI0Ljk0MS0xNy40NiA1LjI0MS00MC40MDMtMTMuMzMtNDkuOUwyOTkuMjQgMi4wNTJjLTI1LjcxNy00Ljc3OC0yNy42ODggOC45MDUtMjkuMDcyIDI0LjgzOWwuNjQ1IDEyNC44ODZjLTEwLjM2NyA5LjIzMi0yNy45MjQgOS4zMzEtMzcuNzY3LS41ODNsLS4yODQtMTMxLjI3QzIyOS41MjQgOS43NjUgMjIwLjI3OC0uMyAyMDguOTY0LjAwNm0tMjIuMDEzIDY4Ljc0MXEuNjM2IDI4LjI2IDEuMjc2IDU2LjUyMmwtNTMuOTg0LTMyLjIzOGMxNy41NDYtOS4xODMgMzUuMDg5LTE4LjM3MiA1Mi42MzQtMjcuNTU2em0xODYuMzggMjcuMTE3bC01Ni4xMSAzMS4wOWwxLjkyNS01OC42MDR6bS04Ny4wMiAxNDkuMDhjNC4wNDggMy40MTYtMS42OTQgNy4xNTMtNC4zOTkgOC44NGMtOS4yNTEgOC4yNjctMTIuNDkyIDIxLjEyNy0xMi42MDUgMzMuMTI2Yy03LjUwNS0xMC45NDktMjQuOTY2LTE1LjA0NS0zNC44NTUtNS4xMDFjLTMuNiAyLjczLTQuNzczLTMuOTUyLTQuNDE1LTYuNzk1Yy0xLjA2Mi0xMS43ODctOS4xNzktMjEuMzA3LTE4LjQ0NC0yNy44NjJjMTAuMDM4LTUuOTE4IDE4Ljg5LTE1LjI2IDE5LjkwOS0yNy40MjRjMy4zNC0zLjg3OCA3LjI4NS0uMDA4IDExLjM5NSAyLjUxNGMxMC42NDMgMy4xMyAyMiAuMjk2IDMxLjY4NC00LjUxNmMtNS45MTQgMTMuNjY0IDIuMzggMjMuODM0IDExLjczIDI3LjIxOG0tMTc3LjAyIDkuMDdsLTUxLjI1NiAyNy45NTRsLTMuMjc4LTYwLjc0em0zMzUuNjgyIDMwLjEwNGwtNTQuMTItMjcuNTgzbDU2LjU3LTMxLjU1OXpNMTcxLjg2MSA0MjkuNzFsLTQ5Ljg3Ny0zMS42Mmw1MC44NDktMzQuNTQ2em0yMDQuNDcyLTMyLjI1M2wtNTAuOTEyIDMzLjE2bDEuMTM5LTY0LjMxNXoiIC8+Cjwvc3ZnPg==",
-                  title: t("webDesign.featureGraphicsTitle"),
-                  desc: t("webDesign.featureGraphicsDesc"),
-                },
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiMxZTg4ZTUiIGQ9Ik0yOC45NjcgMTJIOS40NDJhMiAyIDAgMCAwLTEuODk4IDEuMzY4TDQgMjRWMTBoMjRhMiAyIDAgMCAwLTItMkgxNS4xMjRhMiAyIDAgMCAxLTEuMjgtLjQ2NGwtMS4yODgtMS4wNzJBMiAyIDAgMCAwIDExLjI3NiA2SDRhMiAyIDAgMCAwLTIgMnYxNmEyIDIgMCAwIDAgMiAyaDIybDQuODA1LTExLjIxMkEyIDIgMCAwIDAgMjguOTY3IDEyIiAvPgoJPHBhdGggZmlsbD0iI2JiZGVmYiIgZD0iTTIxLjk5OCAxMEMxNiAxMCAxMiAxNCAxMiAyMGExMCAxMCAwIDAgMCAxMCAxMGMuOTIgMCAyIDAgMi0yYzAtLjQzNi0uNTY5LS43ODUtLjk2NC0xLjE4QTIuMzcgMi4zNyAwIDAgMSAyMiAyNWMwLTEgMS0xIDItMWg0YzQgMCA0LTQgNC02YzAtNC00LTgtMTAuMDAyLThNMTYgMjBhMiAyIDAgMSAxIDItMmEyIDIgMCAwIDEtMiAybTYtNGEyIDIgMCAxIDEgMi0yYTIgMiAwIDAgMS0yIDJtNiA0YTIgMiAwIDEgMSAyLTJhMiAyIDAgMCAxLTIgMiIgLz4KPC9zdmc+",
-                  title: t("webDesign.featureModesTitle"),
-                  desc: t("webDesign.featureModesDesc"),
-                },
-                {
-                  icon: "/globe.svg",
-                  title: t("webDesign.featureGlobalTitle"),
-                  desc: t("webDesign.featureGlobalDesc"),
-                },
-                {
-                  icon: "/vercel.svg",
-                  title: t("webDesign.featureDeployTitle"),
-                  desc: t("webDesign.featureDeployDesc"),
-                },
-              ].map((feature, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center justify-center min-w-[220px] max-w-xs rounded-2xl shadow-xl p-8 bg-gradient-to-br from-[#7a8387] via-[#00BFFF] to-[#8e4747] hover:scale-105 transition-all duration-300 group"
-                >
-                  <div className="w-14 h-14 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 rounded-full shadow-lg border-4 border-white dark:border-gray-900 mb-4 animate-float">
-                    <Image
-                      src={feature.icon}
-                      alt={feature.title}
-                      width={40}
-                      height={40}
-                    />
-                  </div>
-                  <div className="font-extrabold text-xl text-white mb-2 text-center drop-shadow-lg text-nowrap">
-                    {feature.title}
-                  </div>
-                  <div className="text-white/80 dark:text-gray-200 text-center mb-2">
-                    {feature.desc}
-                  </div>
-                  <div className="w-8 h-1 bg-gradient-to-r from-[#00bcd4] to-cyan-400 rounded-full mt-2" />
-                </div>
-              ))}
-            </div>
-          </div>
-          <style jsx>{`
-            @keyframes float {
-              0%,
-              100% {
-                transform: translateY(0);
-              }
-              50% {
-                transform: translateY(-10px);
-              }
-            }
-            .animate-float {
-              animation: float 2.5s ease-in-out infinite;
             }
           `}</style>
         </section>

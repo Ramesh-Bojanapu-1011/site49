@@ -97,6 +97,70 @@ const SeoOptimization = () => {
           </div>
         </section>
 
+        {/* Section 4: SEO Features (Horizontal Cards) */}
+        <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 ">
+          <div className="py-20 px-6 mx-auto w-full">
+            <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
+              {t("seoOptimization.featuresTitle")}
+            </h2>
+            <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
+              {[
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiNmZmVmNWUiIGQ9Ik0xMiA2Ljc0QTIuODcgMi44NyAwIDEgMCAxMiAxYTIuODcgMi44NyAwIDAgMCAwIDUuNzQiIC8+CgkJPHBhdGggZmlsbD0iI2ZmZjliZiIgZD0iTTkuMTMgMy44N2MuMDAxLjI3LjA0LjU0LjExNi44QTIuODcgMi44NyAwIDAgMCAxMy44IDEuNjM0QTIuODcgMi44NyAwIDAgMCA5LjEzIDMuODciIC8+CgkJPHBhdGggZmlsbD0iI2ZmYmM0NCIgZD0ibTkuMDIgMTEuMjg1bC0yLjQzMSAxLjE0YTEuNTk4IDEuNTk4IDAgMCAwLS42NyAyLjQwMmw0LjE2OSA2LjI0aDMuODI2bDQuMTY4LTYuMjRhMS42IDEuNiAwIDAgMC0uNjctMi40MDJsLTIuNjE0LTEuMjI3eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZlZjVlIiBkPSJNMTUuNjEgOS41NjlhLjQ3Ny40NzcgMCAwIDAtLjY0LS41NTRhNy45NCA3Ljk0IDAgMCAxLTUuOTQzLS4wMDhhLjQ3OC40NzggMCAwIDAtLjYzOC41NTRsMi42NTUgMTEuNTA1aDEuOTEzeiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmOWJmIiBkPSJNMTIgOS41ODhhOC4zIDguMyAwIDAgMS0yLjk3My0uNTgxYS40NzguNDc4IDAgMCAwLS42MzguNTU0bDIuNjU1IDExLjUwNUgxMnoiIC8+CgkJPHBhdGggc3Ryb2tlPSIjMTkxOTE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xNy40NjcgMjIuNjI5YTQuMjYgNC4yNiAwIDAgMC0zLjA0NS0xLjU0Mkg5LjYzOWE0LjQgNC40IDAgMCAwLTMuMDc2IDEuNTE5TDYuMjYyIDIzSDE3Ljc0ek0xNS42MSA5LjU2OWEuNDc3LjQ3NyAwIDAgMC0uNjQtLjU1NGE3Ljk0IDcuOTQgMCAwIDEtNS45NDMtLjAwOGEuNDc4LjQ3OCAwIDAgMC0uNjM4LjU1NGwyLjY1NSAxMS41MDVoMS45MTN6TTEyIDYuNzRBMi44NyAyLjg3IDAgMSAwIDEyIDFhMi44NyAyLjg3IDAgMCAwIDAgNS43NG00LjUyOCA1LjI3bC44ODQuNDE1YTEuNTk4IDEuNTk4IDAgMCAxIC42NyAyLjQwM2wtNC4xNjkgNi4yNG0tNi40NC05LjA1OGwtLjg4NC40MTVhMS41OTggMS41OTggMCAwIDAtLjY3IDIuNDAzbDQuMTY5IDYuMjQiIHN0cm9rZS13aWR0aD0iMSIgLz4KCTwvZz4KPC9zdmc+",
+                  title: t("seoOptimization.featureAwardTitle"),
+                  desc: t("seoOptimization.featureAwardDesc"),
+                },
+                {
+                  icon: "https://pic.onlinewebfonts.com/thumbnails/icons_448371.svg",
+                  title: t("seoOptimization.featureFastTitle"),
+                  desc: t("seoOptimization.featureFastDesc"),
+                },
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiMwMDY2ZDEiIGQ9Ik0yMy41MzEgMTYuNDZhOC44IDguOCAwIDAgMC0uODQzLTIuMDA3YTcuNjUgNy42NSAwIDAgMC0yLjE1OC0yLjMzcS4yMTQtLjQ2MS4zODEtLjk0M2MuMjM3LS42NjIuMzMtMS4zNjcuMjcxLTIuMDY4YTIuMTYgMi4xNiAwIDAgMC0xLjAwNC0xLjYwNmExLjY0NiAxLjY0NiAwIDAgMC0yLjAwNy4xOWE2LjQgNi40IDAgMCAwLTEuNDA2IDEuNzY4cS0uNDkzLjk3OS0uODczIDIuMDA3YTQuOSA0LjkgMCAwIDAtMS42NzcuNTMycS0uNDIuMjIzLS43NzMuNTQyYTQgNCAwIDAgMC0uNjEyLjc1M2wtLjI4MS42MjNjLS4xNy43NDMuMDggMS4xMzQuNTEyIDEuMjk1Yy4zOS4xMy44MTQuMTMgMS4yMDUgMGMwIDAtMS4xNDUgMi4zNDktMS4xNTUgMi40NWE4LjQgOC40IDAgMCAwLS4zMjEgMS4zNzRhNCA0IDAgMCAwIDAgMS4wMDRhMy41IDMuNSAwIDAgMCAuMTQuNTYzYy4wNTkuMTQxLjE2LjI2LjI5MS4zNGEuOS45IDAgMCAwIC42NTMuMDkxYTIuNiAyLjYgMCAwIDAgLjgwMy0uMzcxbC41ODItLjU1MmwuNTUyLS43MDNxLjE2LS4wMzQuMzAyLS4xMXEuMzE0LS4yMDIuNTgyLS40NjJxLjM5My0uMzk1LjY5My0uODY0YTcgNyAwIDAgMCAuNDQxLS44NjNxLjA5NS4wNTEuMjAxLjA3cS4zMy4wOS42NzMuMDloLjQwMWEzIDMgMCAwIDAtLjEuNDczcS0uMDMuMjQgMCAuNDgxcS4wNDcuMjM4LjE0LjQ2MmMuMTY0LjM1Ni40MTIuNjY2LjcyMy45MDRhLjMxMy4zMTMgMCAwIDAgLjQ1MiAwYS4zMi4zMiAwIDAgMCAwLS40NTJhMiAyIDAgMCAxLS4xNy0uNDIyYzAtLjE1IDAtLjMtLjA2MS0uNDYyYy0uMDYtLjE2IDAtLjMtLjA3LS40NjFjLS4xNC0uNzIzLS4xNS0uOTA0LS4xOTEtMS4wMDRhLjI4MS4yODEgMCAwIDAtLjM5Ni0uMzAzYS4yNy4yNyAwIDAgMC0uMTI2LjEyMnEtLjIyNS4wMTUtLjQ1MiAwYTIuMSAyLjEgMCAwIDEtLjYwMi0uMThhMi40IDIuNCAwIDAgMS0uOTU0LTEuMDA0Yy0uMTQtLjI2MS0uMi0uNTUzLjE0LS43NDNsLjM0Mi0uMTZjLjI4My0uMDc2LjU4LS4wNzYuODYzIDBxLjQ3OS4xMzIuOTA0LjM5YS4zMS4zMSAwIDAgMCAuNDQyLS4wOWEuMzIuMzIgMCAwIDAtLjA4LS40NDJhNiA2IDAgMCAwLS41OTMtLjQwMWEuMzQuMzQgMCAwIDAgLjIyLS4xNXEuMzAyLS41MzMuNjAzLTEuMTE1YTkuMyA5LjMgMCAwIDEgMS41MjYgMi4yMjlxLjQ1Mi45MDUuNzkzIDEuODU3cS41MzggMS40OC45MDQgMy4wMTFhLjMzLjMzIDAgMCAwIC4zODEuMjYxYS4zMjMuMzIzIDAgMCAwIC4yNTEtLjM4MWEyMC42IDIwLjYgMCAwIDAtLjQ2Mi0zLjIzMm0tMTAuMDM4LTIuMDA3YS4yMy4yMyAwIDAgMS0uMS0uMDdsLjMtLjUzMnEuMzA3LS40NDIuNzAzLS44MDRxLjI2My0uMjU2LjU1Mi0uNDgycS4yNzctLjE5OS41ODItLjM1cS0uMDI4LjA3Ny0uMDcuMTVsLS44OTMgMi4wMDdhOCA4IDAgMCAxLTEuMDM0LjEyMXptLjM0IDUuNDkxYzAtLjA4LS4yLS44MzMtLjIyLTEuMTU0Yy0uMDItLjMyMiAwLS41MzIgMC0uNzkzcS40NDMuNDQ4Ljk0NC44MzNxLjIxNi4xNi40NTEuMjlzLTEuMDI0LjgyNC0xLjEzNC44NjR6bTUuMjQxLTYuNDU1YS4zMS4zMSAwIDAgMCAwIC4zMTFhMiAyIDAgMCAwLS4zMjEtLjE0YTIuMyAyLjMgMCAwIDAtMS4wMDQtLjA5bC0uNjMyLjE5YTEuMzQ2IDEuMzQ2IDAgMCAwLS44MDQgMS43NTdhMi4zOCAyLjM4IDAgMCAwIC45MjQgMS4yMTVjLS4xMi4xNy0uMjIuMzUxLS4zNTEuNTEycS0uMzU2LjQ1NS0uODI0Ljc5M2MtLjA4LjA2LS40MDEuMjctLjM1LjI3YTQgNCAwIDAgMS0uODU0LS4yN2MtLjMzMi0uMTcxLS42NDMtLjM2Mi0xLjAwNC0uNTQycS4zMy0uNjYzLjYwMi0xLjE3NWMuNjAyLTEuMTM0IDEuMDY0LTEuODg3IDEuODc3LTMuNDUzYy40NDItLjg5NC44MzQtMS45MDggMS4zMzYtMi44MzFhNS43IDUuNyAwIDAgMSAxLjEzNC0xLjU0NmEuNjQuNjQgMCAwIDEgLjgwMy0uMWExLjE3IDEuMTcgMCAwIDEgLjYxMi44MzNhNC4yIDQuMiAwIDAgMS0uMTMgMS43MjZjLS4wMS4yMzEtLjgyMyAyLjEyOC0xLjAxNCAyLjU0IiAvPgoJPHBhdGggZmlsbD0iIzAwNjZkMSIgZD0iTTE2LjA2MiAyMC44MjdhMjUgMjUgMCAwIDEtMy44NzUgMS43ODdhNC44IDQuOCAwIDAgMS0yLjYyLjIzMWEyLjMgMi4zIDAgMCAxLTEuMDA0LS42OTNBOS43IDkuNyAwIDAgMSA3LjQgMjAuNDI3Yy0uNTQyLS45MjQtMS4wMDQtMS44NTctMS40NzYtMi44MTFjLS42OTItMS40NDYtMS4zMDUtMi45MTEtMS45NDctNC4zOTdhMjkgMjkgMCAwIDEtLjg5NC0yLjI3OUMyLjY0MSA5Ljc4NSAyLjI3IDguNiAxLjg2OCA3LjQxNmMtLjA4LS4yMzEtLjU0My0xLjAwNC0uNzYzLTEuNDU2cS41MDgtLjAzIDEuMDA0LS4xNWE0MCA0MCAwIDAgMCA1LjAxOS0xLjY1N2E0MCA0MCAwIDAgMCA1LjM2LTIuNDhxLjI0Ny0uMTU1LjQ0Mi0uMzcxcS40MDEuNTg0LjcwMyAxLjIyNWMuNTEyIDEuMTQ0IDEuMDk0IDMuMDExIDEuNjY3IDQuNDk3Yy4xNy40MTIuMzQuNzkzLjUwMSAxLjExNGEuMzIuMzIgMCAwIDAgLjU5NC0uMDM1YS4zMy4zMyAwIDAgMC0uMDExLS4yNDZhMTAgMTAgMCAwIDEtLjQ2Mi0xLjA4NGMtLjU1Mi0xLjQ3Ni0xLjA4NC0zLjM5My0xLjU4Ni00LjU1N0E2LjUgNi41IDAgMCAwIDEzLjA1LjQwOWEuNDguNDggMCAwIDAtLjQ4MiAwYy0uMjYxLjE3LS4wOC4yOS0uNjIzLjYxMmE0OCA0OCAwIDAgMS02LjQwNCAyLjY2YTMxIDMxIDAgMCAxLTMuOTA1IDEuMTQ1Yy0xLjA4NC4xNi0uODc0LS4xMi0xLjMwNS4wOUEuNjIuNjIgMCAwIDAgMCA1LjQ4OGMuMjEuNzg0LjQ5MiAxLjU0Ny44NDQgMi4yNzljLjQwMSAxLjIzNS43NzMgMi4zOCAxLjE2NCAzLjU0NGMuMjkxLjc4My41OTIgMS41NjYuOTQ0IDIuMzQ5Yy42ODIgMS40NzUgMS4zMjUgMi45NDEgMi4wMDggNC4zNzdhMjcgMjcgMCAwIDAgMS42MDYgMi44NGMuMzcyLjY2LjgxNiAxLjI3NyAxLjMyNSAxLjgzOGMuMzc3LjQxMy44NjUuNzA5IDEuNDA1Ljg1M2E1LjQgNS40IDAgMCAwIDMuMDEyLS4zMTFhMjkgMjkgMCAwIDAgMy45MjUtMS45MjhhLjI4LjI4IDAgMCAwIC4xMS0uMzgxYS4yOC4yOCAwIDAgMC0uMjgtLjEyIiAvPgoJPHBhdGggZmlsbD0iIzAwNjZkMSIgZD0iTTcuNjcgNy43ODdhMTAuNSAxMC41IDAgMCAxIDEuNTg2LS4xNGE5IDkgMCAwIDAgMS43ODctLjIxMWEzLjY1IDMuNjUgMCAwIDAgMi4wOTgtMS4yODVhLjMyLjMyIDAgMCAwIDAtLjQ1MmEuMzEuMzEgMCAwIDAtLjQ1MiAwYy0uMzYuMzU2LS44MDYuNjEyLTEuMjk1Ljc0M2E3IDcgMCAwIDEtMS44MzcuMTJhOS43IDkuNyAwIDAgMC0yLjA2OC4xODFhNC4zIDQuMyAwIDAgMC0xLjQ2NS43MDNhNi4xIDYuMSAwIDAgMC0xLjQzNiAxLjYxNmEuMjkxLjI5MSAwIDAgMCAuNDMyLjM1MWMuMzYtLjQxNi43OC0uNzc4IDEuMjQ1LTEuMDc0YTMuNSAzLjUgMCAwIDEgMS40MDUtLjU1Mm02LjE4NCAyLjIxOWEuMzIuMzIgMCAwIDAgMC0uNDUyYS4zMS4zMSAwIDAgMC0uNDUyIDBjLS40MDcuMjcyLS44NjQuNDYtMS4zNDUuNTUyYy0uNzUzLjE3LTEuNTQ2LjE5LTIuMzUuMzAxYy0uNDU1LjA4Ny0uOS4yMjUtMS4zMjQuNDEycS0uNDMxLjE5NS0uODEzLjQ3MmE1LjEgNS4xIDAgMCAwLTEuNTQ2IDEuNjI2YS4yOS4yOSAwIDAgMCAuMTg0LjQzN2EuMjguMjggMCAwIDAgLjI5OC0uMTI2Yy4zMzUtLjQwMy43NC0uNzQzIDEuMTk0LTEuMDA0cS41Mi0uMjg5IDEuMDg0LS40NzJhNy40IDcuNCAwIDAgMSAxLjE0NS0uMzJjLjgwMy0uMTkyIDEuNjE2LS4yOTIgMi4zNzktLjU1M2E0LjIgNC4yIDAgMCAwIDEuNTQ2LS44NzNtLTMuOTE1IDQuODU4YTMuMyAzLjMgMCAwIDAtLjU5My4yNDFxLS4yNzguMTM3LS41MjIuMzMycS0uNTU2LjQ3NS0xLjAwMyAxLjA1NGEuMjkuMjkgMCAwIDAgMCAuNDAxYS4yOC4yOCAwIDAgMCAuNDAxIDBhMTQgMTQgMCAwIDEgMS4zMzUtLjY5MmMuMjExLS4xLjQxMi0uMjIxLjYyMy0uMzMyYy4yMS0uMTEuNDExLS4yNC42MzItLjM0MXEuMzI2LS4xNDUuNjczLS4yMzFhLjMyLjMyIDAgMCAwIC4yOS0uMzUxYS4zMS4zMSAwIDAgMC0uMjI0LS4yODJhLjMuMyAwIDAgMC0uMTI3LS4wMWE0LjMgNC4zIDAgMCAwLTEuNDg1LjIxMSIgLz4KPC9zdmc+",
+                  title: t("seoOptimization.featureContentTitle"),
+                  desc: t("seoOptimization.featureContentDesc"),
+                },
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KCTxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9IiMwMDY2ZDEiPgoJCTxwYXRoIGQ9Ik0xIDBhMSAxIDAgMCAwLTEgMXY5YTEgMSAwIDAgMCAxIDFoNXYxSDJ2Mmg2VjlIMlYyaDEwdjRoMlYxYTEgMSAwIDAgMC0xLTF6IiAvPgoJCTxwYXRoIGQ9Ik0xMCA3YTEgMSAwIDAgMC0xIDF2N2ExIDEgMCAwIDAgMSAxaDVhMSAxIDAgMCAwIDEtMVY4YTEgMSAwIDAgMC0xLTF6bTEgN1Y5aDN2NXoiIC8+Cgk8L2c+Cjwvc3ZnPg==",
+                  title: t("seoOptimization.featureMobileTitle"),
+                  desc: t("seoOptimization.featureMobileDesc"),
+                },
+                {
+                  icon: "/globe.svg",
+                  title: t("seoOptimization.featureGlobalTitle"),
+                  desc: t("seoOptimization.featureGlobalDesc"),
+                },
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9IiMwMDY2ZDEiPgoJCTxwYXRoIGQ9Ik0yNSA1aC0uMTd2MkgyNWExIDEgMCAwIDEgMSAxdjIwYTEgMSAwIDAgMS0xIDFIN2ExIDEgMCAwIDEtMS0xVjhhMSAxIDAgMCAxIDEtMWguMTdWNUg3YTMgMyAwIDAgMC0zIDN2MjBhMyAzIDAgMCAwIDMgM2gxOGEzIDMgMCAwIDAgMy0zVjhhMyAzIDAgMCAwLTMtMyIgLz4KCQk8cGF0aCBkPSJNMjMgM2gtM1YwaC04djNIOXY2aDE0em0tMiA0SDExVjVoM1YyaDR2M2gzeiIgLz4KCQk8cGF0aCBkPSJNMTAgMTNoMTJ2MkgxMHptMCA1aDEydjJIMTB6bTAgNWgxMnYySDEweiIgY2xhc3M9Im91aUljb25fX2ZpbGxTZWNvbmRhcnkiIC8+Cgk8L2c+Cjwvc3ZnPg==",
+                  title: t("seoOptimization.featureReportingTitle"),
+                  desc: t("seoOptimization.featureReportingDesc"),
+                },
+              ].map((feature, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col items-center justify-center min-w-[220px] max-w-xs rounded-2xl shadow-xl p-8 bg-gradient-to-br from-[#7a8387] via-[#00BFFF] to-[#8e4747] hover:scale-105 transition-all duration-300 group"
+                >
+                  <div className="w-14 h-14 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 rounded-full shadow-lg border-4 border-white dark:border-gray-900 mb-4 animate-float">
+                    <Image
+                      src={feature.icon}
+                      alt={feature.title}
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                  <div className="font-extrabold text-xl text-white mb-2 text-center drop-shadow-lg text-nowrap">
+                    {feature.title}
+                  </div>
+                  <div className="text-white/80 dark:text-gray-200 text-center mb-2">
+                    {feature.desc}
+                  </div>
+                  <div className="w-8 h-1 bg-gradient-to-r from-[#00bcd4] to-cyan-400 rounded-full mt-2" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Section 3: SEO Process Steps (Vertical Stepper) */}
         <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 ">
           <div className="py-20 px-6 mx-auto w-full">
@@ -171,70 +235,6 @@ const SeoOptimization = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 4: SEO Features (Horizontal Cards) */}
-        <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 ">
-          <div className="py-20 px-6 mx-auto w-full">
-            <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
-              {t("seoOptimization.featuresTitle")}
-            </h2>
-            <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
-              {[
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiNmZmVmNWUiIGQ9Ik0xMiA2Ljc0QTIuODcgMi44NyAwIDEgMCAxMiAxYTIuODcgMi44NyAwIDAgMCAwIDUuNzQiIC8+CgkJPHBhdGggZmlsbD0iI2ZmZjliZiIgZD0iTTkuMTMgMy44N2MuMDAxLjI3LjA0LjU0LjExNi44QTIuODcgMi44NyAwIDAgMCAxMy44IDEuNjM0QTIuODcgMi44NyAwIDAgMCA5LjEzIDMuODciIC8+CgkJPHBhdGggZmlsbD0iI2ZmYmM0NCIgZD0ibTkuMDIgMTEuMjg1bC0yLjQzMSAxLjE0YTEuNTk4IDEuNTk4IDAgMCAwLS42NyAyLjQwMmw0LjE2OSA2LjI0aDMuODI2bDQuMTY4LTYuMjRhMS42IDEuNiAwIDAgMC0uNjctMi40MDJsLTIuNjE0LTEuMjI3eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZlZjVlIiBkPSJNMTUuNjEgOS41NjlhLjQ3Ny40NzcgMCAwIDAtLjY0LS41NTRhNy45NCA3Ljk0IDAgMCAxLTUuOTQzLS4wMDhhLjQ3OC40NzggMCAwIDAtLjYzOC41NTRsMi42NTUgMTEuNTA1aDEuOTEzeiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmOWJmIiBkPSJNMTIgOS41ODhhOC4zIDguMyAwIDAgMS0yLjk3My0uNTgxYS40NzguNDc4IDAgMCAwLS42MzguNTU0bDIuNjU1IDExLjUwNUgxMnoiIC8+CgkJPHBhdGggc3Ryb2tlPSIjMTkxOTE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xNy40NjcgMjIuNjI5YTQuMjYgNC4yNiAwIDAgMC0zLjA0NS0xLjU0Mkg5LjYzOWE0LjQgNC40IDAgMCAwLTMuMDc2IDEuNTE5TDYuMjYyIDIzSDE3Ljc0ek0xNS42MSA5LjU2OWEuNDc3LjQ3NyAwIDAgMC0uNjQtLjU1NGE3Ljk0IDcuOTQgMCAwIDEtNS45NDMtLjAwOGEuNDc4LjQ3OCAwIDAgMC0uNjM4LjU1NGwyLjY1NSAxMS41MDVoMS45MTN6TTEyIDYuNzRBMi44NyAyLjg3IDAgMSAwIDEyIDFhMi44NyAyLjg3IDAgMCAwIDAgNS43NG00LjUyOCA1LjI3bC44ODQuNDE1YTEuNTk4IDEuNTk4IDAgMCAxIC42NyAyLjQwM2wtNC4xNjkgNi4yNG0tNi40NC05LjA1OGwtLjg4NC40MTVhMS41OTggMS41OTggMCAwIDAtLjY3IDIuNDAzbDQuMTY5IDYuMjQiIHN0cm9rZS13aWR0aD0iMSIgLz4KCTwvZz4KPC9zdmc+",
-                  title: t("seoOptimization.featureAwardTitle"),
-                  desc: t("seoOptimization.featureAwardDesc"),
-                },
-                {
-                  icon: "https://pic.onlinewebfonts.com/thumbnails/icons_448371.svg",
-                  title: t("seoOptimization.featureFastTitle"),
-                  desc: t("seoOptimization.featureFastDesc"),
-                },
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiMwMDY2ZDEiIGQ9Ik0yMy41MzEgMTYuNDZhOC44IDguOCAwIDAgMC0uODQzLTIuMDA3YTcuNjUgNy42NSAwIDAgMC0yLjE1OC0yLjMzcS4yMTQtLjQ2MS4zODEtLjk0M2MuMjM3LS42NjIuMzMtMS4zNjcuMjcxLTIuMDY4YTIuMTYgMi4xNiAwIDAgMC0xLjAwNC0xLjYwNmExLjY0NiAxLjY0NiAwIDAgMC0yLjAwNy4xOWE2LjQgNi40IDAgMCAwLTEuNDA2IDEuNzY4cS0uNDkzLjk3OS0uODczIDIuMDA3YTQuOSA0LjkgMCAwIDAtMS42NzcuNTMycS0uNDIuMjIzLS43NzMuNTQyYTQgNCAwIDAgMC0uNjEyLjc1M2wtLjI4MS42MjNjLS4xNy43NDMuMDggMS4xMzQuNTEyIDEuMjk1Yy4zOS4xMy44MTQuMTMgMS4yMDUgMGMwIDAtMS4xNDUgMi4zNDktMS4xNTUgMi40NWE4LjQgOC40IDAgMCAwLS4zMjEgMS4zNzRhNCA0IDAgMCAwIDAgMS4wMDRhMy41IDMuNSAwIDAgMCAuMTQuNTYzYy4wNTkuMTQxLjE2LjI2LjI5MS4zNGEuOS45IDAgMCAwIC42NTMuMDkxYTIuNiAyLjYgMCAwIDAgLjgwMy0uMzcxbC41ODItLjU1MmwuNTUyLS43MDNxLjE2LS4wMzQuMzAyLS4xMXEuMzE0LS4yMDIuNTgyLS40NjJxLjM5My0uMzk1LjY5My0uODY0YTcgNyAwIDAgMCAuNDQxLS44NjNxLjA5NS4wNTEuMjAxLjA3cS4zMy4wOS42NzMuMDloLjQwMWEzIDMgMCAwIDAtLjEuNDczcS0uMDMuMjQgMCAuNDgxcS4wNDcuMjM4LjE0LjQ2MmMuMTY0LjM1Ni40MTIuNjY2LjcyMy45MDRhLjMxMy4zMTMgMCAwIDAgLjQ1MiAwYS4zMi4zMiAwIDAgMCAwLS40NTJhMiAyIDAgMCAxLS4xNy0uNDIyYzAtLjE1IDAtLjMtLjA2MS0uNDYyYy0uMDYtLjE2IDAtLjMtLjA3LS40NjFjLS4xNC0uNzIzLS4xNS0uOTA0LS4xOTEtMS4wMDRhLjI4MS4yODEgMCAwIDAtLjM5Ni0uMzAzYS4yNy4yNyAwIDAgMC0uMTI2LjEyMnEtLjIyNS4wMTUtLjQ1MiAwYTIuMSAyLjEgMCAwIDEtLjYwMi0uMThhMi40IDIuNCAwIDAgMS0uOTU0LTEuMDA0Yy0uMTQtLjI2MS0uMi0uNTUzLjE0LS43NDNsLjM0Mi0uMTZjLjI4My0uMDc2LjU4LS4wNzYuODYzIDBxLjQ3OS4xMzIuOTA0LjM5YS4zMS4zMSAwIDAgMCAuNDQyLS4wOWEuMzIuMzIgMCAwIDAtLjA4LS40NDJhNiA2IDAgMCAwLS41OTMtLjQwMWEuMzQuMzQgMCAwIDAgLjIyLS4xNXEuMzAyLS41MzMuNjAzLTEuMTE1YTkuMyA5LjMgMCAwIDEgMS41MjYgMi4yMjlxLjQ1Mi45MDUuNzkzIDEuODU3cS41MzggMS40OC45MDQgMy4wMTFhLjMzLjMzIDAgMCAwIC4zODEuMjYxYS4zMjMuMzIzIDAgMCAwIC4yNTEtLjM4MWEyMC42IDIwLjYgMCAwIDAtLjQ2Mi0zLjIzMm0tMTAuMDM4LTIuMDA3YS4yMy4yMyAwIDAgMS0uMS0uMDdsLjMtLjUzMnEuMzA3LS40NDIuNzAzLS44MDRxLjI2My0uMjU2LjU1Mi0uNDgycS4yNzctLjE5OS41ODItLjM1cS0uMDI4LjA3Ny0uMDcuMTVsLS44OTMgMi4wMDdhOCA4IDAgMCAxLTEuMDM0LjEyMXptLjM0IDUuNDkxYzAtLjA4LS4yLS44MzMtLjIyLTEuMTU0Yy0uMDItLjMyMiAwLS41MzIgMC0uNzkzcS40NDMuNDQ4Ljk0NC44MzNxLjIxNi4xNi40NTEuMjlzLTEuMDI0LjgyNC0xLjEzNC44NjR6bTUuMjQxLTYuNDU1YS4zMS4zMSAwIDAgMCAwIC4zMTFhMiAyIDAgMCAwLS4zMjEtLjE0YTIuMyAyLjMgMCAwIDAtMS4wMDQtLjA5bC0uNjMyLjE5YTEuMzQ2IDEuMzQ2IDAgMCAwLS44MDQgMS43NTdhMi4zOCAyLjM4IDAgMCAwIC45MjQgMS4yMTVjLS4xMi4xNy0uMjIuMzUxLS4zNTEuNTEycS0uMzU2LjQ1NS0uODI0Ljc5M2MtLjA4LjA2LS40MDEuMjctLjM1LjI3YTQgNCAwIDAgMS0uODU0LS4yN2MtLjMzMi0uMTcxLS42NDMtLjM2Mi0xLjAwNC0uNTQycS4zMy0uNjYzLjYwMi0xLjE3NWMuNjAyLTEuMTM0IDEuMDY0LTEuODg3IDEuODc3LTMuNDUzYy40NDItLjg5NC44MzQtMS45MDggMS4zMzYtMi44MzFhNS43IDUuNyAwIDAgMSAxLjEzNC0xLjU0NmEuNjQuNjQgMCAwIDEgLjgwMy0uMWExLjE3IDEuMTcgMCAwIDEgLjYxMi44MzNhNC4yIDQuMiAwIDAgMS0uMTMgMS43MjZjLS4wMS4yMzEtLjgyMyAyLjEyOC0xLjAxNCAyLjU0IiAvPgoJPHBhdGggZmlsbD0iIzAwNjZkMSIgZD0iTTE2LjA2MiAyMC44MjdhMjUgMjUgMCAwIDEtMy44NzUgMS43ODdhNC44IDQuOCAwIDAgMS0yLjYyLjIzMWEyLjMgMi4zIDAgMCAxLTEuMDA0LS42OTNBOS43IDkuNyAwIDAgMSA3LjQgMjAuNDI3Yy0uNTQyLS45MjQtMS4wMDQtMS44NTctMS40NzYtMi44MTFjLS42OTItMS40NDYtMS4zMDUtMi45MTEtMS45NDctNC4zOTdhMjkgMjkgMCAwIDEtLjg5NC0yLjI3OUMyLjY0MSA5Ljc4NSAyLjI3IDguNiAxLjg2OCA3LjQxNmMtLjA4LS4yMzEtLjU0My0xLjAwNC0uNzYzLTEuNDU2cS41MDgtLjAzIDEuMDA0LS4xNWE0MCA0MCAwIDAgMCA1LjAxOS0xLjY1N2E0MCA0MCAwIDAgMCA1LjM2LTIuNDhxLjI0Ny0uMTU1LjQ0Mi0uMzcxcS40MDEuNTg0LjcwMyAxLjIyNWMuNTEyIDEuMTQ0IDEuMDk0IDMuMDExIDEuNjY3IDQuNDk3Yy4xNy40MTIuMzQuNzkzLjUwMSAxLjExNGEuMzIuMzIgMCAwIDAgLjU5NC0uMDM1YS4zMy4zMyAwIDAgMC0uMDExLS4yNDZhMTAgMTAgMCAwIDEtLjQ2Mi0xLjA4NGMtLjU1Mi0xLjQ3Ni0xLjA4NC0zLjM5My0xLjU4Ni00LjU1N0E2LjUgNi41IDAgMCAwIDEzLjA1LjQwOWEuNDguNDggMCAwIDAtLjQ4MiAwYy0uMjYxLjE3LS4wOC4yOS0uNjIzLjYxMmE0OCA0OCAwIDAgMS02LjQwNCAyLjY2YTMxIDMxIDAgMCAxLTMuOTA1IDEuMTQ1Yy0xLjA4NC4xNi0uODc0LS4xMi0xLjMwNS4wOUEuNjIuNjIgMCAwIDAgMCA1LjQ4OGMuMjEuNzg0LjQ5MiAxLjU0Ny44NDQgMi4yNzljLjQwMSAxLjIzNS43NzMgMi4zOCAxLjE2NCAzLjU0NGMuMjkxLjc4My41OTIgMS41NjYuOTQ0IDIuMzQ5Yy42ODIgMS40NzUgMS4zMjUgMi45NDEgMi4wMDggNC4zNzdhMjcgMjcgMCAwIDAgMS42MDYgMi44NGMuMzcyLjY2LjgxNiAxLjI3NyAxLjMyNSAxLjgzOGMuMzc3LjQxMy44NjUuNzA5IDEuNDA1Ljg1M2E1LjQgNS40IDAgMCAwIDMuMDEyLS4zMTFhMjkgMjkgMCAwIDAgMy45MjUtMS45MjhhLjI4LjI4IDAgMCAwIC4xMS0uMzgxYS4yOC4yOCAwIDAgMC0uMjgtLjEyIiAvPgoJPHBhdGggZmlsbD0iIzAwNjZkMSIgZD0iTTcuNjcgNy43ODdhMTAuNSAxMC41IDAgMCAxIDEuNTg2LS4xNGE5IDkgMCAwIDAgMS43ODctLjIxMWEzLjY1IDMuNjUgMCAwIDAgMi4wOTgtMS4yODVhLjMyLjMyIDAgMCAwIDAtLjQ1MmEuMzEuMzEgMCAwIDAtLjQ1MiAwYy0uMzYuMzU2LS44MDYuNjEyLTEuMjk1Ljc0M2E3IDcgMCAwIDEtMS44MzcuMTJhOS43IDkuNyAwIDAgMC0yLjA2OC4xODFhNC4zIDQuMyAwIDAgMC0xLjQ2NS43MDNhNi4xIDYuMSAwIDAgMC0xLjQzNiAxLjYxNmEuMjkxLjI5MSAwIDAgMCAuNDMyLjM1MWMuMzYtLjQxNi43OC0uNzc4IDEuMjQ1LTEuMDc0YTMuNSAzLjUgMCAwIDEgMS40MDUtLjU1Mm02LjE4NCAyLjIxOWEuMzIuMzIgMCAwIDAgMC0uNDUyYS4zMS4zMSAwIDAgMC0uNDUyIDBjLS40MDcuMjcyLS44NjQuNDYtMS4zNDUuNTUyYy0uNzUzLjE3LTEuNTQ2LjE5LTIuMzUuMzAxYy0uNDU1LjA4Ny0uOS4yMjUtMS4zMjQuNDEycS0uNDMxLjE5NS0uODEzLjQ3MmE1LjEgNS4xIDAgMCAwLTEuNTQ2IDEuNjI2YS4yOS4yOSAwIDAgMCAuMTg0LjQzN2EuMjguMjggMCAwIDAgLjI5OC0uMTI2Yy4zMzUtLjQwMy43NC0uNzQzIDEuMTk0LTEuMDA0cS41Mi0uMjg5IDEuMDg0LS40NzJhNy40IDcuNCAwIDAgMSAxLjE0NS0uMzJjLjgwMy0uMTkyIDEuNjE2LS4yOTIgMi4zNzktLjU1M2E0LjIgNC4yIDAgMCAwIDEuNTQ2LS44NzNtLTMuOTE1IDQuODU4YTMuMyAzLjMgMCAwIDAtLjU5My4yNDFxLS4yNzguMTM3LS41MjIuMzMycS0uNTU2LjQ3NS0xLjAwMyAxLjA1NGEuMjkuMjkgMCAwIDAgMCAuNDAxYS4yOC4yOCAwIDAgMCAuNDAxIDBhMTQgMTQgMCAwIDEgMS4zMzUtLjY5MmMuMjExLS4xLjQxMi0uMjIxLjYyMy0uMzMyYy4yMS0uMTEuNDExLS4yNC42MzItLjM0MXEuMzI2LS4xNDUuNjczLS4yMzFhLjMyLjMyIDAgMCAwIC4yOS0uMzUxYS4zMS4zMSAwIDAgMC0uMjI0LS4yODJhLjMuMyAwIDAgMC0uMTI3LS4wMWE0LjMgNC4zIDAgMCAwLTEuNDg1LjIxMSIgLz4KPC9zdmc+",
-                  title: t("seoOptimization.featureContentTitle"),
-                  desc: t("seoOptimization.featureContentDesc"),
-                },
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KCTxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9IiMwMDY2ZDEiPgoJCTxwYXRoIGQ9Ik0xIDBhMSAxIDAgMCAwLTEgMXY5YTEgMSAwIDAgMCAxIDFoNXYxSDJ2Mmg2VjlIMlYyaDEwdjRoMlYxYTEgMSAwIDAgMC0xLTF6IiAvPgoJCTxwYXRoIGQ9Ik0xMCA3YTEgMSAwIDAgMC0xIDF2N2ExIDEgMCAwIDAgMSAxaDVhMSAxIDAgMCAwIDEtMVY4YTEgMSAwIDAgMC0xLTF6bTEgN1Y5aDN2NXoiIC8+Cgk8L2c+Cjwvc3ZnPg==",
-                  title: t("seoOptimization.featureMobileTitle"),
-                  desc: t("seoOptimization.featureMobileDesc"),
-                },
-                {
-                  icon: "/globe.svg",
-                  title: t("seoOptimization.featureGlobalTitle"),
-                  desc: t("seoOptimization.featureGlobalDesc"),
-                },
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9IiMwMDY2ZDEiPgoJCTxwYXRoIGQ9Ik0yNSA1aC0uMTd2MkgyNWExIDEgMCAwIDEgMSAxdjIwYTEgMSAwIDAgMS0xIDFIN2ExIDEgMCAwIDEtMS0xVjhhMSAxIDAgMCAxIDEtMWguMTdWNUg3YTMgMyAwIDAgMC0zIDN2MjBhMyAzIDAgMCAwIDMgM2gxOGEzIDMgMCAwIDAgMy0zVjhhMyAzIDAgMCAwLTMtMyIgLz4KCQk8cGF0aCBkPSJNMjMgM2gtM1YwaC04djNIOXY2aDE0em0tMiA0SDExVjVoM1YyaDR2M2gzeiIgLz4KCQk8cGF0aCBkPSJNMTAgMTNoMTJ2MkgxMHptMCA1aDEydjJIMTB6bTAgNWgxMnYySDEweiIgY2xhc3M9Im91aUljb25fX2ZpbGxTZWNvbmRhcnkiIC8+Cgk8L2c+Cjwvc3ZnPg==",
-                  title: t("seoOptimization.featureReportingTitle"),
-                  desc: t("seoOptimization.featureReportingDesc"),
-                },
-              ].map((feature, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center justify-center min-w-[220px] max-w-xs rounded-2xl shadow-xl p-8 bg-gradient-to-br from-[#7a8387] via-[#00BFFF] to-[#8e4747] hover:scale-105 transition-all duration-300 group"
-                >
-                  <div className="w-14 h-14 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 rounded-full shadow-lg border-4 border-white dark:border-gray-900 mb-4 animate-float">
-                    <Image
-                      src={feature.icon}
-                      alt={feature.title}
-                      width={40}
-                      height={40}
-                    />
-                  </div>
-                  <div className="font-extrabold text-xl text-white mb-2 text-center drop-shadow-lg text-nowrap">
-                    {feature.title}
-                  </div>
-                  <div className="text-white/80 dark:text-gray-200 text-center mb-2">
-                    {feature.desc}
-                  </div>
-                  <div className="w-8 h-1 bg-gradient-to-r from-[#00bcd4] to-cyan-400 rounded-full mt-2" />
-                </div>
-              ))}
             </div>
           </div>
         </section>

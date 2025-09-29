@@ -97,6 +97,70 @@ const DigitalMarketing = () => {
           </div>
         </section>
 
+        {/* Section 4: Digital Marketing Features (Horizontal Cards) */}
+        <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+          <div className="py-20 px-6 mx-auto w-full">
+            <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
+              {t("digitalMarketing.featuresTitle")}
+            </h2>
+            <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
+              {[
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiNmZmVmNWUiIGQ9Ik0xMiA2Ljc0QTIuODcgMi44NyAwIDEgMCAxMiAxYTIuODcgMi44NyAwIDAgMCAwIDUuNzQiIC8+CgkJPHBhdGggZmlsbD0iI2ZmZjliZiIgZD0iTTkuMTMgMy44N2MuMDAxLjI3LjA0LjU0LjExNi44QTIuODcgMi44NyAwIDAgMCAxMy44IDEuNjM0QTIuODcgMi44NyAwIDAgMCA5LjEzIDMuODciIC8+CgkJPHBhdGggZmlsbD0iI2ZmYmM0NCIgZD0ibTkuMDIgMTEuMjg1bC0yLjQzMSAxLjE0YTEuNTk4IDEuNTk4IDAgMCAwLS42NyAyLjQwMmw0LjE2OSA2LjI0aDMuODI2bDQuMTY4LTYuMjRhMS42IDEuNiAwIDAgMC0uNjctMi40MDJsLTIuNjE0LTEuMjI3eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZlZjVlIiBkPSJNMTUuNjEgOS41NjlhLjQ3Ny40NzcgMCAwIDAtLjY0LS41NTRhNy45NCA3Ljk0IDAgMCAxLTUuOTQzLS4wMDhhLjQ3OC40NzggMCAwIDAtLjYzOC41NTRsMi42NTUgMTEuNTA1aDEuOTEzeiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmOWJmIiBkPSJNMTIgOS41ODhhOC4zIDguMyAwIDAgMS0yLjk3My0uNTgxYS40NzguNDc4IDAgMCAwLS42MzguNTU0bDIuNjU1IDExLjUwNUgxMnoiIC8+CgkJPHBhdGggc3Ryb2tlPSIjMTkxOTE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xNy40NjcgMjIuNjI5YTQuMjYgNC4yNiAwIDAgMC0zLjA0NS0xLjU0Mkg5LjYzOWE0LjQgNC40IDAgMCAwLTMuMDc2IDEuNTE5TDYuMjYyIDIzSDE3Ljc0ek0xNS42MSA5LjU2OWEuNDc3LjQ3NyAwIDAgMC0uNjQtLjU1NGE3Ljk0IDcuOTQgMCAwIDEtNS45NDMtLjAwOGEuNDc4LjQ3OCAwIDAgMC0uNjM4LjU1NGwyLjY1NSAxMS41MDVoMS45MTN6TTEyIDYuNzRBMi44NyAyLjg3IDAgMSAwIDEyIDFhMi44NyAyLjg3IDAgMCAwIDAgNS43NG00LjUyOCA1LjI3bC44ODQuNDE1YTEuNTk4IDEuNTk4IDAgMCAxIC42NyAyLjQwM2wtNC4xNjkgNi4yNG0tNi40NC05LjA1OGwtLjg4NC40MTVhMS41OTggMS41OTggMCAwIDAtLjY3IDIuNDAzbDQuMTY5IDYuMjQiIHN0cm9rZS13aWR0aD0iMSIgLz4KCTwvZz4KPC9zdmc+",
+                  title: t("digitalMarketing.featureAwardTitle"),
+                  desc: t("digitalMarketing.featureAwardDesc"),
+                },
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiMwMGE2ZWQiIGQ9Ik0yIDZhNCA0IDAgMCAxIDQtNGgyMGE0IDQgMCAwIDEgNCA0djIwYTQgNCAwIDAgMS00IDRINmE0IDQgMCAwIDEtNC00eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmIiBkPSJtMTcgMTYuOTYybC02LjMwNyA2LjA2OWMtLjYzNS42MTEtMS42OTMuMTYtMS42OTMtLjcyVjkuNjljMC0uODgyIDEuMDU4LTEuMzMyIDEuNjkzLS43MkwxNyAxNS4wMzdWOS42OWMwLS44ODIgMS4wNTgtMS4zMzIgMS42OTMtLjcybDYuNTU4IDYuMzFhMSAxIDAgMCAxIDAgMS40NGwtNi41NTggNi4zMWMtLjYzNS42MTItMS42OTMuMTYyLTEuNjkzLS43MnoiIC8+Cgk8L2c+Cjwvc3ZnPg==",
+                  title: t("digitalMarketing.featureFastTitle"),
+                  desc: t("digitalMarketing.featureFastDesc"),
+                },
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KCTxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiMwMDY2ZDEiIGQ9Ik0xNC4yNSAyLjFhMS4yNSAxLjI1IDAgMCAwLTEuMTctLjFMNi45MSA0LjQzYTEuMiAxLjIgMCAwIDEtLjQ2LjA5SDIuNWExLjI1IDEuMjUgMCAwIDAtMS4yNSAxLjI1di4xSDB2M2gxLjI1VjlhMS4yNSAxLjI1IDAgMCAwIDEuMjUgMS4yMkw0IDEzLjRhMS4yNiAxLjI2IDAgMCAwIDEuMTMuNzJoLjYzQTEuMjUgMS4yNSAwIDAgMCA3IDEyLjg3di0yLjUzbDYuMDggMi40M2ExLjMgMS4zIDAgMCAwIC40Ny4wOWExLjMgMS4zIDAgMCAwIC43LS4yMmExLjI1IDEuMjUgMCAwIDAgLjU1LTFWMy4xM2ExLjI1IDEuMjUgMCAwIDAtLjU1LTEuMDNtLTguNSAzLjY3VjlIMi41VjUuNzd6bTAgNy4xaC0uNjNsLTEuMjMtMi42NWgxLjg2em0xLjYyLTMuNzJBMi4zIDIuMyAwIDAgMCA3IDlWNS43YTIuMyAyLjMgMCAwIDAgLjM3LS4xMWw2LjE4LTIuNDZ2OC40OHptNy40Ni0zLjAzdjIuNWExLjI1IDEuMjUgMCAwIDAgMC0yLjUiIC8+Cjwvc3ZnPg==",
+                  title: t("digitalMarketing.featureCustomTitle"),
+                  desc: t("digitalMarketing.featureCustomDesc"),
+                },
+                {
+                  icon: "https://2793236.fs1.hubspotusercontent-na1.net/hub/2793236/hubfs/Brand-consistency.png?width=1600&name=Brand-consistency.png",
+                  title: t("digitalMarketing.featureBrandTitle"),
+                  desc: t("digitalMarketing.featureBrandDesc"),
+                },
+                {
+                  icon: "/globe.svg",
+                  title: t("digitalMarketing.featureGlobalTitle"),
+                  desc: t("digitalMarketing.featureGlobalDesc"),
+                },
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9IiMwMDY2ZDEiPgoJCTxwYXRoIGQ9Ik0yNSA1aC0uMTd2MkgyNWExIDEgMCAwIDEgMSAxdjIwYTEgMSAwIDAgMS0xIDFIN2ExIDEgMCAwIDEtMS0xVjhhMSAxIDAgMCAxIDEtMWguMTdWNUg3YTMgMyAwIDAgMC0zIDN2MjBhMyAzIDAgMCAwIDMgM2gxOGEzIDMgMCAwIDAgMy0zVjhhMyAzIDAgMCAwLTMtMyIgLz4KCQk8cGF0aCBkPSJNMjMgM2gtM1YwaC04djNIOXY2aDE0em0tMiA0SDExVjVoM1YyaDR2M2gzeiIgLz4KCQk8cGF0aCBkPSJNMTAgMTNoMTJ2MkgxMHptMCA1aDEydjJIMTB6bTAgNWgxMnYySDEweiIgY2xhc3M9Im91aUljb25fX2ZpbGxTZWNvbmRhcnkiIC8+Cgk8L2c+Cjwvc3ZnPg==",
+                  title: t("digitalMarketing.featureReportingTitle"),
+                  desc: t("digitalMarketing.featureReportingDesc"),
+                },
+              ].map((feature, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col items-center justify-center min-w-[220px] max-w-xs rounded-2xl shadow-xl p-8 bg-gradient-to-br from-[#7a8387] via-[#00BFFF] to-[#8e4747] hover:scale-105 transition-all duration-300 group"
+                >
+                  <div className="w-14 h-14 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 rounded-full shadow-lg border-4 border-white dark:border-gray-900 mb-4 animate-float">
+                    <Image
+                      src={feature.icon}
+                      alt={feature.title}
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                  <div className="font-extrabold text-xl text-white mb-2 text-center drop-shadow-lg text-nowrap">
+                    {feature.title}
+                  </div>
+                  <div className="text-white/80 dark:text-gray-200 text-center mb-2">
+                    {feature.desc}
+                  </div>
+                  <div className="w-8 h-1 bg-gradient-to-r from-[#00bcd4] to-cyan-400 rounded-full mt-2" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Section 3: Marketing Process Steps (Vertical Stepper) */}
         <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900  ">
           <div className="py-20 px-6 mx-auto w-full">
@@ -171,70 +235,6 @@ const DigitalMarketing = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 4: Digital Marketing Features (Horizontal Cards) */}
-        <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-          <div className="py-20 px-6 mx-auto w-full">
-            <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
-              {t("digitalMarketing.featuresTitle")}
-            </h2>
-            <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
-              {[
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiNmZmVmNWUiIGQ9Ik0xMiA2Ljc0QTIuODcgMi44NyAwIDEgMCAxMiAxYTIuODcgMi44NyAwIDAgMCAwIDUuNzQiIC8+CgkJPHBhdGggZmlsbD0iI2ZmZjliZiIgZD0iTTkuMTMgMy44N2MuMDAxLjI3LjA0LjU0LjExNi44QTIuODcgMi44NyAwIDAgMCAxMy44IDEuNjM0QTIuODcgMi44NyAwIDAgMCA5LjEzIDMuODciIC8+CgkJPHBhdGggZmlsbD0iI2ZmYmM0NCIgZD0ibTkuMDIgMTEuMjg1bC0yLjQzMSAxLjE0YTEuNTk4IDEuNTk4IDAgMCAwLS42NyAyLjQwMmw0LjE2OSA2LjI0aDMuODI2bDQuMTY4LTYuMjRhMS42IDEuNiAwIDAgMC0uNjctMi40MDJsLTIuNjE0LTEuMjI3eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZlZjVlIiBkPSJNMTUuNjEgOS41NjlhLjQ3Ny40NzcgMCAwIDAtLjY0LS41NTRhNy45NCA3Ljk0IDAgMCAxLTUuOTQzLS4wMDhhLjQ3OC40NzggMCAwIDAtLjYzOC41NTRsMi42NTUgMTEuNTA1aDEuOTEzeiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmOWJmIiBkPSJNMTIgOS41ODhhOC4zIDguMyAwIDAgMS0yLjk3My0uNTgxYS40NzguNDc4IDAgMCAwLS42MzguNTU0bDIuNjU1IDExLjUwNUgxMnoiIC8+CgkJPHBhdGggc3Ryb2tlPSIjMTkxOTE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xNy40NjcgMjIuNjI5YTQuMjYgNC4yNiAwIDAgMC0zLjA0NS0xLjU0Mkg5LjYzOWE0LjQgNC40IDAgMCAwLTMuMDc2IDEuNTE5TDYuMjYyIDIzSDE3Ljc0ek0xNS42MSA5LjU2OWEuNDc3LjQ3NyAwIDAgMC0uNjQtLjU1NGE3Ljk0IDcuOTQgMCAwIDEtNS45NDMtLjAwOGEuNDc4LjQ3OCAwIDAgMC0uNjM4LjU1NGwyLjY1NSAxMS41MDVoMS45MTN6TTEyIDYuNzRBMi44NyAyLjg3IDAgMSAwIDEyIDFhMi44NyAyLjg3IDAgMCAwIDAgNS43NG00LjUyOCA1LjI3bC44ODQuNDE1YTEuNTk4IDEuNTk4IDAgMCAxIC42NyAyLjQwM2wtNC4xNjkgNi4yNG0tNi40NC05LjA1OGwtLjg4NC40MTVhMS41OTggMS41OTggMCAwIDAtLjY3IDIuNDAzbDQuMTY5IDYuMjQiIHN0cm9rZS13aWR0aD0iMSIgLz4KCTwvZz4KPC9zdmc+",
-                  title: t("digitalMarketing.featureAwardTitle"),
-                  desc: t("digitalMarketing.featureAwardDesc"),
-                },
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiMwMGE2ZWQiIGQ9Ik0yIDZhNCA0IDAgMCAxIDQtNGgyMGE0IDQgMCAwIDEgNCA0djIwYTQgNCAwIDAgMS00IDRINmE0IDQgMCAwIDEtNC00eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmIiBkPSJtMTcgMTYuOTYybC02LjMwNyA2LjA2OWMtLjYzNS42MTEtMS42OTMuMTYtMS42OTMtLjcyVjkuNjljMC0uODgyIDEuMDU4LTEuMzMyIDEuNjkzLS43MkwxNyAxNS4wMzdWOS42OWMwLS44ODIgMS4wNTgtMS4zMzIgMS42OTMtLjcybDYuNTU4IDYuMzFhMSAxIDAgMCAxIDAgMS40NGwtNi41NTggNi4zMWMtLjYzNS42MTItMS42OTMuMTYyLTEuNjkzLS43MnoiIC8+Cgk8L2c+Cjwvc3ZnPg==",
-                  title: t("digitalMarketing.featureFastTitle"),
-                  desc: t("digitalMarketing.featureFastDesc"),
-                },
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KCTxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiMwMDY2ZDEiIGQ9Ik0xNC4yNSAyLjFhMS4yNSAxLjI1IDAgMCAwLTEuMTctLjFMNi45MSA0LjQzYTEuMiAxLjIgMCAwIDEtLjQ2LjA5SDIuNWExLjI1IDEuMjUgMCAwIDAtMS4yNSAxLjI1di4xSDB2M2gxLjI1VjlhMS4yNSAxLjI1IDAgMCAwIDEuMjUgMS4yMkw0IDEzLjRhMS4yNiAxLjI2IDAgMCAwIDEuMTMuNzJoLjYzQTEuMjUgMS4yNSAwIDAgMCA3IDEyLjg3di0yLjUzbDYuMDggMi40M2ExLjMgMS4zIDAgMCAwIC40Ny4wOWExLjMgMS4zIDAgMCAwIC43LS4yMmExLjI1IDEuMjUgMCAwIDAgLjU1LTFWMy4xM2ExLjI1IDEuMjUgMCAwIDAtLjU1LTEuMDNtLTguNSAzLjY3VjlIMi41VjUuNzd6bTAgNy4xaC0uNjNsLTEuMjMtMi42NWgxLjg2em0xLjYyLTMuNzJBMi4zIDIuMyAwIDAgMCA3IDlWNS43YTIuMyAyLjMgMCAwIDAgLjM3LS4xMWw2LjE4LTIuNDZ2OC40OHptNy40Ni0zLjAzdjIuNWExLjI1IDEuMjUgMCAwIDAgMC0yLjUiIC8+Cjwvc3ZnPg==",
-                  title: t("digitalMarketing.featureCustomTitle"),
-                  desc: t("digitalMarketing.featureCustomDesc"),
-                },
-                {
-                  icon: "https://2793236.fs1.hubspotusercontent-na1.net/hub/2793236/hubfs/Brand-consistency.png?width=1600&name=Brand-consistency.png",
-                  title: t("digitalMarketing.featureBrandTitle"),
-                  desc: t("digitalMarketing.featureBrandDesc"),
-                },
-                {
-                  icon: "/globe.svg",
-                  title: t("digitalMarketing.featureGlobalTitle"),
-                  desc: t("digitalMarketing.featureGlobalDesc"),
-                },
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9IiMwMDY2ZDEiPgoJCTxwYXRoIGQ9Ik0yNSA1aC0uMTd2MkgyNWExIDEgMCAwIDEgMSAxdjIwYTEgMSAwIDAgMS0xIDFIN2ExIDEgMCAwIDEtMS0xVjhhMSAxIDAgMCAxIDEtMWguMTdWNUg3YTMgMyAwIDAgMC0zIDN2MjBhMyAzIDAgMCAwIDMgM2gxOGEzIDMgMCAwIDAgMy0zVjhhMyAzIDAgMCAwLTMtMyIgLz4KCQk8cGF0aCBkPSJNMjMgM2gtM1YwaC04djNIOXY2aDE0em0tMiA0SDExVjVoM1YyaDR2M2gzeiIgLz4KCQk8cGF0aCBkPSJNMTAgMTNoMTJ2MkgxMHptMCA1aDEydjJIMTB6bTAgNWgxMnYySDEweiIgY2xhc3M9Im91aUljb25fX2ZpbGxTZWNvbmRhcnkiIC8+Cgk8L2c+Cjwvc3ZnPg==",
-                  title: t("digitalMarketing.featureReportingTitle"),
-                  desc: t("digitalMarketing.featureReportingDesc"),
-                },
-              ].map((feature, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center justify-center min-w-[220px] max-w-xs rounded-2xl shadow-xl p-8 bg-gradient-to-br from-[#7a8387] via-[#00BFFF] to-[#8e4747] hover:scale-105 transition-all duration-300 group"
-                >
-                  <div className="w-14 h-14 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 rounded-full shadow-lg border-4 border-white dark:border-gray-900 mb-4 animate-float">
-                    <Image
-                      src={feature.icon}
-                      alt={feature.title}
-                      width={40}
-                      height={40}
-                    />
-                  </div>
-                  <div className="font-extrabold text-xl text-white mb-2 text-center drop-shadow-lg text-nowrap">
-                    {feature.title}
-                  </div>
-                  <div className="text-white/80 dark:text-gray-200 text-center mb-2">
-                    {feature.desc}
-                  </div>
-                  <div className="w-8 h-1 bg-gradient-to-r from-[#00bcd4] to-cyan-400 rounded-full mt-2" />
-                </div>
-              ))}
             </div>
           </div>
         </section>

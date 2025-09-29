@@ -97,6 +97,70 @@ const Branding = () => {
           </div>
         </section>
 
+        {/* Section 4: Branding Features (Horizontal Cards) */}
+        <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+          <div className="py-20 px-6 mx-auto w-full">
+            <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
+              {t("branding.featuresTitle")}
+            </h2>
+            <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
+              {[
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiNmZmVmNWUiIGQ9Ik0xMiA2Ljc0QTIuODcgMi44NyAwIDEgMCAxMiAxYTIuODcgMi44NyAwIDAgMCAwIDUuNzQiIC8+CgkJPHBhdGggZmlsbD0iI2ZmZjliZiIgZD0iTTkuMTMgMy44N2MuMDAxLjI3LjA0LjU0LjExNi44QTIuODcgMi44NyAwIDAgMCAxMy44IDEuNjM0QTIuODcgMi44NyAwIDAgMCA5LjEzIDMuODciIC8+CgkJPHBhdGggZmlsbD0iI2ZmYmM0NCIgZD0ibTkuMDIgMTEuMjg1bC0yLjQzMSAxLjE0YTEuNTk4IDEuNTk4IDAgMCAwLS42NyAyLjQwMmw0LjE2OSA2LjI0aDMuODI2bDQuMTY4LTYuMjRhMS42IDEuNiAwIDAgMC0uNjctMi40MDJsLTIuNjE0LTEuMjI3eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZlZjVlIiBkPSJNMTUuNjEgOS41NjlhLjQ3Ny40NzcgMCAwIDAtLjY0LS41NTRhNy45NCA3Ljk0IDAgMCAxLTUuOTQzLS4wMDhhLjQ3OC40NzggMCAwIDAtLjYzOC41NTRsMi42NTUgMTEuNTA1aDEuOTEzeiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmOWJmIiBkPSJNMTIgOS41ODhhOC4zIDguMyAwIDAgMS0yLjk3My0uNTgxYS40NzguNDc4IDAgMCAwLS42MzguNTU0bDIuNjU1IDExLjUwNUgxMnoiIC8+CgkJPHBhdGggc3Ryb2tlPSIjMTkxOTE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xNy40NjcgMjIuNjI5YTQuMjYgNC4yNiAwIDAgMC0zLjA0NS0xLjU0Mkg5LjYzOWE0LjQgNC40IDAgMCAwLTMuMDc2IDEuNTE5TDYuMjYyIDIzSDE3Ljc0ek0xNS42MSA5LjU2OWEuNDc3LjQ3NyAwIDAgMC0uNjQtLjU1NGE3Ljk0IDcuOTQgMCAwIDEtNS45NDMtLjAwOGEuNDc4LjQ3OCAwIDAgMC0uNjM4LjU1NGwyLjY1NSAxMS41MDVoMS45MTN6TTEyIDYuNzRBMi44NyAyLjg3IDAgMSAwIDEyIDFhMi44NyAyLjg3IDAgMCAwIDAgNS43NG00LjUyOCA1LjI3bC44ODQuNDE1YTEuNTk4IDEuNTk4IDAgMCAxIC42NyAyLjQwM2wtNC4xNjkgNi4yNG0tNi40NC05LjA1OGwtLjg4NC40MTVhMS41OTggMS41OTggMCAwIDAtLjY3IDIuNDAzbDQuMTY5IDYuMjQiIHN0cm9rZS13aWR0aD0iMSIgLz4KCTwvZz4KPC9zdmc+",
+                  title: t("branding.featureAwardTitle"),
+                  desc: t("branding.featureAwardDesc"),
+                },
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiMwMGE2ZWQiIGQ9Ik0yIDZhNCA0IDAgMCAxIDQtNGgyMGE0IDQgMCAwIDEgNCA0djIwYTQgNCAwIDAgMS00IDRINmE0IDQgMCAwIDEtNC00eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmIiBkPSJtMTcgMTYuOTYybC02LjMwNyA2LjA2OWMtLjYzNS42MTEtMS42OTMuMTYtMS42OTMtLjcyVjkuNjljMC0uODgyIDEuMDU4LTEuMzMyIDEuNjkzLS43MkwxNyAxNS4wMzdWOS42OWMwLS44ODIgMS4wNTgtMS4zMzIgMS42OTMtLjcybDYuNTU4IDYuMzFhMSAxIDAgMCAxIDAgMS40NGwtNi41NTggNi4zMWMtLjYzNS42MTItMS42OTMuMTYyLTEuNjkzLS43MnoiIC8+Cgk8L2c+Cjwvc3ZnPg==",
+                  title: t("branding.featureFastTitle"),
+                  desc: t("branding.featureFastDesc"),
+                },
+                {
+                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KCTxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2NhZDNmNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJtMS44NyA4bC43LTIuNzRhMSAxIDAgMCAxIC45Ni0uNzZoMTAuOTRhMSAxIDAgMCAxIC45NyAxLjI0TDE1LjEyIDdNNiAxMy41SDJBMS41IDEuNSAwIDAgMSAuNSAxMlYzLjVhMSAxIDAgMCAxIDEtMWg1YTEgMSAwIDAgMSAxIDF2MSIgc3Ryb2tlLXdpZHRoPSIxIiAvPgoJPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWVkNDlmIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNMTIuOTIzIDExLjkwNEg3LjVMMTAuMjEgN1oiIHN0cm9rZS13aWR0aD0iMSIgLz4KCTxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2VlZDQ5ZiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTExLjY2MiA5LjY0MWEyLjU2OSAyLjU5NiAwIDEgMS0xLjMwOCAyLjI2MyIgc3Ryb2tlLXdpZHRoPSIxIiAvPgo8L3N2Zz4=",
+                  title: t("branding.featureCustomTitle"),
+                  desc: t("branding.featureCustomDesc"),
+                },
+                {
+                  icon: "https://2793236.fs1.hubspotusercontent-na1.net/hub/2793236/hubfs/Brand-consistency.png?width=1600&name=Brand-consistency.png",
+                  title: t("branding.featureBrandTitle"),
+                  desc: t("branding.featureBrandDesc"),
+                },
+                {
+                  icon: "/globe.svg",
+                  title: t("branding.featureGlobalTitle"),
+                  desc: t("branding.featureGlobalDesc"),
+                },
+                {
+                  icon: "https://www.svgrepo.com/show/489674/delivery-package.svg",
+                  title: t("branding.featureDeliveryTitle"),
+                  desc: t("branding.featureDeliveryDesc"),
+                },
+              ].map((feature, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col items-center justify-center min-w-[220px] max-w-xs rounded-2xl shadow-xl p-8 bg-gradient-to-br from-[#7a8387] via-[#00BFFF] to-[#8e4747] hover:scale-105 transition-all duration-300 group"
+                >
+                  <div className="w-14 h-14 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 rounded-full shadow-lg border-4 border-white dark:border-gray-900 mb-4 animate-float">
+                    <Image
+                      src={feature.icon}
+                      alt={feature.title}
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                  <div className="font-extrabold text-xl text-white mb-2 text-center drop-shadow-lg text-nowrap">
+                    {feature.title}
+                  </div>
+                  <div className="text-white/80 dark:text-gray-200 text-center mb-2">
+                    {feature.desc}
+                  </div>
+                  <div className="w-8 h-1 bg-gradient-to-r from-[#00bcd4] to-cyan-400 rounded-full mt-2" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Section 3: Branding Process Steps (Vertical Stepper) */}
         <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
           <div className="py-20 px-6 mx-auto w-full">
@@ -171,70 +235,6 @@ const Branding = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 4: Branding Features (Horizontal Cards) */}
-        <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-          <div className="py-20 px-6 mx-auto w-full">
-            <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
-              {t("branding.featuresTitle")}
-            </h2>
-            <div className="flex flex-wrap gap-10 justify-center items-center pb-4">
-              {[
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiNmZmVmNWUiIGQ9Ik0xMiA2Ljc0QTIuODcgMi44NyAwIDEgMCAxMiAxYTIuODcgMi44NyAwIDAgMCAwIDUuNzQiIC8+CgkJPHBhdGggZmlsbD0iI2ZmZjliZiIgZD0iTTkuMTMgMy44N2MuMDAxLjI3LjA0LjU0LjExNi44QTIuODcgMi44NyAwIDAgMCAxMy44IDEuNjM0QTIuODcgMi44NyAwIDAgMCA5LjEzIDMuODciIC8+CgkJPHBhdGggZmlsbD0iI2ZmYmM0NCIgZD0ibTkuMDIgMTEuMjg1bC0yLjQzMSAxLjE0YTEuNTk4IDEuNTk4IDAgMCAwLS42NyAyLjQwMmw0LjE2OSA2LjI0aDMuODI2bDQuMTY4LTYuMjRhMS42IDEuNiAwIDAgMC0uNjctMi40MDJsLTIuNjE0LTEuMjI3eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZlZjVlIiBkPSJNMTUuNjEgOS41NjlhLjQ3Ny40NzcgMCAwIDAtLjY0LS41NTRhNy45NCA3Ljk0IDAgMCAxLTUuOTQzLS4wMDhhLjQ3OC40NzggMCAwIDAtLjYzOC41NTRsMi42NTUgMTEuNTA1aDEuOTEzeiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmOWJmIiBkPSJNMTIgOS41ODhhOC4zIDguMyAwIDAgMS0yLjk3My0uNTgxYS40NzguNDc4IDAgMCAwLS42MzguNTU0bDIuNjU1IDExLjUwNUgxMnoiIC8+CgkJPHBhdGggc3Ryb2tlPSIjMTkxOTE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xNy40NjcgMjIuNjI5YTQuMjYgNC4yNiAwIDAgMC0zLjA0NS0xLjU0Mkg5LjYzOWE0LjQgNC40IDAgMCAwLTMuMDc2IDEuNTE5TDYuMjYyIDIzSDE3Ljc0ek0xNS42MSA5LjU2OWEuNDc3LjQ3NyAwIDAgMC0uNjQtLjU1NGE3Ljk0IDcuOTQgMCAwIDEtNS45NDMtLjAwOGEuNDc4LjQ3OCAwIDAgMC0uNjM4LjU1NGwyLjY1NSAxMS41MDVoMS45MTN6TTEyIDYuNzRBMi44NyAyLjg3IDAgMSAwIDEyIDFhMi44NyAyLjg3IDAgMCAwIDAgNS43NG00LjUyOCA1LjI3bC44ODQuNDE1YTEuNTk4IDEuNTk4IDAgMCAxIC42NyAyLjQwM2wtNC4xNjkgNi4yNG0tNi40NC05LjA1OGwtLjg4NC40MTVhMS41OTggMS41OTggMCAwIDAtLjY3IDIuNDAzbDQuMTY5IDYuMjQiIHN0cm9rZS13aWR0aD0iMSIgLz4KCTwvZz4KPC9zdmc+",
-                  title: t("branding.featureAwardTitle"),
-                  desc: t("branding.featureAwardDesc"),
-                },
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KCTxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiMwMGE2ZWQiIGQ9Ik0yIDZhNCA0IDAgMCAxIDQtNGgyMGE0IDQgMCAwIDEgNCA0djIwYTQgNCAwIDAgMS00IDRINmE0IDQgMCAwIDEtNC00eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmIiBkPSJtMTcgMTYuOTYybC02LjMwNyA2LjA2OWMtLjYzNS42MTEtMS42OTMuMTYtMS42OTMtLjcyVjkuNjljMC0uODgyIDEuMDU4LTEuMzMyIDEuNjkzLS43MkwxNyAxNS4wMzdWOS42OWMwLS44ODIgMS4wNTgtMS4zMzIgMS42OTMtLjcybDYuNTU4IDYuMzFhMSAxIDAgMCAxIDAgMS40NGwtNi41NTggNi4zMWMtLjYzNS42MTItMS42OTMuMTYyLTEuNjkzLS43MnoiIC8+Cgk8L2c+Cjwvc3ZnPg==",
-                  title: t("branding.featureFastTitle"),
-                  desc: t("branding.featureFastDesc"),
-                },
-                {
-                  icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KCTxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2NhZDNmNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJtMS44NyA4bC43LTIuNzRhMSAxIDAgMCAxIC45Ni0uNzZoMTAuOTRhMSAxIDAgMCAxIC45NyAxLjI0TDE1LjEyIDdNNiAxMy41SDJBMS41IDEuNSAwIDAgMSAuNSAxMlYzLjVhMSAxIDAgMCAxIDEtMWg1YTEgMSAwIDAgMSAxIDF2MSIgc3Ryb2tlLXdpZHRoPSIxIiAvPgoJPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWVkNDlmIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNMTIuOTIzIDExLjkwNEg3LjVMMTAuMjEgN1oiIHN0cm9rZS13aWR0aD0iMSIgLz4KCTxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2VlZDQ5ZiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTExLjY2MiA5LjY0MWEyLjU2OSAyLjU5NiAwIDEgMS0xLjMwOCAyLjI2MyIgc3Ryb2tlLXdpZHRoPSIxIiAvPgo8L3N2Zz4=",
-                  title: t("branding.featureCustomTitle"),
-                  desc: t("branding.featureCustomDesc"),
-                },
-                {
-                  icon: "https://2793236.fs1.hubspotusercontent-na1.net/hub/2793236/hubfs/Brand-consistency.png?width=1600&name=Brand-consistency.png",
-                  title: t("branding.featureBrandTitle"),
-                  desc: t("branding.featureBrandDesc"),
-                },
-                {
-                  icon: "/globe.svg",
-                  title: t("branding.featureGlobalTitle"),
-                  desc: t("branding.featureGlobalDesc"),
-                },
-                {
-                  icon: "https://www.svgrepo.com/show/489674/delivery-package.svg",
-                  title: t("branding.featureDeliveryTitle"),
-                  desc: t("branding.featureDeliveryDesc"),
-                },
-              ].map((feature, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center justify-center min-w-[220px] max-w-xs rounded-2xl shadow-xl p-8 bg-gradient-to-br from-[#7a8387] via-[#00BFFF] to-[#8e4747] hover:scale-105 transition-all duration-300 group"
-                >
-                  <div className="w-14 h-14 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 rounded-full shadow-lg border-4 border-white dark:border-gray-900 mb-4 animate-float">
-                    <Image
-                      src={feature.icon}
-                      alt={feature.title}
-                      width={40}
-                      height={40}
-                    />
-                  </div>
-                  <div className="font-extrabold text-xl text-white mb-2 text-center drop-shadow-lg text-nowrap">
-                    {feature.title}
-                  </div>
-                  <div className="text-white/80 dark:text-gray-200 text-center mb-2">
-                    {feature.desc}
-                  </div>
-                  <div className="w-8 h-1 bg-gradient-to-r from-[#00bcd4] to-cyan-400 rounded-full mt-2" />
-                </div>
-              ))}
             </div>
           </div>
         </section>
