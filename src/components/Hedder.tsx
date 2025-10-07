@@ -51,7 +51,7 @@ const Header: React.FC = () => {
     { code: "ar", label: "Arabic" },
     { code: "he", label: "Hebrew" },
   ];
- 
+
   const router = useRouter();
 
   React.useEffect(() => {
