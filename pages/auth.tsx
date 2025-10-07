@@ -105,7 +105,7 @@ const AuthPage = () => {
           />
         </div>
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-white drop-shadow-lg">
-          {isLogin ? "Login" : "Sign Up"}
+          {isLogin ? "Welcome Back" : "Regester now "}
         </h2>
         <form onSubmit={handleSubmit} className="space-y-5">
           {!isLogin && (

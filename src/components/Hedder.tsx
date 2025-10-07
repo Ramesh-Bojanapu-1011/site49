@@ -51,8 +51,7 @@ const Header: React.FC = () => {
     { code: "ar", label: "Arabic" },
     { code: "he", label: "Hebrew" },
   ];
-  //   const [selectedLanguage, setSelectedLanguage] = useState("English");
-  // const [langReady, setLangReady] = useState(false);
+ 
   const router = useRouter();
 
   React.useEffect(() => {
@@ -169,7 +168,11 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className=" caret-transparent bg-white dark:bg-gray-900 max-w-screen sticky top-0 z-100 text-nowrap pl-4 min-[769px]:pl-8 lg:pl-16  ">
+    <header
+      className={`caret-transparent bg-white dark:bg-gray-900 max-w-screen sticky top-0 z-100 text-nowrap  ${
+        i18n.language == "en" ? "min-[769px]:pl-8 pl-4 lg:pl-16" : ""
+      }`}
+    >
       <div
         ref={dropdownRef}
         className="  mx-auto flex items-center justify-between px-4 py-3"
@@ -258,7 +261,38 @@ const Header: React.FC = () => {
         </nav>
         <div className="hidden min-[769px]:flex items-center gap-4">
           <ModeToggle />
-          {/* Profile Dropdown */}
+
+          {/* Language Dropdown */}
+          <div className="relative group">
+            <button
+              onClick={() => handleDropdown("language")}
+              className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors px-3 py-2 rounded-full border border-blue-200 dark:border-blue-700 bg-white dark:bg-gray-900"
+            >
+              <span className="text-base font-semibold">
+                {supportedLanguages.find((l) => l.code === i18n.language)
+                  ?.label || "Language"}
+              </span>
+              <span className="text-lg">▼</span>
+            </button>
+            {openDropdown === "language" && (
+              <div
+                className={`absolute ${
+                  i18n.language === "en" ? "right-0" : "left-0"
+                } mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg `}
+              >
+                {supportedLanguages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => handleLanguageChange(lang.label)}
+                    className=" px-4 w-full py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors flex  "
+                  >
+                    {lang.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+          {/* Profile Dropdown (with Logout) */}
           <div className="relative group">
             <button
               onClick={() => handleDropdown("profile")}
@@ -273,35 +307,10 @@ const Header: React.FC = () => {
               <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]">
                 <button
                   onClick={handleLogout}
-                  className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                  className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors text-left w-full"
                 >
                   {t("hedder.logout")}
                 </button>
-              </div>
-            )}
-          </div>
-          <div className="relative group">
-            <button
-              onClick={() => handleDropdown("language")}
-              className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-            >
-              <span className="text-xl">🌐</span> <span>▼</span>
-            </button>
-            {openDropdown === "language" && (
-              <div
-                className={`absolute ${
-                  i18n.language === "en" ? "right-0" : "left-0"
-                } mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg `}
-              >
-                {supportedLanguages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => handleLanguageChange(lang.label)}
-                    className="block px-4 w-full py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
-                  >
-                    {lang.label}
-                  </button>
-                ))}
               </div>
             )}
           </div>
@@ -393,13 +402,40 @@ const Header: React.FC = () => {
           >
             {t("hedder.contactUs")}
           </Link>
-          <div className="mt-4 border-t flex justify-between items-center   dark:border-gray-700 pt-4">
+          <div className="mt-4 border-t flex  justify-between gap-4 dark:border-gray-700 pt-4">
             <ModeToggle />
 
-            <div className="mb-2 flex items-center gap-2">
+            {/* Language Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={() => handleDropdown("language")}
+                className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors px-3 py-2 rounded-full border border-blue-200 dark:border-blue-700 bg-white dark:bg-gray-900 w-full"
+              >
+                <span className="text-base font-semibold">
+                  {supportedLanguages.find((l) => l.code === i18n.language)
+                    ?.label || "Language"}
+                </span>
+                <span className="text-lg">▼</span>
+              </button>
+              {openDropdown === "language" && (
+                <div className="flex flex-col p-3 absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700 w-full">
+                  {supportedLanguages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => handleLanguageChange(lang.label)}
+                      className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors text-left"
+                    >
+                      {lang.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+            {/* Profile Dropdown (with Logout) */}
+            <div className="relative group">
               <button
                 onClick={() => handleDropdown("profile")}
-                className="w-full text-left py-2 flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                className="flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors w-full"
               >
                 <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 flex w-10 h-10 justify-center items-center text-center dark:to-blue-300 text-white font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
                   {userInitials || "AD"}
@@ -407,35 +443,13 @@ const Header: React.FC = () => {
                 <span>▼</span>
               </button>
               {openDropdown === "profile" && (
-                <div className=" -bottom-2  px-3   absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700">
+                <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px] w-full">
                   <button
                     onClick={handleLogout}
-                    className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
+                    className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors text-left w-full"
                   >
                     {t("hedder.logout")}
                   </button>
-                </div>
-              )}
-            </div>
-            <div className="">
-              <button
-                onClick={() => handleDropdown("language")}
-                className="w-full text-left py-2 flex items-center gap-1 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-              >
-                <span className="text-xl">🌐</span> {t("hedder.language")}{" "}
-                <span>▼</span>
-              </button>
-              {openDropdown === "language" && (
-                <div className="flex flex-col p-3 absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700">
-                  {supportedLanguages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => handleLanguageChange(lang.label)}
-                      className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
-                    >
-                      {lang.label}
-                    </button>
-                  ))}
                 </div>
               )}
             </div>
