@@ -110,8 +110,15 @@ const AuthPage = () => {
         <form onSubmit={handleSubmit} className="space-y-5">
           {!isLogin && (
             <>
+              <label
+                htmlFor="firstname"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1 ml-1"
+              >
+                First Name
+              </label>
               <input
                 type="text"
+                id="firstname"
                 name="firstname"
                 placeholder="First Name"
                 value={form.firstname}
@@ -119,8 +126,15 @@ const AuthPage = () => {
                 className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#00bcd4] shadow-sm"
                 required
               />
+              <label
+                htmlFor="lastname"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1 ml-1 mt-4"
+              >
+                Last Name
+              </label>
               <input
                 type="text"
+                id="lastname"
                 name="lastname"
                 placeholder="Last Name"
                 value={form.lastname}
@@ -130,8 +144,15 @@ const AuthPage = () => {
               />
             </>
           )}
+          <label
+            htmlFor="email"
+            className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1 ml-1"
+          >
+            Email
+          </label>
           <input
             type="email"
+            id="email"
             name="email"
             placeholder="Email"
             value={form.email}
@@ -139,8 +160,15 @@ const AuthPage = () => {
             className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#00bcd4] shadow-sm"
             required
           />
+          <label
+            htmlFor="password"
+            className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1 ml-1 mt-4"
+          >
+            Password
+          </label>
           <input
             type="password"
+            id="password"
             name="password"
             placeholder="Password"
             value={form.password}

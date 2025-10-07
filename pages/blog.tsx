@@ -386,7 +386,7 @@ const Blog = () => {
               <h2 className="text-4xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da]">
                 {t("blog.categoriesTitle")}
               </h2>
-              <p className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-6">
+              <p className="   text-gray-600 dark:text-gray-400 mb-6">
                 {t("blog.categoriesDesc1")}
               </p>
               <p className="text-base text-gray-600 dark:text-gray-400">
@@ -469,18 +469,9 @@ const Blog = () => {
 
         {/* Section 6: Contact CTA */}
         <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-20 px-6">
-          <div className="py-20 px-6 mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-16">
-            <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
-              <Image
-                src="/contact-main.jpg"
-                alt={t("digitalMarketing.contactImgAlt")}
-                width={400}
-                height={400}
-                className="rounded-3xl w-100 h-100 shadow-2xl object-cover"
-              />
-            </div>
-            <div className="w-full md:w-1/2 flex justify-center">
-              <div className="relative group w-full max-w-lg">
+          <div className="py-20 px-6 mx-auto w-full flex   items-center justify-center gap-16">
+            <div className="w-full   flex justify-center">
+              <div className="relative group w-full  ">
                 <div className="absolute inset-0 rounded-3xl p-[3px] bg-gradient-to-tr from-[#00bcd4] via-cyan-400 to-amber-400 animate-gradient-x blur-sm opacity-80 group-hover:opacity-100 transition-all duration-500" />
                 <div className="relative bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-12 flex flex-col items-center justify-center min-w-[340px]">
                   <div className="flex gap-6 mb-6 animate-float">

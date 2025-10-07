@@ -831,6 +831,7 @@
     "backToBlog": "Back to Blog"
   },
   "contactUs": {
+    "mapSectionTitle": "Find Us on the Map",
     "pageTitle": "Contact Us | Get in Touch",
     "pageDesc": "Reach out to our team for inquiries, support, or collaboration.",
     "heroTitle": "Contact Us",
@@ -873,6 +874,12 @@
     "heroTitle": "Admin Dashboard",
     "heroDesc": "Overview of all users and their activity status.",
     "userDetailsTitle": "All User Details",
+    "metrics": {
+      "totalUsers": "Total Users",
+      "loggedIn": "Active Users",
+
+      "loggedOut": "In Active Users"
+    },
     "table": {
       "id": "ID",
       "name": "Name",

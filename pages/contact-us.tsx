@@ -1,6 +1,5 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Hedder";
-import i18n from "@/i18n";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
@@ -134,14 +133,14 @@ const ContactUs = () => {
             <h2 className="text-3xl font-bold mb-8 text-[#00bcd4] text-center">
               {t("contactUs.formTitle")}
             </h2>
-            <div className="flex flex-col md:flex-row items-center gap-10">
-              <div className="md:w-1/2 w-full flex justify-center mb-8 md:mb-0">
+            <div className="flex flex-col min-[769px]:flex-row items-center gap-10">
+              <div className="min-[769px]:w-1/2 w-full flex justify-center mb-8 md:mb-0">
                 <Image
                   src="/contact-form-side.jpg"
                   alt={t("contactUs.formImgAlt")}
                   width={500}
                   height={500}
-                  className="rounded-2xl shadow-xl object-cover"
+                  className="rounded-2xl w-full h-full shadow-xl object-cover"
                 />
               </div>
 
@@ -181,7 +180,7 @@ const ContactUs = () => {
                 onSubmit={handleSubmit}
                 action="https://formspree.io/f/xovlekvg"
                 method="POST"
-                className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col gap-6 md:w-1/2 w-full"
+                className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col gap-6 min-[769px]:w-1/2 w-full"
               >
                 <input
                   type="text"
@@ -246,52 +245,23 @@ const ContactUs = () => {
           </div>
         </section>
 
-        {/* Section 4: Meet the Team (Horizontal Scroll) */}
-        <section
-          className=" caret-transparent py-20 px-6 mx-auto w-full
-    bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
-        >
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-extrabold mb-12 text-gray-900 dark:text-white text-center">
-              <span className="text-[#00bcd4]">{t("contactUs.teamTitle")}</span>
+        {/* Section 4: Interactive Map */}
+        <section className="relative bg-gradient-to-br from-cyan-50 via-blue-50 to-cyan-100 dark:from-gray-900 dark:via-cyan-900 dark:to-slate-900 py-16 flex flex-col items-center justify-center">
+          <div className=" w-full mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-8 text-[#00bcd4] text-center caret-transparent drop-shadow-lg">
+              {t("contactUs.mapSectionTitle")}
             </h2>
-
-            {/* NEW: Replaced flex-wrap with a responsive grid */}
-            <div className="grid grid-cols-1   lg:grid-cols-3 gap-10">
-              {/* NOTE: Ensure 'team' data is available in the component scope */}
-              {team.map((member, idx) => (
-                <div
-                  key={idx}
-                  // NEW: No background or shadow on the element itself.
-                  // Added: Relative positioning and clean padding
-                  className="relative p-6 flex items-center bg-transparent group transition-all duration-300 transform hover:scale-[1.02]"
-                >
-                  {/* NEW: Vertical Accent Bar (The "new look" structural element) */}
-                  <div className="absolute top-0 left-0 w-1 h-full bg-[#00bcd4]/50 group-hover:bg-gradient-to-b group-hover:from-[#00bcd4] group-hover:to-cyan-400 transition-all duration-300" />
-
-                  <Image
-                    src={member.img}
-                    alt={member.name}
-                    // Increased image size for better presence
-                    width={120}
-                    height={120}
-                    className={`rounded-full w-24 h-24 object-cover object-top ${
-                      i18n.language == "en" ? "mr-6" : "ml-6"
-                    } border-4 border-[#00bcd4] shadow-lg flex-shrink-0`}
-                  />
-
-                  {/* Text Content Block */}
-                  <div className={`${i18n.language == "en"}`}>
-                    <div className="font-extrabold text-xl text-gray-900 dark:text-white mb-1">
-                      {member.name}
-                    </div>
-                    {/* Role uses primary color and stronger font weight */}
-                    <div className="text-lg text-[#00bcd4] font-semibold mb-2">
-                      {member.role}
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-[#00bcd4]/20">
+              <iframe
+                title="Company Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019786112442!2d-122.40142052469264!3d37.79362197198115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064cbad9e6f%3A0x5f3e3568efbc19d!2sSalesforce%20Tower!5e0!3m2!1sen!2sus!4v1705934046756!5m2!1sen!2sus"
+                width="100%"
+                height="450"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="border-0"
+              ></iframe>
             </div>
           </div>
         </section>

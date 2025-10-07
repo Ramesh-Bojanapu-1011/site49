@@ -10,7 +10,7 @@ const Footer = () => {
     { name: t("footer.about"), href: "/about-us" },
     { name: t("footer.services"), href: "/services" },
     { name: t("footer.blog"), href: "/blog" },
-    { name: t("footer.contact"), href: "/contact" },
+    { name: t("footer.contact"), href: "/contact-us" },
   ];
   const services = [
     t("footer.webDesign"),

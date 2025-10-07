@@ -185,26 +185,29 @@ const Services = () => {
                   <div
                     key={idx}
                     className={`flex items-center w-full ${
-                      idx % 2 === 0 ? "justify-start" : "justify-end"
+                      idx % 2 === 0 ? "md:justify-start" : "md:justify-end"
                     }`}
                   >
-                    <div className="relative w-1/2 bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-cyan-100 dark:border-cyan-900">
+                    <div className="relative w-full md:w-1/2 bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-cyan-100 dark:border-cyan-900">
+                      {/* Icon: absolute on md+, static on mobile */}
                       <div
-                        className={`absolute ${
-                          idx % 2 != 0
-                            ? `${
+                        className={`$${
+                          "absolute md:static" // absolute on md+, static on mobile
+                        } ${
+                          idx % 2 !== 0
+                            ? `md:${
                                 i18next.language == "ar" ||
                                 i18next.language == "he"
                                   ? "-right-8"
                                   : "-left-8"
                               }`
-                            : `${
+                            : `md:${
                                 i18next.language == "ar" ||
                                 i18next.language == "he"
                                   ? "-left-8"
                                   : "-right-8"
                               }`
-                        } top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900`}
+                        } top-1/2 md:-translate-y-1/2 w-12 h-12 rounded-full bg-gradient-to-tr from-[#00bcd4] to-cyan-400 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900 mb-4 md:mb-0`}
                       >
                         <Image
                           src={step.icon}
@@ -237,7 +240,7 @@ const Services = () => {
             <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
               {t("services.whyTitle")}
             </h2>
-            <div className="flex gap-8 justify-center items-center   pb-4  ">
+            <div className="flex gap-8 flex-wrap justify-center items-center   pb-4  ">
               {[
                 t("services.whyExpertTeam"),
                 t("services.whyTech"),
@@ -303,7 +306,7 @@ const Services = () => {
             <h2 className="text-3xl font-bold mb-10 text-[#00bcd4] text-center">
               {t("services.impactTitle")}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 justify-center items-stretch">
+            <div className="grid grid-cols-4 max-[425px]:grid-cols-1   max-[769px]:grid-cols-2   gap-10 justify-center items-stretch">
               {[
                 {
                   icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxwYXRoIGZpbGw9IiNmZmVmNWUiIGQ9Ik0xMiA2Ljc0QTIuODcgMi44NyAwIDEgMCAxMiAxYTIuODcgMi44NyAwIDAgMCAwIDUuNzQiIC8+CgkJPHBhdGggZmlsbD0iI2ZmZjliZiIgZD0iTTkuMTMgMy44N2MuMDAxLjI3LjA0LjU0LjExNi44QTIuODcgMi44NyAwIDAgMCAxMy44IDEuNjM0QTIuODcgMi44NyAwIDAgMCA5LjEzIDMuODciIC8+CgkJPHBhdGggZmlsbD0iI2ZmYmM0NCIgZD0ibTkuMDIgMTEuMjg1bC0yLjQzMSAxLjE0YTEuNTk4IDEuNTk4IDAgMCAwLS42NyAyLjQwMmw0LjE2OSA2LjI0aDMuODI2bDQuMTY4LTYuMjRhMS42IDEuNiAwIDAgMC0uNjctMi40MDJsLTIuNjE0LTEuMjI3eiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZlZjVlIiBkPSJNMTUuNjEgOS41NjlhLjQ3Ny40NzcgMCAwIDAtLjY0LS41NTRhNy45NCA3Ljk0IDAgMCAxLTUuOTQzLS4wMDhhLjQ3OC40NzggMCAwIDAtLjYzOC41NTRsMi42NTUgMTEuNTA1aDEuOTEzeiIgLz4KCQk8cGF0aCBmaWxsPSIjZmZmOWJmIiBkPSJNMTIgOS41ODhhOC4zIDguMyAwIDAgMS0yLjk3My0uNTgxYS40NzguNDc4IDAgMCAwLS42MzguNTU0bDIuNjU1IDExLjUwNUgxMnoiIC8+CgkJPHBhdGggc3Ryb2tlPSIjMTkxOTE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xNy40NjcgMjIuNjI5YTQuMjYgNC4yNiAwIDAgMC0zLjA0NS0xLjU0Mkg5LjYzOWE0LjQgNC40IDAgMCAwLTMuMDc2IDEuNTE5TDYuMjYyIDIzSDE3Ljc0ek0xNS42MSA5LjU2OWEuNDc3LjQ3NyAwIDAgMC0uNjQtLjU1NGE3Ljk0IDcuOTQgMCAwIDEtNS45NDMtLjAwOGEuNDc4LjQ3OCAwIDAgMC0uNjM4LjU1NGwyLjY1NSAxMS41MDVoMS45MTN6TTEyIDYuNzRBMi44NyAyLjg3IDAgMSAwIDEyIDFhMi44NyAyLjg3IDAgMCAwIDAgNS43NG00LjUyOCA1LjI3bC44ODQuNDE1YTEuNTk4IDEuNTk4IDAgMCAxIC42NyAyLjQwM2wtNC4xNjkgNi4yNG0tNi40NC05LjA1OGwtLjg4NC40MTVhMS41OTggMS41OTggMCAwIDAtLjY3IDIuNDAzbDQuMTY5IDYuMjQiIHN0cm9rZS13aWR0aD0iMSIgLz4KCTwvZz4KPC9zdmc+",
@@ -389,18 +392,9 @@ const Services = () => {
 
         {/* Section 6: Contact CTA (Split Image + Card) */}
         <section className="bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-          <div className="py-20 px-6 mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-16">
-            <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
-              <Image
-                src="/contact-main.jpg"
-                alt={t("services.contactImgAlt")}
-                width={400}
-                height={400}
-                className="rounded-3xl w-100 h-100 shadow-2xl object-cover"
-              />
-            </div>
-            <div className="w-full md:w-1/2 flex justify-center">
-              <div className="relative group w-full max-w-lg">
+          <div className="py-20 px-6 mx-auto w-full flex   items-center justify-center  ">
+            <div className="  flex justify-center">
+              <div className="relative group w-full  ">
                 <div className="absolute inset-0 rounded-3xl p-[3px] bg-gradient-to-tr from-[#00bcd4] via-cyan-400 to-amber-400 animate-gradient-x blur-sm opacity-80 group-hover:opacity-100 transition-all duration-500" />
                 <div className="relative bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-12 flex flex-col items-center justify-center min-w-[340px]">
                   <div className="flex gap-6 mb-6 animate-float">

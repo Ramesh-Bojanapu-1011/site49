@@ -169,7 +169,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className=" caret-transparent bg-white dark:bg-gray-900 max-w-screen sticky top-0 z-100 text-nowrap  ">
+    <header className=" caret-transparent bg-white dark:bg-gray-900 max-w-screen sticky top-0 z-100 text-nowrap pl-4 min-[769px]:pl-8 lg:pl-16  ">
       <div
         ref={dropdownRef}
         className="  mx-auto flex items-center justify-between px-4 py-3"
@@ -185,7 +185,7 @@ const Header: React.FC = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-6 text-gray-700 dark:text-gray-200 font-medium">
+        <nav className="hidden min-[769px]:flex items-center gap-6 text-gray-700 dark:text-gray-200 font-medium">
           <div className="relative group">
             <button
               onClick={() => handleDropdown("home")}
@@ -256,7 +256,7 @@ const Header: React.FC = () => {
             {t("hedder.contactUs")}
           </Link>
         </nav>
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden min-[769px]:flex items-center gap-4">
           <ModeToggle />
           {/* Profile Dropdown */}
           <div className="relative group">
@@ -267,7 +267,7 @@ const Header: React.FC = () => {
               <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 flex w-10 h-10 justify-center items-center text-center dark:to-blue-300 text-white font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
                 {userInitials || "AD"}
               </span>
-              <span className="ml-1">{t("hedder.profile")}</span> <span>▼</span>
+              <span>▼</span>
             </button>
             {openDropdown === "profile" && (
               <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow-lg min-w-[120px]">
@@ -307,7 +307,7 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        <div className="md:hidden flex gap-4 items-center">
+        <div className="min-[769px]:hidden flex gap-4 items-center">
           {/* Mobile Hamburger */}
           <button
             className=" text-2xl text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
@@ -322,7 +322,7 @@ const Header: React.FC = () => {
       {menuOpen && (
         <nav
           ref={dropdownRef}
-          className="md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-700 shadow-lg px-4 py-3 transition-colors"
+          className="min-[769px]:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-700 shadow-lg px-4 py-3 transition-colors"
         >
           <div className="mb-2">
             <button
@@ -404,10 +404,10 @@ const Header: React.FC = () => {
                 <span className="rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 dark:from-blue-500 flex w-10 h-10 justify-center items-center text-center dark:to-blue-300 text-white font-bold text-lg shadow-md border-2 border-white dark:border-gray-900">
                   {userInitials || "AD"}
                 </span>
-                {t("hedder.profile")} <span>▼</span>
+                <span>▼</span>
               </button>
               {openDropdown === "profile" && (
-                <div className="  px-3   absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700">
+                <div className=" -bottom-2  px-3   absolute bg-white dark:bg-gray-800 shadow-md rounded-md border dark:border-gray-700">
                   <button
                     onClick={handleLogout}
                     className="block py-1 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"

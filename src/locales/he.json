@@ -829,6 +829,7 @@
     "backToBlog": "חזרה לבלוג"
   },
   "contactUs": {
+    "mapSectionTitle": "מצא אותנו על המפה",
     "pageTitle": "צור קשר | התחבר איתנו",
     "pageDesc": "צור קשר עם הצוות שלנו לשאלות, תמיכה או שיתופי פעולה.",
     "heroTitle": "צור קשר",
@@ -880,6 +881,11 @@
     "heroTitle": "לוח מנהל",
     "heroDesc": "סקירה של כל המשתמשים ומצב הפעילות שלהם.",
     "userDetailsTitle": "כל פרטי המשתמשים",
+    "metrics": {
+      "totalUsers": "סה״כ משתמשים",
+      "loggedIn": "משתמשים פעילים",
+      "loggedOut": "משתמשים לא פעילים"
+    },
     "table": {
       "id": "מזהה",
       "name": "שם",

@@ -83,9 +83,6 @@ const Home1 = () => {
           <div className="pointer-events-none absolute inset-0 z-10 opacity-[0.08] bg-[linear-gradient(to_right,#0ea5e9_1px,transparent_1px),linear-gradient(to_bottom,#0ea5e9_1px,transparent_1px)] [background-size:60px_60px]" />
 
           <div className="relative flex text-center w-full flex-col items-center z-20 max-w-5xl mx-auto">
-            <span className="inline-flex mb-6 px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold tracking-wide bg-gradient-to-r from-[#00bcd4] to-cyan-400 text-white shadow-lg/40 shadow-cyan-500/30 ring-1 ring-cyan-400/40">
-              {t("home1.heroBtn")}
-            </span>
             <h1 className="text-4xl md:text-6xl font-black mb-6 leading-[1.1] bg-gradient-to-br from-[#00bcd4] via-cyan-500 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">
               {t("home1.heroTitle")}
             </h1>
@@ -94,17 +91,11 @@ const Home1 = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-5 items-center">
               <a
-                href="/contact-us"
+                href="/about-us"
                 className="group relative inline-flex items-center justify-center px-10 py-4 rounded-2xl font-bold text-white text-lg tracking-wide overflow-hidden focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800"
               >
                 <span className="absolute inset-0 bg-gradient-to-tr from-[#00bcd4] via-cyan-400 to-blue-500 transition-transform duration-300 group-hover:scale-105" />
-                <span className="relative">{t("home1.collabBtn")}</span>
-              </a>
-              <a
-                href="/about-us"
-                className="relative inline-flex items-center justify-center px-10 py-4 rounded-2xl font-semibold text-[#00bcd4] dark:text-cyan-300 text-lg bg-white/80 dark:bg-gray-900/70 backdrop-blur border border-cyan-100 dark:border-gray-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
-              >
-                {t("home1.aboutBtn")}
+                <span className="relative">{t("home1.aboutBtn")}</span>
               </a>
             </div>
           </div>

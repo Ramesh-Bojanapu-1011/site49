@@ -24,11 +24,11 @@ const Branding = () => {
             loop
             muted
             playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
+            className="absolute inset-0 w-full h-full object-cover   z-0"
           >
             <source src="/branding-bg-video.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 w-full h-full object-cover opacity-30 z-0 bg-gradient-to-tr from-[#00bcd4]/30 to-cyan-400/30" />
+          <div className="absolute inset-0 w-full h-full object-cover opacity-80 bg-white z-0   pointer-events-none" />
           <div className="relative z-10 mx-auto">
             <h1 className="text-5xl font-extrabold mb-6 text-[#0097a7] dark:text-[#26c6da] drop-shadow-lg">
               {t("branding.heroTitle")}
@@ -168,7 +168,7 @@ const Branding = () => {
               {t("branding.processTitle")}
             </h2>
             <div className="relative">
-              <div className="absolute left-1/2 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#00bcd4] via-cyan-400 to-amber-400 opacity-30 z-0" />
+              <div className="absolute md:block hidden left-1/2 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#00bcd4] via-cyan-400 to-amber-400 opacity-30 z-0" />
               <div className="flex flex-col gap-14 relative z-10">
                 {[
                   {
@@ -205,26 +205,27 @@ const Branding = () => {
                   <div
                     key={idx}
                     className={`flex items-center w-full ${
-                      idx % 2 === 0 ? "justify-start" : "justify-end"
+                      idx % 2 === 0 ? "md:justify-start" : "md:justify-end"
                     }`}
                   >
                     <div
-                      className={`relative w-1/2 bg-gradient-to-br from-[#7a8387] via-[#00BFFF] to-[#8e4747] rounded-2xl shadow-xl p-8 flex flex-col items-center border border-cyan-100 dark:border-cyan-900 animate-popin`}
+                      className={`relative w-full md:w-1/2 bg-gradient-to-br from-[#7a8387] via-[#00BFFF] to-[#8e4747] rounded-2xl shadow-xl p-8 flex flex-col items-center border border-cyan-100 dark:border-cyan-900 animate-popin`}
                       style={{ animationDelay: `${idx * 0.15}s` }}
                     >
+                      {/* Icon: absolute on md+, static on mobile */}
                       <div
-                        className={`absolute ${
-                          idx % 2 !== 0 ? "-left-8" : "-right-8"
-                        } top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white/80 dark:bg-gray-900/80 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900 animate-float`}
+                        className={`$${"absolute md:static"} ${
+                          idx % 2 !== 0 ? "md:-left-8" : "md:-right-8"
+                        } top-1/2 md:-translate-y-1/2 w-14 h-14 rounded-full bg-white/80 dark:bg-gray-900/80 flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-900 animate-float mb-4 md:mb-0`}
                       >
                         <Image
                           src={step.icon}
                           alt={step.title}
-                          width={40}
-                          height={40}
+                          width={48}
+                          height={48}
                         />
                       </div>
-                      <div className="font-bold text-xl text-white mb-2 text-center drop-shadow-lg">
+                      <div className="font-extrabold text-2xl text-white mb-2 text-center drop-shadow-lg">
                         {step.title}
                       </div>
                       <div className="text-white/80 dark:text-gray-200 text-center mb-2">

@@ -46,7 +46,7 @@ const AboutUs = () => {
                 alt={t("aboutUs.storyImgAlt")}
                 width={400}
                 height={400}
-                className="rounded-3xl w-150 h-150 shadow-2xl object-cover"
+                className="rounded-3xl w-180 h-180 shadow-2xl object-cover"
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center">
@@ -69,8 +69,8 @@ const AboutUs = () => {
                   { year: "2022", desc: t("aboutUs.timeline2022") },
                   { year: "2024", desc: t("aboutUs.timeline2024") },
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-400 to-cyan-400 flex items-center justify-center text-white font-bold">
+                  <li key={idx} className="flex items-center gap-3">
+                    <span className="w-13 h-13 rounded-full bg-gradient-to-tr from-amber-400 to-cyan-400 flex items-center justify-center text-white font-bold">
                       {item.year}
                     </span>
                     <span className="text-gray-800 dark:text-gray-200">
@@ -600,7 +600,7 @@ const AboutUs = () => {
                     />
                   </div>
                   <div className="font-extrabold text-3xl text-[#00bcd4] mb-2 mt-2">
-                    {fact.value}
+                    {fact.value}+
                   </div>
                   <div className="font-semibold text-lg text-gray-700 dark:text-gray-300 text-center">
                     {fact.label}
@@ -613,23 +613,12 @@ const AboutUs = () => {
 
         {/* Section 6: Contact Us (Split Image + Card) */}
         <section className=" bg-gradient-to-br from-gray-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-          <div className="py-20 px-6 mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-16">
-            {/* Left Side Image */}
-            <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
-              <Image
-                src="/contact-main.jpg"
-                alt={t("aboutUs.contactImgAlt")}
-                width={400}
-                height={400}
-                className="rounded-3xl w-100 h-100 shadow-2xl object-cover"
-              />
-            </div>
-            {/* Right Side Contact Card */}
-            <div className="w-full md:w-1/2 flex justify-center">
-              <div className="relative group w-full max-w-lg">
+          <div className="py-20 px-6 mx-auto w-full flex flex-col  items-center justify-center  ">
+            <div className="w-full   flex justify-center">
+              <div className="relative group w-full  ">
                 {/* Animated Gradient Border */}
                 <div className="absolute inset-0 rounded-3xl p-[3px] bg-gradient-to-tr from-[#00bcd4] via-cyan-400 to-amber-400 animate-gradient-x blur-sm opacity-80 group-hover:opacity-100 transition-all duration-500" />
-                <div className="relative bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-12 flex flex-col items-center justify-center min-w-[340px]">
+                <div className="relative bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-12 flex flex-col items-center justify-center  ">
                   {/* Floating Contact Icons */}
                   <div className="flex gap-6 mb-6 animate-float">
                     <a
